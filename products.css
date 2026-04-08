@@ -1,0 +1,100 @@
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  background-color: #D6ECFA;
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  color: #1a1a1a;
+  margin: 40px 0;
+  background: linear-gradient(90deg, #4da6ff, #99ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 60px 60px;
+}
+
+
+.card {
+  position: relative;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.card1 { background-image: url("images/akne.jpg"); }
+.card2 { background-image: url("images/hiperpigmentim.jpg"); }
+.card3 { background-image: url("images/dehidratim.jpg"); }
+.card4 { background-image: url("images/pore&yndyr.jpg"); }
+.card5 { background-image: url("images/rrudha.jpg"); }
+.card6 { background-image: url("images/rosacea.jpg"); }
+.card7 { background-image: url("images/skuqje.jpg"); }
+
+
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 24px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 136, 255, 0.3);
+}
+
+.card:hover::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.15));
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
