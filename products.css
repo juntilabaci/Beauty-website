@@ -2,17 +2,19 @@ body {
   font-family: 'Playfair Display', serif;
   margin: 0;
   background-color: #D6ECFA;
+}
+
 
 .title {
   font-size: 36px;
   text-align: center;
-  color: #1a1a1a;
   margin: 40px 0;
   background: linear-gradient(90deg, #4da6ff, #99ccff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
+
 
 .grid {
   display: grid;
@@ -27,9 +29,13 @@ body {
   height: 280px;
   border-radius: 20px;
   overflow: hidden;
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   text-decoration: none;
+
   transform: translateY(20px);
   opacity: 0;
   animation: fadeIn 0.6s forwards;
@@ -49,14 +55,34 @@ body {
   transition: background 0.3s;
 }
 
-.card1 { background-image: url("images/akne.jpg"); }
-.card2 { background-image: url("images/hiperpigmentim.jpg"); }
-.card3 { background-image: url("images/dehidratim.jpg"); }
-.card4 { background-image: url("images/pore&yndyr.jpg"); }
-.card5 { background-image: url("images/rrudha.jpg"); }
-.card6 { background-image: url("images/rosacea.jpg"); }
-.card7 { background-image: url("images/skuqje.jpg"); }
 
+.card1 {
+  background-image: url("./images/akne.jpg");
+}
+
+.card2 {
+  background-image: url("./images/hiperpigmentim.jpg");
+}
+
+.card3 {
+  background-image: url("./images/dehidratim.jpg");
+}
+
+.card4 {
+  background-image: url("./images/pore&yndyr.jpg");
+}
+
+.card5 {
+  background-image: url("./images/rrudha.jpg");
+}
+
+.card6 {
+  background-image: url("./images/rosacea.jpg");
+}
+
+.card7 {
+  background-image: url("./images/skuqje.jpg");
+}
 
 
 .overlay {
@@ -65,6 +91,7 @@ body {
   left: 20px;
   color: white;
   z-index: 2;
+
   backdrop-filter: blur(4px);
   padding: 10px;
   border-radius: 8px;
@@ -81,6 +108,7 @@ body {
   font-size: 14px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
+
 
 .card:hover {
   transform: scale(1.03);
