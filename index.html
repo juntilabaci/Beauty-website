@@ -1,100 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Solavie</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Solavie</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="top-bar">
-    Makeup & Skincare me Cilësi Superiore • Korean Skin Care • Posta Kudo
+
+<div class="top-bar">
+  <div class="ticker">
+    <span>Free Shipping in Albania • </span>
+    <span>Korean Skincare • Clean Beauty • </span>
+    <span>Dermatologist Inspired Formulas • </span>
+    <span>Special Offers Every Week • </span>
+    <span>Shop Solavie Now • </span>
+  </div>
+</div>
+
+<header class="header">
+
+  <!-- LEFT: SEARCH -->
+  <div class="search-box">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <div id="suggestions" class="suggestions"></div>
+    </div>
   </div>
 
-  <header class="header">
+  <!-- CENTER: LOGO (PERFECT CENTER FIX) -->
+  <div class="logo">
+    <a href="index.html">Solavie</a>
+  </div>
 
-    <div class="search-box">
-      <input type="text" placeholder="Kërko...">
+  <!-- RIGHT: ICONS -->
+  <div class="icons-right">
+
+    <!-- WISHLIST (FIXED HEART) -->
+    <div class="icon-item" onclick="openFav()" title="Wishlist">
+      <span style="font-size:20px; color:red;">❤️</span>
     </div>
 
-    <div class="logo">
-      <a href="#">Solavie</a>
+    <!-- CART -->
+    <div class="icon-item" onclick="openCart()" title="Cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 6h15l-1.5 9h-12z"/>
+        <path d="M6 6L5 3H2"/>
+        <circle cx="9" cy="20" r="1"/>
+        <circle cx="18" cy="20" r="1"/>
+      </svg>
+      <b id="cartCount">0</b>
     </div>
 
-    <div class="icons">
-      <span>👤</span>
-      <span>🛒</span>
+    <!-- ACCOUNT -->
+    <div class="icon-item" title="Account">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c2-4 14-4 16 0"/>
+      </svg>
     </div>
 
-  </header>
+  </div>
 
-  <nav class="menu">
-    <a href="#">Kujdesi per lekure</a>
-    <a href="#">Make Up</a>
-    <a href="#">Floket</a>
-    <a href="#">Trupi</a>
-    <a href="#">Parfume</a>
-    <a href="#">Oferta</a>
-  </nav>
+</header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Minimal skincare.<br>Maximum glow.</h1>
-      <p>Clean, soft and effective products for your daily ritual.</p>
-     <a href="products.html"><button>Shop Now</button></a>
+<!-- MENU -->
+<nav class="menu">
+
+  <a href="products.html">Kujdesi për lëkurë</a>
+
+  <div class="menu-item">
+    <a href="#">Brendet</a>
+    <div class="dropdown">
+      <a onclick="filterBrand('cosrx')">COSRX</a>
+      <a onclick="filterBrand('anua')">ANUA</a>
+      <a onclick="filterBrand('boj')">Beauty of Joseon</a>
+      <a onclick="filterBrand('all')">All</a>
     </div>
-  </section>
+  </div>
 
-  <section class="products">
-    <h2>Our Essentials</h2>
+  <a href="#">Make Up</a>
+  <a href="#">Flokët</a>
+  <a href="#">Trupi</a>
+  <a href="#">Parfume</a>
+  <a href="#">Oferta</a>
 
-    <div class="product-grid">
-      <div class="product">
-        <div class="imgcleansers"></div>
-        <h3>Oil Cleanser</h3>
-        <p>Skin Essential</p>
-      </div>
+</nav>
 
-      <div class="product">
-        <div class="imgwash"></div>
-        <h3>Cloudy Cleanser</h3>
-        <p>Gentle daily wash</p>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Minimal skincare.<br>Maximum glow.</h1>
+    <p>Clean Korean beauty for your daily ritual.</p>
+    <a href="products.html"><button>Shop Now</button></a>
+  </div>
+</section>
 
-      <div class="product">
-        <div class="imgmoist"></div>
-        <h3>Soft Skin Moisturiser</h3>
-        <p>Hydration & glow</p>
-      </div>
+<!-- PRODUCTS -->
+<section class="products">
 
-      <div class="product">
-        <div class="imgsun"></div>
-        <h3>Sun Cream</h3>
-        <p>Barrier protector</p>
-      </div>
-    </div>
-  </section>
+<h2>Our Essentials</h2>
 
-  <section class="bg-section">
-    <h2>Our Philosophy</h2>
-  </section>
+<div class="product-grid">
 
-  <section class="philosophy">
-    <h2>Less steps. Better skin.</h2>
-    <p>We believe in simple routines, clean ingredients and mindful self-care.</p>
-  </section>
+  <div class="product" data-brand="cosrx" data-name="cosrx cleanser" data-price="12">
+    <div class="imgcleansers"></div>
+    <h3>COSRX Cleanser</h3>
+    <p>€12</p>
+    <span class="heart" onclick="toggleHeart(this)">♡</span>
+    <button onclick="addToCart('COSRX Cleanser',12)">Add to cart</button>
+  </div>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+  <div class="product" data-brand="anua" data-name="anua wash" data-price="15">
+    <div class="imgwash"></div>
+    <h3>ANUA Wash</h3>
+    <p>€15</p>
+    <span class="heart" onclick="toggleHeart(this)">♡</span>
+    <button onclick="addToCart('ANUA Wash',15)">Add to cart</button>
+  </div>
 
-    <p>© 2026 Solavie. All rights reserved.</p>
-  </footer>
+  <div class="product" data-brand="boj" data-name="boj moisturizer" data-price="18">
+    <div class="imgmoist"></div>
+    <h3>BOJ Moisturizer</h3>
+    <p>€18</p>
+    <span class="heart" onclick="toggleHeart(this)">♡</span>
+    <button onclick="addToCart('BOJ Moisturizer',18)">Add to cart</button>
+  </div>
 
+  <div class="product" data-brand="cosrx" data-name="sunscreen spf" data-price="10">
+    <div class="imgsun"></div>
+    <h3>Sunscreen</h3>
+    <p>€10</p>
+    <span class="heart" onclick="toggleHeart(this)">♡</span>
+    <button onclick="addToCart('Sunscreen',10)">Add to cart</button>
+  </div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Solavie. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
