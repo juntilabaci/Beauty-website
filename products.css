@@ -2,7 +2,7 @@ body {
   font-family: 'Playfair Display', serif;
   margin: 0;
   background-color: #D6ECFA;
-
+}
 .title {
   font-size: 36px;
   text-align: center;
@@ -55,7 +55,6 @@ body {
 .card4 { background-image: url("images/pore&yndyr.jpg"); }
 .card5 { background-image: url("images/rrudha.jpg"); }
 .card6 { background-image: url("images/rosacea.jpg"); }
-.card7 { background-image: url("images/skuqje.jpg"); }
 
 
 
