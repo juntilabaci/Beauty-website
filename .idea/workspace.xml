@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
-      <change afterPath="$PROJECT_DIR$/akne.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dehidratim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hiperpigmentim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/akne.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/dehidratim.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hiperpigmentim.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/pore&amp;yndyr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/rosacea.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/rrudha.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/skuqje.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/poret&amp;yndyra.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rosacea.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rrudha.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skuqje.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/147.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/147.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/345.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/345.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/crm.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/crm.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/idk.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/images/idk.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/img3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/oil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/oil.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/solavie.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/images/solavie.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/spf.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/spf.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/sun.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/sun.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/images/wash.jpg.webp" beforeDir="false" afterPath="$PROJECT_DIR$/images/wash.jpg.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +30,13 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/juntilabaci/Beauty-website.git&quot;,
-    &quot;accountId&quot;: &quot;cd8b11ca-15a9-4472-ab76-8aa7703222af&quot;
+    &quot;accountId&quot;: &quot;8457e025-36f8-44a9-b6e0-71389b9fcd0d&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -73,14 +49,18 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/elitebook/OneDrive/Documents/Beauty-website",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Admin/Documents/Beauty-website",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,7 +72,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-02acdf704d18-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28539.27" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
       </set>
     </attachedChunks>
   </component>
