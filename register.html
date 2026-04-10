@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Regjistrim - Solavie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">Solavie</a>
+  </div>
+</header>
+
+<section style="padding:60px; max-width:500px; margin:auto;">
+
+<h1>Plotëso të dhënat</h1>
+
+<form onsubmit="saveUser(event)">
+
+  <input type="text" id="firstName" placeholder="Emri" required style="width:100%; padding:10px; margin:10px 0;">
+
+  <input type="text" id="lastName" placeholder="Mbiemri" required style="width:100%; padding:10px; margin:10px 0;">
+
+  <input type="tel" id="phone" placeholder="Numri i telefonit" required style="width:100%; padding:10px; margin:10px 0;">
+
+  <input type="email" id="email" readonly style="width:100%; padding:10px; margin:10px 0; background:#eee;" hidden>
+
+  <button type="submit">Ruaj të dhënat</button>
+
+</form>
+
+
+<div id="successMessage" style="display:none; margin-top:20px; padding:15px; border:2px solid #10b981; color:#10b981; border-radius:10px; text-align:center;">
+  ✅ Të dhënat u ruajtën me sukses!
+</div>
+
+</section>
+
+<script>
+
+
+document.getElementById("email").value = localStorage.getItem("tempEmail");
+
+function saveUser(e) {
+  e.preventDefault();
+
+  let user = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value
+  };
+
+  localStorage.setItem("userData", JSON.stringify(user));
+
+  document.getElementById("successMessage").style.display = "block";
+
+  document.querySelector("form").reset();
+
+  setTimeout(() => {
+    document.getElementById("successMessage").style.display = "none";
+  }, 3000);
+}
+
+</script>
+
+</body>
+</html>
