@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shop - Solavie</title>
+<link rel="stylesheet" href="shop.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="shop-header">
+  <h1>Shop Skincare</h1>
+</header>
+
+<!-- FILTER -->
+<div class="filters">
+
+  <select id="brandFilter">
+    <option value="all">All Brands</option>
+    <option value="cosrx">COSRX</option>
+    <option value="anua">ANUA</option>
+    <option value="boj">Beauty of Joseon</option>
+  </select>
+
+  <select id="typeFilter">
+    <option value="all">All Types</option>
+    <option value="oil">Oil Cleanser</option>
+    <option value="water">Water Cleanser</option>
+    <option value="moisturizer">Moisturizer</option>
+    <option value="serum">Serum</option>
+  </select>
+
+  <!-- 🔥 FILTER I RI -->
+  <select id="concernFilter">
+    <option value="all">All Concerns</option>
+    <option value="acne">Akne</option>
+    <option value="pigmentation">Hiperpigmentim</option>
+    <option value="dehydration">Dehidratim</option>
+    <option value="pores">Pore & Yndyr</option>
+    <option value="aging">Rrudha</option>
+    <option value="rosacea">Rosacea</option>
+  </select>
+
+</div>>
+
+</div>
+
+<!-- PRODUCTS -->
+<div class="grid" id="productGrid">
+
+  <!-- COSRX -->
+  <div class="card" data-brand="cosrx" data-type="water">
+    <img src="images/cosrx-cleanser.jpg">
+    <h4>Low pH Good Morning Cleanser</h4>
+    <p>Oily / Acne Skin</p>
+    <span>€12</span>
+    <a href="product-cosrx.html">View</a>
+  </div>
+
+  <div class="card" data-brand="cosrx" data-type="serum">
+    <img src="images/cosrx-serum.jpg">
+    <h4>COSRX Snail Mucin Essence</h4>
+    <p>Hydration & Repair</p>
+    <span>€22</span>
+    <a href="product-cosrx2.html">View</a>
+  </div>
+
+  <!-- ANUA -->
+  <div class="card" data-brand="anua" data-type="oil">
+    <img src="images/anua-oil.jpg">
+    <h4>Heartleaf Oil Cleanser</h4>
+    <p>Sensitive Skin</p>
+    <span>€18</span>
+    <a href="product-anua.html">View</a>
+  </div>
+
+  <!-- BOJ -->
+  <div class="card" data-brand="boj" data-type="moisturizer">
+    <img src="images/boj-cream.jpg">
+    <h4>Dynasty Cream</h4>
+    <p>Dry Skin</p>
+    <span>€20</span>
+    <a href="product-boj.html">View</a>
+  </div>
+
+</div>
+
+<script src="shop.js"></script>
+</body>
+</html>
