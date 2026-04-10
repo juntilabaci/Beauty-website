@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
-      <change afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/akne.html" beforeDir="false" afterPath="$PROJECT_DIR$/akne.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dehidratim.html" beforeDir="false" afterPath="$PROJECT_DIR$/dehidratim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hiperpigmentim.html" beforeDir="false" afterPath="$PROJECT_DIR$/hiperpigmentim.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loyalty.html" beforeDir="false" afterPath="$PROJECT_DIR$/loyalty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poret&amp;yndyra.html" beforeDir="false" afterPath="$PROJECT_DIR$/poret&amp;yndyra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-Glow- Serum.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-Glow- Serum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-anua.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-anua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-boj-cream.html" beforeDir="false" afterPath="$PROJECT_DIR$/product-boj-cream.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rosacea.html" beforeDir="false" afterPath="$PROJECT_DIR$/rosacea.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rrudha.html" beforeDir="false" afterPath="$PROJECT_DIR$/rrudha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skuqje.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775862439105</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="modifikim vizual">
+      <option name="closed" value="true" />
+      <created>1775862619244</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1775862619244</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
