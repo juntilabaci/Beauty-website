@@ -73,3 +73,14 @@ select {
   border-radius: 8px;
   text-decoration: none;
 }
+.top-bar {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
