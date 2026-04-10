@@ -127,12 +127,9 @@ function subscribe() {
     return;
   }
 
-  let emails = JSON.parse(localStorage.getItem("emails")) || [];
-  emails.push(email);
-  localStorage.setItem("emails", JSON.stringify(emails));
+  localStorage.setItem("tempEmail", email);
 
-  alert("U regjistrove me sukses!");
-  document.getElementById("newsletterEmail").value = "";
+  window.location.href = "register.html";
 }
 
 
