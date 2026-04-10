@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="search bar dhe header edit">
-      <change afterPath="$PROJECT_DIR$/product-anua.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
+    <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775839827854</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modifikim vizual">
+      <option name="closed" value="true" />
+      <created>1775843489600</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1775843489600</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,9 +174,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <MESSAGE value="modifikim vizual" />
     <MESSAGE value="editim pamje" />
     <MESSAGE value="search bar dhe header edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="search bar dhe header edit" />
+    <MESSAGE value="modifikim vizual" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifikim vizual" />
   </component>
 </project>

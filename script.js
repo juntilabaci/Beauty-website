@@ -1,7 +1,7 @@
 let cart = 0;
 let cartItems = [];
 
-/* CART */
+
 function addToCart(name, price) {
   cart++;
   cartItems.push({ name, price });
@@ -9,7 +9,7 @@ function addToCart(name, price) {
   document.getElementById("cartCount").innerText = cart;
 }
 
-/* HEART / WISHLIST */
+
 function toggleHeart(el) {
   el.classList.toggle("active");
 
@@ -20,7 +20,7 @@ function toggleHeart(el) {
   }
 }
 
-/* AMAZON SEARCH ENGINE */
+
 const searchInput = document.getElementById("searchInput");
 const suggestionsBox = document.getElementById("suggestions");
 
@@ -74,7 +74,7 @@ function searchEngine(value) {
   suggestionsBox.style.display = "block";
 }
 
-/* DEBOUNCE */
+
 function debounce(fn, delay) {
   let timer;
   return function (...args) {
@@ -87,14 +87,14 @@ searchInput.addEventListener("keyup", debounce(function () {
   searchEngine(this.value);
 }, 150));
 
-/* CLOSE SEARCH DROPDOWN */
+
 document.addEventListener("click", function(e){
   if (!e.target.closest(".search-wrapper")) {
     suggestionsBox.style.display = "none";
   }
 });
 
-/* FILTER BRAND */
+
 function filterBrand(brand) {
   products.forEach(p => {
     if (brand === "all" || p.dataset.brand === brand) {
@@ -105,12 +105,11 @@ function filterBrand(brand) {
   });
 }
 
-/* MOBILE MENU */
+
 function toggleMenu() {
   document.querySelector(".menu").classList.toggle("active");
 }
 
-/* PLACEHOLDERS (future system) */
 function openCart() {
   alert("Cart items: " + cartItems.length);
 }

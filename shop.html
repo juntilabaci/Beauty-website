@@ -3,18 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <title>Shop - Solavie Skincare</title>
+
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="shop.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div id="header"></div>
+
+
+<div class="top-bar">
+  <div class="ticker">
+    <span>Free Shipping in Albania • </span>
+    <span>Korean Skincare • Clean Beauty • </span>
+    <span>Dermatologist Inspired Formulas • </span>
+    <span>Special Offers Every Week • </span>
+    <span>Shop Solavie Now • </span>
+  </div>
+</div>
+
+
+<header class="header">
+
+  <div class="search-box">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+  </div>
+
+  <div class="logo">
+    <a href="index.html">Solavie</a>
+  </div>
+
+  <div class="icons-right">
+
+    <div class="icon-item" title="Wishlist">
+      <span style="font-size:20px; color:red;">❤️</span>
+    </div>
+
+    <div class="icon-item" title="Cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
+        <path d="M6 6h15l-1.5 9h-12z"/>
+        <path d="M6 6L5 3H2"/>
+        <circle cx="9" cy="20" r="1"/>
+        <circle cx="18" cy="20" r="1"/>
+      </svg>
+      <b>0</b>
+    </div>
+
+    <div class="icon-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M4 20c2-4 14-4 16 0"/>
+      </svg>
+    </div>
+
+  </div>
+</header>
+
+
+<nav class="menu">
+
+  <a href="shop.html">Kujdesi për lëkurë</a>
+
+  <div class="menu-item">
+    <a href="#">Brendet</a>
+    <div class="dropdown">
+      <a>COSRX</a>
+      <a>ANUA</a>
+      <a>Beauty of Joseon</a>
+      <a>All</a>
+    </div>
+  </div>
+
+  <a href="#">Make Up</a>
+  <a href="#">Flokët</a>
+  <a href="#">Trupi</a>
+  <a href="#">Parfume</a>
+  <a href="#">Oferta</a>
+
+</nav>
+
+
 <header class="shop-header">
   <h1>Shop Skincare</h1>
 </header>
 
 <div class="grid">
 
-  <!-- ================= COSRX ================= -->
   <div class="card">
     <img src="images/cosrx-cleanser.jpg">
     <h4>Low pH Cleanser</h4>
@@ -33,7 +112,7 @@
 
   <div class="card">
     <img src="images/cosrx-toner.jpg">
-    <h4>AHA/BHA Clarifying Toner</h4>
+    <h4>AHA/BHA Toner</h4>
     <span>€19</span>
     <p>COSRX</p>
     <a href="product-cosrx-toner.html">View</a>
@@ -41,13 +120,12 @@
 
   <div class="card">
     <img src="images/cosrx-cream.jpg">
-    <h4>Snail Repair Cream</h4>
+    <h4>Snail Cream</h4>
     <span>€25</span>
     <p>COSRX</p>
     <a href="product-cosrx-cream.html">View</a>
   </div>
 
-  <!-- ================= ANUA ================= -->
   <div class="card">
     <img src="images/anua-cream.jpg">
     <h4>Heartleaf Moisturizer</h4>
@@ -66,7 +144,7 @@
 
   <div class="card">
     <img src="images/anua-oil.jpg">
-    <h4>Heartleaf Oil Cleanser</h4>
+    <h4>Oil Cleanser</h4>
     <span>€18</span>
     <p>ANUA</p>
     <a href="product-anua-oil.html">View</a>
@@ -74,13 +152,12 @@
 
   <div class="card">
     <img src="images/anua-niacinamide.jpg">
-    <h4>Niacinamide 10% Serum</h4>
+    <h4>Niacinamide Serum</h4>
     <span>€24</span>
     <p>ANUA</p>
     <a href="product-anua-niacinamide.html">View</a>
   </div>
 
-  <!-- ================= BEAUTY OF JOSEON ================= -->
   <div class="card">
     <img src="images/boj-serum.jpg">
     <h4>Glow Serum</h4>
@@ -90,262 +167,12 @@
   </div>
 
   <div class="card">
-    <img src="images/boj-cream.jpg">
-    <h4>Dynasty Cream</h4>
-    <span>€20</span>
-    <p>Beauty of Joseon</p>
-    <a href="product-boj-cream.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/boj-sunscreen.jpg">
-    <h4>Relief Sun SPF50+</h4>
-    <span>€18</span>
-    <p>Beauty of Joseon</p>
-    <a href="product-boj-sunscreen.html">View</a>
-  </div>
-
-  <!-- ================= SOME BY MI ================= -->
-  <div class="card">
-    <img src="images/sbm-toner.jpg">
-    <h4>AHA BHA PHA Toner</h4>
-    <span>€17</span>
-    <p>Some By Mi</p>
-    <a href="product-somebymi-toner.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/sbm-serum.jpg">
-    <h4>Miracle Serum</h4>
-    <span>€23</span>
-    <p>Some By Mi</p>
-    <a href="product-somebymi-serum.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/sbm-cream.jpg">
-    <h4>Miracle Cream</h4>
-    <span>€24</span>
-    <p>Some By Mi</p>
-    <a href="product-somebymi-cream.html">View</a>
-  </div>
-
-  <!-- ================= AESTURA ================= -->
-  <div class="card">
-    <img src="images/aestura-cream.jpg">
-    <h4>Atobarrier 365 Cream</h4>
-    <span>€28</span>
-    <p>AESTURA</p>
-    <a href="product-aestura.html">View</a>
-  </div>
-
-  <!-- ================= APLB ================= -->
-  <div class="card">
-    <img src="images/aplb-glutathione.jpg">
-    <h4>Glutathione Niacinamide Cream</h4>
-    <span>€22</span>
-    <p>APLB</p>
-    <a href="product-aplb-glutathione.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/aplb-vitc.jpg">
-    <h4>PDRN Vitamin C Cream</h4>
-    <span>€24</span>
-    <p>APLB</p>
-    <a href="product-aplb-vitc.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/aplb-snail.jpg">
-    <h4>Snail Mucin Ginseng Cream</h4>
-    <span>€23</span>
-    <p>APLB</p>
-    <a href="product-aplb-snail.html">View</a>
-  </div>
-
-  <!-- ================= BEE FACTOR ================= -->
-  <div class="card">
-    <img src="images/beefactor-shine.jpg">
-    <h4>SHINE BRIGHT Cream</h4>
-    <span>€26</span>
-    <p>Bee Factor</p>
-    <a href="product-beefactor.html">View</a>
-  </div>
-
-  <!-- ================= BIODERMA ================= -->
-  <div class="card">
-    <img src="images/bioderma-cicabio.jpg">
-    <h4>Cicabio Creme+</h4>
-    <span>€18</span>
-    <p>Bioderma</p>
-    <a href="product-bioderma.html">View</a>
-  </div>
-
-  <!-- ================= CELIMAX ================= -->
-  <div class="card">
-    <img src="images/celimax-retinal.jpg">
-    <h4>Vita A Retinal Booster</h4>
-    <span>€27</span>
-    <p>Celimax</p>
-    <a href="product-celimax.html">View</a>
-  </div>
-
-  <!-- ================= CERAVE ================= -->
-  <div class="card">
-    <img src="images/cerave-foaming.jpg">
-    <h4>Foaming Facial Cleanser</h4>
-    <span>€17</span>
-    <p>CeraVe</p>
-    <a href="product-cerave-foaming.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/cerave-hydrating.jpg">
-    <h4>Hydrating Cleanser</h4>
-    <span>€18</span>
-    <p>CeraVe</p>
-    <a href="product-cerave-hydrating.html">View</a>
-  </div>
-
-  <div class="card">
     <img src="images/cerave-cream.jpg">
-    <h4>Moisturizing Cream</h4>
+    <h4>CeraVe Cream</h4>
     <span>€21</span>
     <p>CeraVe</p>
     <a href="product-cerave-cream.html">View</a>
   </div>
-
-  <div class="card">
-    <img src="images/cerave-pm.jpg">
-    <h4>PM Facial Moisturiser</h4>
-    <span>€20</span>
-    <p>CeraVe</p>
-    <a href="product-cerave-pm.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/cerave-am.jpg">
-    <h4>AM SPF 30 Lotion</h4>
-    <span>€20</span>
-    <p>CeraVe</p>
-    <a href="product-cerave-am.html">View</a>
-  </div>
-
-  <!-- ================= THE ORDINARY ================= -->
-  <div class="card">
-    <img src="images/ordinary-niacinamide.jpg">
-    <h4>Niacinamide 10% + Zinc</h4>
-    <span>€12</span>
-    <p>The Ordinary</p>
-    <a href="product-ordinary-niacinamide.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/ordinary-ha.jpg">
-    <h4>Hyaluronic Acid 2% + B5</h4>
-    <span>€13</span>
-    <p>The Ordinary</p>
-    <a href="product-ordinary-ha.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/ordinary-peeling.jpg">
-    <h4>AHA 30% + BHA 2%</h4>
-    <span>€10</span>
-    <p>The Ordinary</p>
-    <a href="product-ordinary-peeling.html">View</a>
-  </div>
-
-  <div class="card">
-    <img src="images/ordinary-retinol.jpg">
-    <h4>Retinol 0.5% in Squalane</h4>
-    <span>€14</span>
-    <p>The Ordinary</p>
-    <a href="product-ordinary-retinol.html">View</a>
-  </div>
-
-  <!-- ================= EXTRA PRODUCTS ================= -->
-
-<div class="card">
-  <img src="images/cerave-blemish.jpg">
-  <h4>Blemish Control Cleanser</h4>
-  <span>€18</span>
-  <p>CeraVe</p>
-  <a href="product-cerave-blemish.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/cerave-retinol.jpg">
-  <h4>Resurfacing Retinol Serum</h4>
-  <span>€25</span>
-  <p>CeraVe</p>
-  <a href="product-cerave-retinol.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/anua-txa.jpg">
-  <h4>TXA Dark Spot Serum</h4>
-  <span>€24</span>
-  <p>ANUA</p>
-  <a href="product-anua-txa.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/cosrx-bha.jpg">
-  <h4>BHA Blackhead Power Liquid</h4>
-  <span>€23</span>
-  <p>COSRX</p>
-  <a href="product-cosrx-bha.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/cosrx-essence.jpg">
-  <h4>Advanced Snail 96 Essence</h4>
-  <span>€25</span>
-  <p>COSRX</p>
-  <a href="product-cosrx-essence.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/skin1004-sunscreen.jpg">
-  <h4>Centella Sun Serum SPF50+</h4>
-  <span>€20</span>
-  <p>SKIN1004</p>
-  <a href="product-skin1004-sunscreen.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/somebymi-miracle.jpg">
-  <h4>30 Days Miracle Toner</h4>
-  <span>€19</span>
-  <p>Some By Mi</p>
-  <a href="product-somebymi-miracle.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/theordinary-azelaic.jpg">
-  <h4>Azelaic Acid 10%</h4>
-  <span>€12</span>
-  <p>The Ordinary</p>
-  <a href="product-ordinary-azelaic.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/klairs-toner.jpg">
-  <h4>Supple Preparation Toner</h4>
-  <span>€20</span>
-  <p>Klairs</p>
-  <a href="product-klairs-toner.html">View</a>
-</div>
-
-<div class="card">
-  <img src="images/isntree-ha.jpg">
-  <h4>Hyaluronic Acid Toner Plus</h4>
-  <span>€21</span>
-  <p>Isntree</p>
-  <a href="product-isntree-ha.html">View</a>
-</div>
 
 </div>
 
