@@ -1,10 +1,10 @@
-body {
+                                                                                                                                                              body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: #D6ECFA;
 }
 
-/* TOP BAR */
+
 .top-bar {
   background: #0f172a;
   color: white;
@@ -32,7 +32,6 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-/* HEADER (CENTER FIX) */
 .header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -45,7 +44,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-/* SEARCH */
 .search-wrapper {
   position: relative;
   width: 180px;
@@ -67,7 +65,7 @@ body {
   background: transparent;
 }
 
-/* SUGGESTIONS */
+
 .suggestions {
   position: absolute;
   top: 42px;
@@ -96,7 +94,7 @@ body {
   background: yellow;
 }
 
-/* LOGO */
+
 .logo {
   justify-self: center;
   display: flex;
@@ -111,7 +109,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ICONS RIGHT */
+
 .icons-right {
   justify-self: end;
   display: flex;
@@ -119,7 +117,7 @@ body {
   align-items: center;
 }
 
-/* ICON ITEM */
+
 .icon-item {
   cursor: pointer;
   display: flex;
@@ -129,7 +127,7 @@ body {
   transition: 0.2s;
 }
 
-/* ❤️ WISHLIST FIX */
+
 .icon-item.wishlist {
   color: red;
   font-size: 18px;
@@ -139,7 +137,7 @@ body {
   opacity: 0.6;
 }
 
-/* MENU */
+
 .menu {
   display: flex;
   gap: 20px;
@@ -156,7 +154,7 @@ body {
   color: #4da6ff;
 }
 
-/* DROPDOWN */
+
 .menu-item {
   position: relative;
 }
@@ -173,7 +171,7 @@ body {
   display: block;
 }
 
-/* HERO */
+
 .hero {
   height: 300px;
   display: flex;
@@ -182,7 +180,7 @@ body {
   text-align: center;
 }
 
-/* PRODUCTS */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -202,7 +200,7 @@ body {
   transform: scale(1.05);
 }
 
-/* IMAGES */
+
 .imgcleansers,
 .imgwash,
 .imgmoist,
@@ -213,7 +211,6 @@ body {
   border-radius: 10px;
 }
 
-/* HEART */
 .heart {
   position: absolute;
   top: 10px;
@@ -222,7 +219,7 @@ body {
   font-size: 18px;
 }
 
-/* BUTTON */
+
 button {
   margin-top: 10px;
   width: 100%;
@@ -234,7 +231,7 @@ button {
   cursor: pointer;
 }
 
-/* MOBILE */
+
 .hamburger {
   display: none;
   font-size: 25px;
