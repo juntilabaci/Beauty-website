@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ - Solavie</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+  background: #f8f8f8;
+}
+
+.faq-container {
+  padding: 60px;
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 15px;
+}
+
+.faq-container h1 {
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  background: #d6ecfa;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.faq-question:hover {
+  background: #c2e4f7;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  line-height: 1.6;
+  border: 1px solid #eee;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">Solavie</a>
+  </div>
+</header>
+
+<section class="faq-container">
+
+<h1>FAQ</h1>
+
+<div class="faq-item">
+  <div class="faq-question" onclick="toggleFAQ(this)">
+    A mund te kthehet ose nderrohet nje produkt me nje tjeter ?
+  </div>
+  <div class="faq-answer">
+    Per arsye te sigurise te klientit nuk lejohet kthimi apo nderrimi i produkteve.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question" onclick="toggleFAQ(this)">
+    Kam nevoje per nje rutine skincare, a mund te me ndihmoni ?
+  </div>
+  <div class="faq-answer">
+    Per sugjerime profesionale sipas tipologjise dhe problematikave te lekures tuaj ju duhet te kontaktoni ne instagram ne inbox tek kfarma.al dhe aty gjeni ndihme nga stafi pergjegjes.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question" onclick="toggleFAQ(this)">
+    Pse po vonohet porosia?
+  </div>
+  <div class="faq-answer">
+    Nese porosia juaj eshte vonuar me shume se 72h ju lutem verifikoni numrin tuaj te telefonit nese eshte i sakte dhe gjithashtu nese porosia juaj eshte perfunduar dhe keni marre emailin e konfirmimit. Kontaktoni me stafin neqoftese te dyja me lart jane ne rregull.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question" onclick="toggleFAQ(this)">
+    Si mund te anulloj rezervimin e Skin Testit?
+  </div>
+  <div class="faq-answer">
+    Futuni tek llogaria juaj tek menu Skin Test. Aty do ju shfaqet lista e rezevimieve qe keni bere dhe nje opsion ku mund ta anuloni.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question" onclick="toggleFAQ(this)">
+    Si mund te bej nje rezervim per Skin Test?
+  </div>
+  <div class="faq-answer">
+    1. Tek faqja Skin Test ndodhet nje kalendar dhe nje liste oraresh te cilat jane te klikueshme nese orari apo dita qe ju zgjidhni eshte e lire.
+  </div>
+</div>
+
+</section>
+
+<script>
+function toggleFAQ(el) {
+  let answer = el.nextElementSibling;
+
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
+  } else {
+    answer.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
