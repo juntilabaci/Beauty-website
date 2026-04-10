@@ -118,3 +118,31 @@ function openFav() {
   let favs = document.querySelectorAll(".heart.active").length;
   alert("Wishlist items: " + favs);
 }
+
+function subscribe() {
+  let email = document.getElementById("newsletterEmail").value;
+
+  if (email === "" || !email.includes("@")) {
+    alert("Shkruaj një email të saktë!");
+    return;
+  }
+
+  let emails = JSON.parse(localStorage.getItem("emails")) || [];
+  emails.push(email);
+  localStorage.setItem("emails", JSON.stringify(emails));
+
+  alert("U regjistrove me sukses!");
+  document.getElementById("newsletterEmail").value = "";
+}
+
+
+document.querySelectorAll(".footer-links a").forEach(link => {
+  link.addEventListener("click", function(e) {
+
+    if (this.getAttribute("href") === "#") {
+      e.preventDefault();
+      alert(this.innerText + " do vijë së shpejti!");
+    }
+
+  });
+});
