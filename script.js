@@ -1,37 +1,149 @@
-let cart = 0;
 let cartItems = [];
+let wishlist = [];
 
-
+/* ================= CART ================= */
 function addToCart(name, price) {
-  cart++;
   cartItems.push({ name, price });
 
-  document.getElementById("cartCount").innerText = cart;
+  let cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.innerText = cartItems.length;
+  }
 }
 
+/* ================= CART FROM CARD (SHOP) ================= */
+function addToCartFromCard(btn) {
+  let card = btn.closest(".card") || btn.parentElement;
 
+  let name =
+    card.querySelector("h3")?.innerText ||
+    card.querySelector("h4")?.innerText;
+
+  let priceText =
+    card.querySelector("span")?.innerText ||
+    card.querySelector("p")?.innerText;
+
+  let price = parseFloat(priceText?.replace("€", ""));
+
+  if (!name || isNaN(price)) return;
+
+  cartItems.push({ name, price });
+
+  let cartCount = document.getElementById("cartCount");
+  if (cartCount) {
+    cartCount.innerText = cartItems.length;
+  }
+}
+
+/* ================= OPEN CART ================= */
+function openCart() {
+  let table = document.getElementById("cartTable");
+  let total = 0;
+
+  if (!table) return;
+
+  table.innerHTML = "";
+
+  if (cartItems.length === 0) {
+    table.innerHTML = "<tr><td>Shporta është bosh</td></tr>";
+  } else {
+    cartItems.forEach(item => {
+      total += item.price;
+
+      table.innerHTML += `
+        <tr>
+          <td>${item.name}</td>
+          <td>€${item.price}</td>
+        </tr>
+      `;
+    });
+  }
+
+  let totalEl = document.getElementById("cartTotal");
+  if (totalEl) totalEl.innerText = "Total: €" + total;
+
+  let modal = document.getElementById("cartModal");
+  if (modal) modal.style.display = "flex";
+}
+
+function closeCart() {
+  let modal = document.getElementById("cartModal");
+  if (modal) modal.style.display = "none";
+}
+
+/* ================= WISHLIST ================= */
 function toggleHeart(el) {
+  let card = el.closest(".card") || el.parentElement;
+
+  let name =
+    card.querySelector("h3")?.innerText ||
+    card.querySelector("h4")?.innerText;
+
+  if (!name) return;
+
   el.classList.toggle("active");
 
   if (el.classList.contains("active")) {
     el.innerText = "❤️";
+    if (!wishlist.includes(name)) wishlist.push(name);
   } else {
     el.innerText = "♡";
+    wishlist = wishlist.filter(p => p !== name);
   }
 }
 
+/* ================= OPEN WISHLIST ================= */
+function openFav() {
+  let table = document.getElementById("wishlistTable");
+  if (!table) return;
 
+  table.innerHTML = "";
+
+  if (wishlist.length === 0) {
+    table.innerHTML = "<tr><td>Wishlist është bosh</td></tr>";
+  } else {
+    wishlist.forEach(item => {
+      table.innerHTML += `<tr><td>${item}</td></tr>`;
+    });
+  }
+
+  let modal = document.getElementById("wishlistModal");
+  if (modal) modal.style.display = "flex";
+}
+
+function closeWishlist() {
+  let modal = document.getElementById("wishlistModal");
+  if (modal) modal.style.display = "none";
+}
+
+/* ================= LOGIN ================= */
+function openLogin() {
+  document.getElementById("loginModal").style.display = "flex";
+}
+
+function closeLogin() {
+  document.getElementById("loginModal").style.display = "none";
+}
+
+/* ================= PRODUCTS ================= */
+let products = Array.from(document.querySelectorAll(".product"));
+
+function filterBrand(brand) {
+  products.forEach(p => {
+    p.style.display =
+      brand === "all" || p.dataset.brand === brand
+        ? "block"
+        : "none";
+  });
+}
+
+/* ================= SEARCH ================= */
 const searchInput = document.getElementById("searchInput");
 const suggestionsBox = document.getElementById("suggestions");
 
-let products = Array.from(document.querySelectorAll(".product"));
-
-function highlight(text, match) {
-  let regex = new RegExp(match, "gi");
-  return text.replace(regex, m => `<span class="highlight">${m}</span>`);
-}
-
 function searchEngine(value) {
+  if (!suggestionsBox) return;
+
   suggestionsBox.innerHTML = "";
 
   if (!value) {
@@ -43,28 +155,17 @@ function searchEngine(value) {
     p.dataset.name.toLowerCase().includes(value.toLowerCase())
   );
 
-  if (results.length === 0) {
-    suggestionsBox.innerHTML = `<div class="suggestion-item">No results found</div>`;
-    suggestionsBox.style.display = "block";
-    return;
-  }
-
   results.forEach(p => {
-    let name = p.dataset.name;
-    let price = p.dataset.price;
-
     let div = document.createElement("div");
     div.className = "suggestion-item";
 
     div.innerHTML = `
-      <strong>${highlight(name, value)}</strong><br>
-      <small>€${price}</small>
+      <strong>${p.dataset.name}</strong><br>
+      <small>€${p.dataset.price}</small>
     `;
 
     div.onclick = () => {
-      p.scrollIntoView({ behavior: "smooth", block: "center" });
-      p.style.border = "2px solid #4da6ff";
-      setTimeout(() => p.style.border = "none", 1500);
+      p.scrollIntoView({ behavior: "smooth" });
       suggestionsBox.style.display = "none";
     };
 
@@ -74,121 +175,13 @@ function searchEngine(value) {
   suggestionsBox.style.display = "block";
 }
 
-
-function debounce(fn, delay) {
-  let timer;
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
+if (searchInput) {
+  searchInput.addEventListener("keyup", e => searchEngine(e.target.value));
 }
 
-searchInput.addEventListener("keyup", debounce(function () {
-  searchEngine(this.value);
-}, 150));
-
-
-document.addEventListener("click", function(e){
-  if (!e.target.closest(".search-wrapper")) {
-    suggestionsBox.style.display = "none";
+/* ================= CLOSE MODALS ================= */
+window.onclick = function (e) {
+  if (e.target.classList.contains("modal")) {
+    e.target.style.display = "none";
   }
-});
-
-
-function filterBrand(brand) {
-  products.forEach(p => {
-    if (brand === "all" || p.dataset.brand === brand) {
-      p.style.display = "block";
-    } else {
-      p.style.display = "none";
-    }
-  });
-}
-
-
-function toggleMenu() {
-  document.querySelector(".menu").classList.toggle("active");
-}
-
-function openCart() {
-  alert("Cart items: " + cartItems.length);
-}
-
-function openFav() {
-  let favs = document.querySelectorAll(".heart.active").length;
-  alert("Wishlist items: " + favs);
-}
-
-function subscribe() {
-  let email = document.getElementById("newsletterEmail").value;
-
-  if (email === "" || !email.includes("@")) {
-    alert("Shkruaj një email të saktë!");
-    return;
-  }
-
-  localStorage.setItem("tempEmail", email);
-
-  window.location.href = "register.html";
-}
-
-
-document.querySelectorAll(".footer-links a").forEach(link => {
-  link.addEventListener("click", function(e) {
-
-    if (this.getAttribute("href") === "#") {
-      e.preventDefault();
-      alert(this.innerText + " do vijë së shpejti!");
-    }
-
-  });
-});
-function openLogin(){
-  document.getElementById("loginModal").style.display="flex";
-}
-
-function closeLogin(){
-  document.getElementById("loginModal").style.display="none";
-}
-
-/* ===== WISHLIST ===== */
-let wishlist = [];
-
-function toggleHeart(el){
-  el.classList.toggle("active");
-
-  let product = el.parentElement.querySelector("h3").innerText;
-
-  if(el.classList.contains("active")){
-    el.innerText = "❤️";
-    wishlist.push(product);
-  } else {
-    el.innerText = "♡";
-    wishlist = wishlist.filter(p => p !== product);
-  }
-}
-
-function openFav(){
-  let table = document.getElementById("wishlistTable");
-  table.innerHTML = "";
-
-  if(wishlist.length === 0){
-    table.innerHTML = "<tr><td>Wishlist është bosh</td></tr>";
-  } else {
-    wishlist.forEach(item=>{
-      table.innerHTML += `<tr><td>${item}</td></tr>`;
-    });
-  }
-
-  document.getElementById("wishlistModal").style.display="flex";
-}
-
-function closeWishlist(){
-  document.getElementById("wishlistModal").style.display="none";
-}
-
-window.onclick = function(e){
-  if(e.target.classList.contains("modal")){
-    e.target.style.display="none";
-  }
-}
+};

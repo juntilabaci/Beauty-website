@@ -395,3 +395,11 @@ button {
   background:#4da6ff;
   transform: scale(1.08);
 }
+#cartTable{
+  width:100%;
+  margin-top:10px;
+}
+#cartTable td{
+  padding:8px;
+  border-bottom:1px solid #ddd;
+}
