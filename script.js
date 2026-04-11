@@ -143,3 +143,52 @@ document.querySelectorAll(".footer-links a").forEach(link => {
 
   });
 });
+function openLogin(){
+  document.getElementById("loginModal").style.display="flex";
+}
+
+function closeLogin(){
+  document.getElementById("loginModal").style.display="none";
+}
+
+/* ===== WISHLIST ===== */
+let wishlist = [];
+
+function toggleHeart(el){
+  el.classList.toggle("active");
+
+  let product = el.parentElement.querySelector("h3").innerText;
+
+  if(el.classList.contains("active")){
+    el.innerText = "❤️";
+    wishlist.push(product);
+  } else {
+    el.innerText = "♡";
+    wishlist = wishlist.filter(p => p !== product);
+  }
+}
+
+function openFav(){
+  let table = document.getElementById("wishlistTable");
+  table.innerHTML = "";
+
+  if(wishlist.length === 0){
+    table.innerHTML = "<tr><td>Wishlist është bosh</td></tr>";
+  } else {
+    wishlist.forEach(item=>{
+      table.innerHTML += `<tr><td>${item}</td></tr>`;
+    });
+  }
+
+  document.getElementById("wishlistModal").style.display="flex";
+}
+
+function closeWishlist(){
+  document.getElementById("wishlistModal").style.display="none";
+}
+
+window.onclick = function(e){
+  if(e.target.classList.contains("modal")){
+    e.target.style.display="none";
+  }
+}
