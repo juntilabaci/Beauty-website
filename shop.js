@@ -1,40 +1,20 @@
+
 let cartItems = [];
 let wishlist = [];
 
 /* ================= CART ================= */
-function updateCartCount() {
-  let cartCount = document.getElementById("cart-count");
-  if (cartCount) {
-    cartCount.innerText = cartItems.length;
-  }
-}
 
 function addToCart(name, price) {
   cartItems.push({ name, price });
+  alert(name + " u shtua në shportë!");
   updateCartCount();
 }
 
-/* ================= CART FROM CARD ================= */
-function addToCartFromCard(btn) {
-  let card = btn.closest(".card") || btn.parentElement;
-
-  let name =
-    card.querySelector("h3")?.innerText ||
-    card.querySelector("h4")?.innerText;
-
-  let priceText =
-    card.querySelector("span")?.innerText ||
-    card.querySelector("p")?.innerText;
-
-  let price = parseFloat(priceText?.replace("€", ""));
-
-  if (!name || isNaN(price)) return;
-
-  cartItems.push({ name, price });
-  updateCartCount();
+function updateCartCount() {
+  const el = document.getElementById("cart-count");
+  if (!el) return;
+  el.innerText = cartItems.length;
 }
-
-/* ================= OPEN CART ================= */
 function openCart() {
   let table = document.getElementById("cartTable");
   let total = 0;
@@ -62,21 +42,22 @@ function openCart() {
   if (totalEl) totalEl.innerText = "Total: €" + total;
 
   let modal = document.getElementById("cartModal");
-  if (modal) modal.classList.add("show"); // ✅ FIX
+  if (modal) modal.style.display = "flex";
 }
+
 
 function closeCart() {
-  let modal = document.getElementById("cartModal");
-  if (modal) modal.classList.remove("show"); // ✅ FIX
+  const modal = document.getElementById("cartModal");
+  if (modal) modal.style.display = "none";
 }
-
 /* ================= WISHLIST ================= */
+
 function toggleHeart(el) {
-  let card = el.closest(".card") || el.parentElement;
+  let card = el.closest(".card");
 
   let name =
-    card.querySelector("h3")?.innerText ||
-    card.querySelector("h4")?.innerText;
+    card?.querySelector("h3")?.innerText ||
+    card?.querySelector("h4")?.innerText;
 
   if (!name) return;
 
@@ -84,14 +65,25 @@ function toggleHeart(el) {
 
   if (el.classList.contains("active")) {
     el.innerText = "❤️";
-    if (!wishlist.includes(name)) wishlist.push(name);
+
+    if (!wishlist.includes(name)) {
+      wishlist.push(name);
+    }
+
   } else {
     el.innerText = "♡";
     wishlist = wishlist.filter(p => p !== name);
   }
+
+  updateWishCount();
 }
 
-/* ================= OPEN WISHLIST ================= */
+function updateWishCount() {
+  const el = document.getElementById("wish-count");
+  if (!el) return;
+  el.innerText = wishlist.length;
+}
+
 function openFav() {
   let table = document.getElementById("wishlistTable");
   if (!table) return;
@@ -107,25 +99,29 @@ function openFav() {
   }
 
   let modal = document.getElementById("wishlistModal");
-  if (modal) modal.classList.add("show"); // ✅ FIX
+  if (modal) modal.style.display = "flex";
 }
 
 function closeWishlist() {
   let modal = document.getElementById("wishlistModal");
-  if (modal) modal.classList.remove("show"); // ✅ FIX
+  if (modal) modal.style.display = "none";
 }
 
 /* ================= LOGIN ================= */
+
 function openLogin() {
-  document.getElementById("loginModal").classList.add("show");
+  const modal = document.getElementById("loginModal");
+  if (modal) modal.style.display = "flex";
 }
 
 function closeLogin() {
-  document.getElementById("loginModal").classList.remove("show");
+  const modal = document.getElementById("loginModal");
+  if (modal) modal.style.display = "none";
 }
 
-/* ================= PRODUCTS ================= */
-let products = Array.from(document.querySelectorAll(".product"));
+/* ================= PRODUCTS FILTER ================= */
+
+let products = Array.from(document.querySelectorAll(".card"));
 
 function filterBrand(brand) {
   products.forEach(p => {
@@ -137,6 +133,7 @@ function filterBrand(brand) {
 }
 
 /* ================= SEARCH ================= */
+
 const searchInput = document.getElementById("searchInput");
 const suggestionsBox = document.getElementById("suggestions");
 
@@ -151,7 +148,7 @@ function searchEngine(value) {
   }
 
   let results = products.filter(p =>
-    p.dataset.name.toLowerCase().includes(value.toLowerCase())
+    (p.dataset.name || "").toLowerCase().includes(value.toLowerCase())
   );
 
   results.forEach(p => {
@@ -159,8 +156,8 @@ function searchEngine(value) {
     div.className = "suggestion-item";
 
     div.innerHTML = `
-      <strong>${p.dataset.name}</strong><br>
-      <small>€${p.dataset.price}</small>
+      <strong>${p.dataset.name || ""}</strong><br>
+      <small>€${p.dataset.price || ""}</small>
     `;
 
     div.onclick = () => {
@@ -178,8 +175,17 @@ if (searchInput) {
   searchInput.addEventListener("keyup", e => searchEngine(e.target.value));
 }
 
+/* ================= CLICK OUTSIDE MODAL ================= */
+
 window.onclick = function (e) {
   if (e.target.classList.contains("modal")) {
-    e.target.classList.remove("show");
+    e.target.style.display = "none";
   }
 };
+
+/* ================= INIT ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  updateCartCount();
+  updateWishCount();
+});
