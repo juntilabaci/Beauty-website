@@ -13,7 +13,7 @@
 
 <body>
 
-
+<!-- TOP BAR -->
 <div class="top-bar">
   <div class="ticker">
     <span>Free Shipping in Albania • </span>
@@ -24,7 +24,7 @@
   </div>
 </div>
 
-
+<!-- HEADER -->
 <header class="header">
 
   <div class="search-box">
@@ -40,30 +40,57 @@
 
   <div class="icons-right">
 
-    <div class="icon-item" title="Wishlist">
-      <span style="font-size:20px; color:red;">❤️</span>
-    </div>
+ <div class="icons-right">
 
-    <div class="icon-item" title="Cart">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
-        <path d="M6 6h15l-1.5 9h-12z"/>
-        <path d="M6 6L5 3H2"/>
-        <circle cx="9" cy="20" r="1"/>
-        <circle cx="18" cy="20" r="1"/>
-      </svg>
-      <b>0</b>
-    </div>
-
-    <div class="icon-item">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
-        <circle cx="12" cy="8" r="4"/>
-        <path d="M4 20c2-4 14-4 16 0"/>
-      </svg>
-    </div>
-
+  <!-- ❤️ WISHLIST -->
+  <div id="wishlist-icon" class="icon-item" onclick="openFav()" title="Wishlist">
+    <span style="font-size:20px; color:red;">❤️</span>
+    <span id="wish-count">0</span>
   </div>
+
+  <!-- 🛒 CART -->
+  <div id="cart-icon" class="icon-item" onclick="openCart()" title="Cart">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
+      <path d="M6 6h15l-1.5 9h-12z"/>
+      <path d="M6 6L5 3H2"/>
+      <circle cx="9" cy="20" r="1"/>
+      <circle cx="18" cy="20" r="1"/>
+    </svg>
+    <b id="cart-count">0</b>
+  </div>
+
+</div>
+
 </header>
 
+<!-- ================= MODALS ================= -->
+<div id="cartModal">
+  <div class="modal-box">
+    <h3>🛒 Shporta</h3>
+
+    <table id="cartTable" width="100%"></table>
+
+    <h4 id="cartTotal">Total: €0</h4>
+
+    <button onclick="closeCart()">Mbyll</button>
+  </div>
+</div>
+
+<div id="wishlistModal">
+  <div class="modal-box">
+    <h3>❤️ Wishlist</h3>
+
+    <table id="wishlistTable" width="100%"></table>
+
+    <button onclick="closeWishlist()">Mbyll</button>
+  </div>
+</div>
+</div>
+
+<script src="shop.js"></script>
+
+</body>
+</html>
 
 <nav class="menu">
 
@@ -87,42 +114,64 @@
 
 </nav>
 
-
 <header class="shop-header">
   <h1>Shop Skincare</h1>
+  <div class="filters">
+  <select id="brandFilter">
+    <option value="all">All Brands</option>
+    <option value="cosrx">COSRX</option>
+    <option value="laneige">Laneige</option>
+    <option value="drjart">Dr.Jart+</option>
+  </select>
+
+  <select id="typeFilter">
+    <option value="all">All Types</option>
+    <option value="cleanser">Cleanser</option>
+    <option value="serum">Serum</option>
+    <option value="cream">Cream</option>
+  </select>
+
+  <select id="concernFilter">
+    <option value="all">All Concerns</option>
+    <option value="akne">Akne</option>
+    <option value="hiperpigmentim">Hiperpigmentim</option>
+    <option value="dehidratim">Dehidratim</option>
+    <option value="pore">Pore & Yndyrë</option>
+    <option value="rrudha">Rrudha</option>
+    <option value="rosacea">Rosacea</option>
+  </select>
+</div>
 </header>
 
-<div class="grid">
-
-  <div class="card">
-    <img src="images/Low pH Cleanser.webp">
-    <h4>Low pH Cleanser</h4>
-    <span>€12</span>
-    <p>COSRX</p>
-    <a href="product-cosrx-cleanser.html">View</a>
-    <button onclick="addToCart('Emri Produktit', 12)">Add to cart</button>
+<div class="grid"><div class="card" data-brand="cosrx" data-type="cleanser" data-concern="akne">
+  <img src="images/Low pH Cleanser.webp" alt="Low pH Cleanser">
+  <h4>Low pH Cleanser</h4>
+  <span>€12</span>
+  <p>COSRX</p>
+  <a href="product-cosrx-cleanser.html">View</a>
+  <button onclick="addToCart('Low pH Cleanser', 12)">Add to cart</button>
   <span class="heart" onclick="toggleHeart(this)">♡</span>
-  </div>
+</div>
 
-  <div class="card">
-    <img src="images/Snail Essence.webp" alt="">
-    <h4>Snail Essence</h4>
-    <span>€22</span>
-    <p>COSRX</p>
-    <a href="product-cosrx-snail.html">View</a>
-    <button onclick="addToCart('Emri Produktit', 12)">Add to cart</button>
+<div class="card" data-brand="cosrx" data-type="serum" data-concern="dehidratim">
+  <img src="images/Snail Essence.webp" alt="Snail Essence">
+  <h4>Snail Essence</h4>
+  <span>€22</span>
+  <p>COSRX</p>
+  <a href="product-cosrx-snail.html">View</a>
+  <button onclick="addToCart('Snail Essence', 22)">Add to cart</button>
   <span class="heart" onclick="toggleHeart(this)">♡</span>
-  </div>
+</div>
 
-  <div class="card">
-    <img src="images/BHA.webp">
-    <h4>AHA/BHA Toner</h4>
-    <span>€19</span>
-    <p>COSRX</p>
-    <a href="product-cosrx-toner.html">View</a>
-    <button onclick="addToCart('Emri Produktit', 12)">Add to cart</button>
-  <span class="heart" onclick="toggleHeart(this)">♡</span>
-  </div>
+<div class="card" data-brand="cosrx" data-type="toner" data-concern="akne">
+  <img src="images/BHA.webp" alt="AHA/BHA Toner">
+  <h4>AHA/BHA Toner</h4>
+  <span>€19</span>
+  <p>COSRX</p>
+  <a href="product-cosrx-toner.html">View</a>
+  <button onclick="addToCart('AHA/BHA Toner', 19)">Add to cart</button>
+ <span class="heart" onclick="toggleHeart(this)">♡</span>
+</div>
 
   <div class="card">
     <img src="images/Snail Cream.webp">
@@ -1195,6 +1244,91 @@
 </div>
 
 </div>
-<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const brandFilter = document.getElementById("brandFilter");
+  const typeFilter = document.getElementById("typeFilter");
+  const concernFilter = document.getElementById("concernFilter");
+
+  const products = document.querySelectorAll(".card");
+
+  function filterProducts() {
+    const brand = brandFilter ? brandFilter.value : "all";
+    const type = typeFilter ? typeFilter.value : "all";
+    const concern = concernFilter ? concernFilter.value : "all";
+
+    products.forEach(product => {
+      const pBrand = product.getAttribute("data-brand");
+      const pType = product.getAttribute("data-type");
+      const pConcern = product.getAttribute("data-concern");
+
+      if (
+        (brand === "all" || brand === pBrand) &&
+        (type === "all" || type === pType) &&
+        (concern === "all" || concern === pConcern)
+      ) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+
+  if (brandFilter) brandFilter.addEventListener("change", filterProducts);
+  if (typeFilter) typeFilter.addEventListener("change", filterProducts);
+  if (concernFilter) concernFilter.addEventListener("change", filterProducts);
+
+  /* ================= CART ================= */
+  const cartIcon = document.getElementById("cart-icon");
+  if (cartIcon) {
+    cartIcon.addEventListener("click", openCart);
+  }
+
+  /* ================= WISHLIST ================= */
+  const wishIcon = document.getElementById("wishlist-icon");
+  if (wishIcon) {
+    wishIcon.addEventListener("click", openFav);
+  }
+
+});
+</script>
+
+<!-- ICONS -->
+<div id="cartModal" class="modal">
+
+</div>
+
+<!-- CART MODAL -->
+<div id="cartModal">
+  <div class="modal-box">
+    <h3>🛒 Shporta</h3>
+
+    <table id="cartTable" width="100%"></table>
+
+    <h4 id="cartTotal">Total: €0</h4>
+
+    <button onclick="closeCart()">Mbyll</button>
+  </div>
+</div>
+
+<!-- WISHLIST MODAL -->
+<div id="wishlistModal">
+  <div class="modal-box">
+    <h3>❤️ Wishlist</h3>
+
+    <table id="wishlistTable" border="1" width="100%"></table>
+
+    <button onclick="closeWishlist()">Mbyll</button>
+  </div>
+</div>
+<div id="cartModal"></div>
+<div id="wishlistModal"></div>
+
+<table id="cartTable"></table>
+<table id="wishlistTable"></table>
+<span id="cart-count"></span>
+<span id="wish-count"></span>
+<script src="shop.js"></script>
 </body>
 </html>
