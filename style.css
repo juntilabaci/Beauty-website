@@ -4,7 +4,7 @@ body {
   background: #D6ECFA;
 }
 
-
+/* ================= TOP BAR ================= */
 .top-bar {
   background: linear-gradient(90deg, #0f172a, #111c33);
   color: white;
@@ -27,20 +27,9 @@ body {
   margin-right: 60px;
   font-size: 13px;
   letter-spacing: 0.5px;
-  color: white;
 }
 
-
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
+/* ================= HEADER ================= */
 .header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -85,7 +74,7 @@ body {
   max-height: 300px;
   overflow-y: auto;
   display: none;
-  z-index: 999;
+  z-index: 9999; /* FIX IMPORTANT */
 }
 
 .suggestion-item {
@@ -98,11 +87,7 @@ body {
   background: #f3f3f3;
 }
 
-.highlight {
-  background: yellow;
-}
-
-
+/* ================= LOGO ================= */
 .logo {
   justify-self: center;
   display: flex;
@@ -114,10 +99,9 @@ body {
   font-size: 36px;
   text-decoration: none;
   color: #000;
-  letter-spacing: 1px;
 }
 
-
+/* ================= ICONS ================= */
 .icons-right {
   justify-self: end;
   display: flex;
@@ -130,15 +114,11 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 14px;
-  transition: 0.2s;
+  position: relative;
+  z-index: 2000; /* FIX */
 }
 
-.icon-item:hover {
-  opacity: 0.6;
-}
-
-
+/* ================= MENU ================= */
 .menu {
   display: flex;
   gap: 20px;
@@ -171,7 +151,7 @@ body {
   display: block;
 }
 
-
+/* ================= HERO ================= */
 .hero {
   height: 300px;
   display: flex;
@@ -180,6 +160,16 @@ body {
   text-align: center;
 }
 
+.hero button {
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: #4da6ff;
+  transform: scale(1.08);
+}
+
+/* ================= PRODUCTS ================= */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -199,7 +189,6 @@ body {
   transform: scale(1.05);
 }
 
-
 .imgcleansers,
 .imgwash,
 .imgmoist,
@@ -210,7 +199,7 @@ body {
   border-radius: 10px;
 }
 
-
+/* ================= HEART ================= */
 .heart {
   position: absolute;
   top: 10px;
@@ -219,7 +208,7 @@ body {
   font-size: 18px;
 }
 
-
+/* ================= BUTTON ================= */
 button {
   margin-top: 10px;
   width: 100%;
@@ -231,28 +220,7 @@ button {
   cursor: pointer;
 }
 
-
-.hamburger {
-  display: none;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-
-@media (max-width: 900px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
+/* ================= FOOTER ================= */
 .footer {
   background: #0f172a;
   color: white;
@@ -268,14 +236,9 @@ button {
   padding-bottom: 20px;
 }
 
-.newsletter-text h3 {
-  margin: 0;
-}
-
 .newsletter-text p {
-  margin: 5px 0 0;
-  font-size: 14px;
   color: #ccc;
+  font-size: 14px;
 }
 
 .newsletter-form {
@@ -292,114 +255,56 @@ button {
 
 .newsletter-form button {
   background: #10b981;
-  border: none;
-  padding: 10px 20px;
-  color: white;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 🔥 FIX CRITICAL */
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
   cursor: pointer;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-top: 30px;
+/* ================= CART TABLE ================= */
+#cartTable {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.footer-brand h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.footer-links h4 {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  display: block;
-  text-decoration: none;
-  color: #ccc;
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.2);
-  margin-top: 30px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-}
-.modal{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.modal-content{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  width:320px;
-  text-align:center;
-}
-
-.modal-content input{
-  width:90%;
-  padding:8px;
-  margin:5px 0;
-  border:1px solid #ccc;
-  border-radius:8px;
-}
-
-.modal-content button{
-  width:100%;
-  margin-top:10px;
-  padding:8px;
-  border:none;
-  background:#4da6ff;
-  color:white;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.close{
-  float:right;
-  font-size:20px;
-  cursor:pointer;
-}
-.hero button{
-  transition: all 0.3s ease;
-}
-
-.hero button:hover{
-  background:#4da6ff;
-  transform: scale(1.08);
-}
-#cartTable{
-  width:100%;
-  margin-top:10px;
-}
-#cartTable td{
-  padding:8px;
-  border-bottom:1px solid #ddd;
+#cartTable td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
