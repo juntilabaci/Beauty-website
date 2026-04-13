@@ -3,7 +3,7 @@ let wishlist = [];
 
 /* ================= CART ================= */
 function updateCartCount() {
-  let cartCount = document.getElementById("cart-count");
+  let cartCount = document.getElementById("cart-count"); // FIX OK
   if (cartCount) {
     cartCount.innerText = cartItems.length;
   }
@@ -16,7 +16,7 @@ function addToCart(name, price) {
 
 /* ================= CART FROM CARD ================= */
 function addToCartFromCard(btn) {
-  let card = btn.closest(".card") || btn.parentElement;
+  let card = btn.closest(".product") || btn.parentElement; // FIX: product
 
   let name =
     card.querySelector("h3")?.innerText ||
@@ -62,17 +62,17 @@ function openCart() {
   if (totalEl) totalEl.innerText = "Total: €" + total;
 
   let modal = document.getElementById("cartModal");
-  if (modal) modal.classList.add("show"); // ✅ FIX
+  if (modal) modal.classList.add("show");
 }
 
 function closeCart() {
   let modal = document.getElementById("cartModal");
-  if (modal) modal.classList.remove("show"); // ✅ FIX
+  if (modal) modal.classList.remove("show");
 }
 
 /* ================= WISHLIST ================= */
 function toggleHeart(el) {
-  let card = el.closest(".card") || el.parentElement;
+  let card = el.closest(".product") || el.parentElement; // FIX: product
 
   let name =
     card.querySelector("h3")?.innerText ||
@@ -107,21 +107,23 @@ function openFav() {
   }
 
   let modal = document.getElementById("wishlistModal");
-  if (modal) modal.classList.add("show"); // ✅ FIX
+  if (modal) modal.classList.add("show");
 }
 
 function closeWishlist() {
   let modal = document.getElementById("wishlistModal");
-  if (modal) modal.classList.remove("show"); // ✅ FIX
+  if (modal) modal.classList.remove("show");
 }
 
 /* ================= LOGIN ================= */
 function openLogin() {
-  document.getElementById("loginModal").classList.add("show");
+  let modal = document.getElementById("loginModal");
+  if (modal) modal.classList.add("show");
 }
 
 function closeLogin() {
-  document.getElementById("loginModal").classList.remove("show");
+  let modal = document.getElementById("loginModal");
+  if (modal) modal.classList.remove("show");
 }
 
 /* ================= PRODUCTS ================= */
@@ -178,6 +180,7 @@ if (searchInput) {
   searchInput.addEventListener("keyup", e => searchEngine(e.target.value));
 }
 
+/* ================= CLOSE MODALS CLICK OUTSIDE ================= */
 window.onclick = function (e) {
   if (e.target.classList.contains("modal")) {
     e.target.classList.remove("show");

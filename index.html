@@ -47,7 +47,9 @@
         <circle cx="9" cy="20" r="1"/>
         <circle cx="18" cy="20" r="1"/>
       </svg>
-      <b id="cartCount">0</b>
+
+      <!-- FIX: ID e saktë -->
+      <b id="cart-count">0</b>
     </div>
 
     <div class="icon-item" title="Account" onclick="openLogin()">
@@ -129,8 +131,6 @@
 </div>
 </section>
 
-<script src="script.js"></script>
-
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeLogin()">&times;</span>
@@ -160,9 +160,7 @@
   </div>
 </div>
 
-
 <footer class="footer">
-
   <div class="newsletter">
     <div class="newsletter-text">
       <h3>Regjistrohu</h3>
@@ -170,8 +168,8 @@
     </div>
 
     <div class="newsletter-form">
-    <input type="email" id="newsletterEmail" placeholder="E-mail">
-    <button onclick="subscribe()">Regjistrohu!</button>
+      <input type="email" id="newsletterEmail" placeholder="E-mail">
+      <button onclick="subscribe()">Regjistrohu!</button>
     </div>
   </div>
 
@@ -181,7 +179,6 @@
       <h2>Solavie</h2>
       <p>
         Solavie sjell bukurinë moderne me produkte të kujdesit për lëkurën të zgjedhura me kujdes.
-        Ne besojmë në formulat e pastra, efektive dhe të sigurta për një lëkurë të shëndetshme dhe natyrale.
       </p>
     </div>
 
@@ -189,34 +186,15 @@
       <h4>Shërbimi i Klientit</h4>
       <a href="#">Llogaria ime</a>
       <a href="#">Porosi</a>
-      <a href="#">Kasa</a>
       <a href="#">Shporta</a>
-      <a href="#">Termat & Kushtet</a>
-      <a href="#">Politikat e Privatësisë</a>
-    </div>
-
-    <div class="footer-links">
-      <h4>Të tjera</h4>
-      <a href="loyalty.html">Programi i Besnikërisë</a>
-      <a href="faq.html">FAQ</a>
-      <a href="#">Gift Card</a>
-      <a href="#">Lista e Dëshirave</a>
-    </div>
-
-    <div class="footer-links">
-     <h4>Rreth Nesh</h4>
-     <a href="about.html">Rreth Nesh</a>
-     <a href="contact.html">Kontakt</a>
-     <a href="careers.html">Karriera</a>
-     <a href="blog.html">Blog</a>
     </div>
 
   </div>
+
   <div class="footer-bottom">
     <p>© 2026 Solavie. Të gjitha të drejtat e rezervuara.</p>
   </div>
-
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

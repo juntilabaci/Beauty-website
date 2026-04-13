@@ -1,6 +1,78 @@
-
 let cartItems = [];
 let wishlist = [];
+
+let products = [];
+let selectedBrand = "all";
+let selectedType = "all";
+let selectedConcern = "all";
+
+/* ================= INIT ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  updateCartCount();
+  updateWishCount();
+
+  // PRODUCTS
+  products = document.querySelectorAll(".card");
+
+  // CART ICON
+  const cartIcon = document.getElementById("cart-icon");
+  if (cartIcon) {
+    cartIcon.addEventListener("click", openCart);
+  }
+
+  // FILTERS
+  const brandFilter = document.getElementById("brandFilter");
+  const typeFilter = document.getElementById("typeFilter");
+  const concernFilter = document.getElementById("concernFilter");
+
+  if (brandFilter) {
+    brandFilter.addEventListener("change", e => filterBrand(e.target.value));
+  }
+
+  if (typeFilter) {
+    typeFilter.addEventListener("change", e => filterType(e.target.value));
+  }
+
+  if (concernFilter) {
+    concernFilter.addEventListener("change", e => filterConcern(e.target.value));
+  }
+
+});
+
+/* ================= FILTERS ================= */
+
+function filterBrand(value) {
+  selectedBrand = value.toLowerCase();
+  applyFilters();
+}
+
+function filterType(value) {
+  selectedType = value.toLowerCase();
+  applyFilters();
+}
+
+function filterConcern(value) {
+  selectedConcern = value.toLowerCase();
+  applyFilters();
+}
+
+function applyFilters() {
+  products.forEach(card => {
+
+    let brand = card.querySelector("p")?.innerText.toLowerCase() || "";
+    let type = card.dataset.type?.toLowerCase() || "";
+    let concern = card.dataset.concern?.toLowerCase() || "";
+
+    let show =
+      (selectedBrand === "all" || brand.includes(selectedBrand)) &&
+      (selectedType === "all" || type.includes(selectedType)) &&
+      (selectedConcern === "all" || concern.includes(selectedConcern));
+
+    card.style.display = show ? "" : "none";
+  });
+}
 
 /* ================= CART ================= */
 
@@ -10,11 +82,26 @@ function addToCart(name, price) {
   updateCartCount();
 }
 
+function addToCartFromCard(btn) {
+  let card = btn.closest(".card");
+
+  let name = card.querySelector("h4")?.innerText || "Produkt";
+  let priceText = card.querySelector("span")?.innerText || "€0";
+
+  let price = parseFloat(priceText.replace("€", ""));
+
+  cartItems.push({ name, price });
+
+  alert(name + " u shtua në shportë!");
+  updateCartCount();
+}
+
 function updateCartCount() {
   const el = document.getElementById("cart-count");
   if (!el) return;
   el.innerText = cartItems.length;
 }
+
 function openCart() {
   let table = document.getElementById("cartTable");
   let total = 0;
@@ -45,11 +132,11 @@ function openCart() {
   if (modal) modal.style.display = "flex";
 }
 
-
 function closeCart() {
   const modal = document.getElementById("cartModal");
   if (modal) modal.style.display = "none";
 }
+
 /* ================= WISHLIST ================= */
 
 function toggleHeart(el) {
@@ -65,11 +152,7 @@ function toggleHeart(el) {
 
   if (el.classList.contains("active")) {
     el.innerText = "❤️";
-
-    if (!wishlist.includes(name)) {
-      wishlist.push(name);
-    }
-
+    if (!wishlist.includes(name)) wishlist.push(name);
   } else {
     el.innerText = "♡";
     wishlist = wishlist.filter(p => p !== name);
@@ -119,19 +202,6 @@ function closeLogin() {
   if (modal) modal.style.display = "none";
 }
 
-/* ================= PRODUCTS FILTER ================= */
-
-let products = Array.from(document.querySelectorAll(".card"));
-
-function filterBrand(brand) {
-  products.forEach(p => {
-    p.style.display =
-      brand === "all" || p.dataset.brand === brand
-        ? "block"
-        : "none";
-  });
-}
-
 /* ================= SEARCH ================= */
 
 const searchInput = document.getElementById("searchInput");
@@ -147,8 +217,10 @@ function searchEngine(value) {
     return;
   }
 
-  let results = products.filter(p =>
-    (p.dataset.name || "").toLowerCase().includes(value.toLowerCase())
+  let results = Array.from(products).filter(p =>
+    (p.querySelector("h4")?.innerText || "")
+      .toLowerCase()
+      .includes(value.toLowerCase())
   );
 
   results.forEach(p => {
@@ -156,8 +228,8 @@ function searchEngine(value) {
     div.className = "suggestion-item";
 
     div.innerHTML = `
-      <strong>${p.dataset.name || ""}</strong><br>
-      <small>€${p.dataset.price || ""}</small>
+      <strong>${p.querySelector("h4")?.innerText || ""}</strong><br>
+      <small>${p.querySelector("span")?.innerText || ""}</small>
     `;
 
     div.onclick = () => {
@@ -175,17 +247,10 @@ if (searchInput) {
   searchInput.addEventListener("keyup", e => searchEngine(e.target.value));
 }
 
-/* ================= CLICK OUTSIDE MODAL ================= */
+/* ================= OUTSIDE CLICK ================= */
 
 window.onclick = function (e) {
   if (e.target.classList.contains("modal")) {
     e.target.style.display = "none";
   }
 };
-
-/* ================= INIT ================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-  updateCartCount();
-  updateWishCount();
-});
