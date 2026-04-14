@@ -1,256 +1,151 @@
-let cartItems = [];
-let wishlist = [];
+const grid = document.getElementById("productGrid");
 
 let products = [];
-let selectedBrand = "all";
-let selectedType = "all";
-let selectedConcern = "all";
+let cart = [];
+let wishlist = [];
 
-/* ================= INIT ================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  updateCartCount();
-  updateWishCount();
-
-  // PRODUCTS
-  products = document.querySelectorAll(".card");
-
-  // CART ICON
-  const cartIcon = document.getElementById("cart-icon");
-  if (cartIcon) {
-    cartIcon.addEventListener("click", openCart);
-  }
-
-  // FILTERS
-  const brandFilter = document.getElementById("brandFilter");
-  const typeFilter = document.getElementById("typeFilter");
-  const concernFilter = document.getElementById("concernFilter");
-
-  if (brandFilter) {
-    brandFilter.addEventListener("change", e => filterBrand(e.target.value));
-  }
-
-  if (typeFilter) {
-    typeFilter.addEventListener("change", e => filterType(e.target.value));
-  }
-
-  if (concernFilter) {
-    concernFilter.addEventListener("change", e => filterConcern(e.target.value));
-  }
-
+document.addEventListener("DOMContentLoaded", () => {
+  loadProducts();
 });
 
-/* ================= FILTERS ================= */
+/* ================= LOAD PRODUCTS ================= */
+async function loadProducts() {
+  try {
+    const res = await fetch("http://localhost:3000/products");
 
-function filterBrand(value) {
-  selectedBrand = value.toLowerCase();
-  applyFilters();
+    if (!res.ok) {
+      console.log("Server error:", res.status);
+      return;
+    }
+
+    const data = await res.json();
+
+    products = Array.isArray(data) ? data : (data.products || []);
+
+    render(products);
+
+  } catch (err) {
+    console.log("FETCH ERROR:", err);
+  }
 }
 
-function filterType(value) {
-  selectedType = value.toLowerCase();
-  applyFilters();
-}
+/* ================= IMAGES BY TYPE ================= */
+const typeImages = {
+  cleanser: [
+    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad7a7e?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80"
+  ],
+  serum: [
+    "https://images.unsplash.com/photo-1612810436541-336d7c7a1b4b?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad7a7e?auto=format&fit=crop&w=600&q=80"
+  ],
+  cream: [
+    "https://images.unsplash.com/photo-1612810436541-336d7c7a1b4b?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=600&q=80"
+  ],
+  toner: [
+    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad7a7e?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1612810436541-336d7c7a1b4b?auto=format&fit=crop&w=600&q=80"
+  ]
+};
 
-function filterConcern(value) {
-  selectedConcern = value.toLowerCase();
-  applyFilters();
-}
+/* ================= GET IMAGE ================= */
+function getImage(type, id) {
+  const images = typeImages[type];
 
-function applyFilters() {
-  products.forEach(card => {
-
-    let brand = card.querySelector("p")?.innerText.toLowerCase() || "";
-    let type = card.dataset.type?.toLowerCase() || "";
-    let concern = card.dataset.concern?.toLowerCase() || "";
-
-    let show =
-      (selectedBrand === "all" || brand.includes(selectedBrand)) &&
-      (selectedType === "all" || type.includes(selectedType)) &&
-      (selectedConcern === "all" || concern.includes(selectedConcern));
-
-    card.style.display = show ? "" : "none";
-  });
-}
-
-/* ================= CART ================= */
-
-function addToCart(name, price) {
-  cartItems.push({ name, price });
-  alert(name + " u shtua në shportë!");
-  updateCartCount();
-}
-
-function addToCartFromCard(btn) {
-  let card = btn.closest(".card");
-
-  let name = card.querySelector("h4")?.innerText || "Produkt";
-  let priceText = card.querySelector("span")?.innerText || "€0";
-
-  let price = parseFloat(priceText.replace("€", ""));
-
-  cartItems.push({ name, price });
-
-  alert(name + " u shtua në shportë!");
-  updateCartCount();
-}
-
-function updateCartCount() {
-  const el = document.getElementById("cart-count");
-  if (!el) return;
-  el.innerText = cartItems.length;
-}
-
-function openCart() {
-  let table = document.getElementById("cartTable");
-  let total = 0;
-
-  if (!table) return;
-
-  table.innerHTML = "";
-
-  if (cartItems.length === 0) {
-    table.innerHTML = "<tr><td>Shporta është bosh</td></tr>";
-  } else {
-    cartItems.forEach(item => {
-      total += item.price;
-
-      table.innerHTML += `
-        <tr>
-          <td>${item.name}</td>
-          <td>€${item.price}</td>
-        </tr>
-      `;
-    });
+  if (!images) {
+    return "https://via.placeholder.com/600x600?text=No+Image";
   }
 
-  let totalEl = document.getElementById("cartTotal");
-  if (totalEl) totalEl.innerText = "Total: €" + total;
-
-  let modal = document.getElementById("cartModal");
-  if (modal) modal.style.display = "flex";
+  return images[id % images.length];
 }
 
-function closeCart() {
-  const modal = document.getElementById("cartModal");
-  if (modal) modal.style.display = "none";
-}
+/* ================= RENDER ================= */
+function render(list) {
+  const grid = document.getElementById("productGrid");
 
-/* ================= WISHLIST ================= */
+  if (!grid) return;
 
-function toggleHeart(el) {
-  let card = el.closest(".card");
-
-  let name =
-    card?.querySelector("h3")?.innerText ||
-    card?.querySelector("h4")?.innerText;
-
-  if (!name) return;
-
-  el.classList.toggle("active");
-
-  if (el.classList.contains("active")) {
-    el.innerText = "❤️";
-    if (!wishlist.includes(name)) wishlist.push(name);
-  } else {
-    el.innerText = "♡";
-    wishlist = wishlist.filter(p => p !== name);
-  }
-
-  updateWishCount();
-}
-
-function updateWishCount() {
-  const el = document.getElementById("wish-count");
-  if (!el) return;
-  el.innerText = wishlist.length;
-}
-
-function openFav() {
-  let table = document.getElementById("wishlistTable");
-  if (!table) return;
-
-  table.innerHTML = "";
-
-  if (wishlist.length === 0) {
-    table.innerHTML = "<tr><td>Wishlist është bosh</td></tr>";
-  } else {
-    wishlist.forEach(item => {
-      table.innerHTML += `<tr><td>${item}</td></tr>`;
-    });
-  }
-
-  let modal = document.getElementById("wishlistModal");
-  if (modal) modal.style.display = "flex";
-}
-
-function closeWishlist() {
-  let modal = document.getElementById("wishlistModal");
-  if (modal) modal.style.display = "none";
-}
-
-/* ================= LOGIN ================= */
-
-function openLogin() {
-  const modal = document.getElementById("loginModal");
-  if (modal) modal.style.display = "flex";
-}
-
-function closeLogin() {
-  const modal = document.getElementById("loginModal");
-  if (modal) modal.style.display = "none";
-}
-
-/* ================= SEARCH ================= */
-
-const searchInput = document.getElementById("searchInput");
-const suggestionsBox = document.getElementById("suggestions");
-
-function searchEngine(value) {
-  if (!suggestionsBox) return;
-
-  suggestionsBox.innerHTML = "";
-
-  if (!value) {
-    suggestionsBox.style.display = "none";
+  if (!Array.isArray(list) || list.length === 0) {
+    grid.innerHTML = "<p>No products found</p>";
     return;
   }
 
-  let results = Array.from(products).filter(p =>
-    (p.querySelector("h4")?.innerText || "")
-      .toLowerCase()
-      .includes(value.toLowerCase())
-  );
+  let html = "";
 
-  results.forEach(p => {
-    let div = document.createElement("div");
-    div.className = "suggestion-item";
+  list.forEach(p => {
+    html += `
+      <div class="card">
 
-    div.innerHTML = `
-      <strong>${p.querySelector("h4")?.innerText || ""}</strong><br>
-      <small>${p.querySelector("span")?.innerText || ""}</small>
+        <img
+          src="${getImage(p.type, p.id)}"
+          onerror="this.src='https://via.placeholder.com/600x600?text=No+Image'"
+          onclick="openModal('${p.id}')"
+        >
+
+        <h4>${p.name}</h4>
+        <p>${p.desc}</p>
+        <span>€${Number(p.price).toFixed(2)}</span>
+
+        <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+          <button onclick="addToCart('${p.id}')">Add to Cart</button>
+          <button onclick="addToWishlist('${p.id}')">❤</button>
+        </div>
+
+      </div>
     `;
-
-    div.onclick = () => {
-      p.scrollIntoView({ behavior: "smooth" });
-      suggestionsBox.style.display = "none";
-    };
-
-    suggestionsBox.appendChild(div);
   });
 
-  suggestionsBox.style.display = "block";
+  grid.innerHTML = html;
 }
 
-if (searchInput) {
-  searchInput.addEventListener("keyup", e => searchEngine(e.target.value));
+/* ================= CART ================= */
+function addToCart(id) {
+  const item = products.find(p => String(p.id) === String(id));
+  if (!item) return;
+
+  cart.push(item);
+
+  const counter = document.getElementById("cart-count");
+  if (counter) counter.innerText = cart.length;
 }
 
-/* ================= OUTSIDE CLICK ================= */
+/* ================= WISHLIST ================= */
+function addToWishlist(id) {
+  const item = products.find(p => String(p.id) === String(id));
+  if (!item) return;
 
+  if (!wishlist.some(p => String(p.id) === String(id))) {
+    wishlist.push(item);
+  }
+
+  alert("Added to wishlist ❤️");
+}
+
+/* ================= MODAL ================= */
+function openModal(id) {
+  const p = products.find(x => String(x.id) === String(id));
+  if (!p) return;
+
+  const modal = document.getElementById("modal");
+  if (!modal) return;
+
+  document.getElementById("modalImg").src = getImage(p.type, p.id);
+  document.getElementById("modalTitle").innerText = p.name;
+  document.getElementById("modalDesc").innerText = p.desc;
+  document.getElementById("modalPrice").innerText = "€" + Number(p.price).toFixed(2);
+
+  modal.style.display = "flex";
+}
+
+/* ================= CLOSE MODAL ================= */
 window.onclick = function (e) {
-  if (e.target.classList.contains("modal")) {
-    e.target.style.display = "none";
+  const modal = document.getElementById("modal");
+  if (modal && e.target === modal) {
+    modal.style.display = "none";
   }
 };
