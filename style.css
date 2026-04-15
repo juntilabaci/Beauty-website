@@ -538,14 +538,14 @@ button {
   color: #6b7280;
 }
 
-/* ================= BLOG HEADER ================= */
+
 .blog-header {
   justify-content: center;
   padding: 25px;
   border-bottom: 1px solid #eee;
 }
 
-/* LOGO LUXURY (fix për ty) */
+
 .luxury-logo a {
   font-family: 'Great Vibes', cursive;
   font-size: 36px;
@@ -553,7 +553,7 @@ button {
   text-decoration: none;
 }
 
-/* ================= HERO ================= */
+
 .blog-hero {
   position: relative;
   height: 60vh;
@@ -587,14 +587,14 @@ button {
   letter-spacing: 2px;
 }
 
-/* ================= BLOG ================= */
+
 .blog-container {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
 }
 
-/* CARD */
+
 .blog-card {
   display: flex;
   align-items: center;
@@ -606,13 +606,13 @@ button {
   flex-direction: row-reverse;
 }
 
-/* IMAGE */
+
 .blog-img {
   width: 50%;
   border-radius: 12px;
 }
 
-/* TEXT */
+
 .blog-text {
   width: 50%;
 }
@@ -628,7 +628,7 @@ button {
   color: #555;
 }
 
-/* MOBILE */
+
 @media (max-width: 768px) {
   .blog-card {
     flex-direction: column;
