@@ -374,3 +374,73 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+let loginModal;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loginModal = document.getElementById("loginModal");
+
+  if (loginModal) {
+    loginModal.addEventListener("click", (e) => {
+      if (e.target === loginModal) closeLogin();
+    });
+  }
+});
+
+function openLogin() {
+  if (!loginModal) return;
+  loginModal.classList.add("show");
+}
+
+function closeLogin() {
+  if (!loginModal) return;
+  loginModal.classList.remove("show");
+}
+
+function showMessage(text) {
+  const box = document.getElementById("messageBox");
+  const msg = document.getElementById("messageText");
+
+  msg.innerText = text;
+  box.classList.add("show");
+
+  setTimeout(() => {
+    box.classList.remove("show");
+  }, 2000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!loginModal) return;
+
+  const buttons = loginModal.querySelectorAll("button");
+
+  const loginBtn = buttons[0];
+  const registerBtn = buttons[1];
+
+  loginBtn.addEventListener("click", () => {
+    const user = document.getElementById("loginUser").value;
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPass").value;
+
+    if (!email || !pass) {
+      showMessage("Plotëso email dhe password!");
+      return;
+    }
+
+    showMessage(`Mirë se erdhe ${user || email} ✅`);
+    closeLogin();
+  });
+
+  registerBtn.addEventListener("click", () => {
+    const user = document.getElementById("loginUser").value;
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPass").value;
+
+    if (!user || !email || !pass) {
+      showMessage("Plotëso të gjitha fushat!");
+      return;
+    }
+
+    showMessage(`U regjistrua me sukses ${user} 🎉`);
+    closeLogin();
+  });
+});
