@@ -562,3 +562,50 @@ button {
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+.loyalty-container {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f5f7fb;
+}
+
+.loyalty-container h1 {
+  font-size: 40px;
+  color: #1e3a8a;
+}
+
+.loyalty-buttons {
+  margin-top: 20px;
+}
+
+.loyalty-buttons button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.join {
+  background: #f9a8d4;
+  color: white;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid #f9a8d4;
+  color: #f9a8d4;
+}
+
+.loyalty-sections {
+  padding: 40px;
+}
+
+.loyalty-card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
