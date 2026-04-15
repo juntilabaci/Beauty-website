@@ -119,7 +119,6 @@ function closeCart() {
   document.getElementById("cartModal").style.display = "none";
 }
 
-/* ===================== WISHLIST ===================== */
 function getWishlist() {
   return JSON.parse(localStorage.getItem("wishlist")) || [];
 }
@@ -214,88 +213,110 @@ function syncHearts() {
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const suggestionsBox = document.getElementById("suggestions");
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase().trim();
 
-  searchInput.addEventListener("input", () => {
-    const value = searchInput.value.toLowerCase().trim();
+  suggestionsBox.innerHTML = "";
 
-    suggestionsBox.innerHTML = "";
+  if (!value) {
+    suggestionsBox.style.display = "none";
+    renderProducts();
+    return;
+  }
 
-    if (!value) {
-      suggestionsBox.style.display = "none";
-      return;
-    }
+  const filtered = products.filter(p =>
+    (p.name || "").toLowerCase().includes(value) ||
+    (p.brand || "").toLowerCase().includes(value)
+  );
 
-    const filtered = products.filter(p =>
-      (p.name || "").toLowerCase().includes(value)
-    );
 
-    if (filtered.length === 0) {
-      suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
-      suggestionsBox.style.display = "block";
-      return;
-    }
-
+  if (filtered.length === 0) {
+    suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
+  } else {
     filtered.forEach(p => {
       const div = document.createElement("div");
       div.classList.add("suggestion-item");
       div.innerText = p.name;
 
       div.onclick = () => {
-        searchInput.value = p.name;
-        suggestionsBox.style.display = "none";
-
-        const productEl = document.querySelector(`.product[data-name="${p.name}"]`);
-
-        if (productEl) {
-          productEl.scrollIntoView({ behavior: "smooth", block: "center" });
-
-          productEl.style.border = "2px solid #4da6ff";
-
-          setTimeout(() => {
-            productEl.style.border = "none";
-          }, 1500);
-        }
+        window.location.href = `shop.html?search=${encodeURIComponent(p.name)}`;
       };
 
       suggestionsBox.appendChild(div);
     });
+  }
 
-    suggestionsBox.style.display = "block";
-  });
+  suggestionsBox.style.display = "block";
 
+
+  const grid = document.getElementById("productGrid");
+
+  if (grid) {
+    let html = "";
+
+    filtered.forEach(p => {
+      html += `
+        <div class="product"
+          data-id="${p.id}"
+          data-name="${p.name}"
+          data-brand="${p.brand}"
+          data-price="${p.price}">
+
+          <img src="${p.image}">
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          <span>€${Number(p.price).toFixed(2)}</span>
+
+          <button onclick="addToCartFromCard(this)">Add to Cart</button>
+          <button onclick="toggleHeart(this)">♡</button>
+        </div>
+      `;
+    });
+
+    grid.innerHTML = html;
+    syncHearts();
+  }
+});
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const value = searchInput.value.trim();
+
+    if (!value) return;
+
+    window.location.href = `shop.html?search=${encodeURIComponent(value)}`;
+  }
+});
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-wrapper")) {
       suggestionsBox.style.display = "none";
     }
   });
 });
-const loginModal = document.getElementById("loginModal");
+let loginModal;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loginModal = document.getElementById("loginModal");
+
+  if (loginModal) {
+    loginModal.addEventListener("click", (e) => {
+      if (e.target === loginModal) closeLogin();
+    });
+  }
+});
 
 function openLogin() {
+  if (!loginModal) return;
   loginModal.classList.add("show");
 }
 
 function closeLogin() {
+  if (!loginModal) return;
   loginModal.classList.remove("show");
 }
 
-loginModal.addEventListener("click", (e) => {
-  if (e.target === loginModal) closeLogin();
-});
-
-function showMessage(text) {
-  let box = document.getElementById("messageBox");
-  let msg = document.getElementById("messageText");
-
-  msg.innerText = text;
-  box.classList.add("show");
-
-  setTimeout(() => {
-    box.classList.remove("show");
-  }, 2000);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+  if (!loginModal) return;
+
   const buttons = loginModal.querySelectorAll("button");
 
   const loginBtn = buttons[0];
@@ -348,4 +369,52 @@ function addToCart(name, price) {
   localStorage.setItem("cart", JSON.stringify(cartItems));
 
   updateCartCount();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get("search");
+
+  if (!search) return;
+
+  const interval = setInterval(() => {
+    if (window.productsReady) {
+      applySearch(search);
+      clearInterval(interval);
+    }
+  }, 100);
+});
+
+function applySearch(value) {
+  value = value.toLowerCase();
+
+  const filtered = products.filter(p =>
+    (p.name || "").toLowerCase().includes(value) ||
+    (p.brand || "").toLowerCase().includes(value)
+  );
+
+  const grid = document.getElementById("productGrid");
+
+  let html = "";
+
+  filtered.forEach(p => {
+    html += `
+      <div class="product"
+        data-id="${p.id}"
+        data-name="${p.name}"
+        data-brand="${p.brand}"
+        data-price="${p.price}">
+
+        <img src="${p.image}">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <span>€${Number(p.price).toFixed(2)}</span>
+
+        <button onclick="addToCartFromCard(this)">Add to Cart</button>
+        <button onclick="toggleHeart(this)">♡</button>
+      </div>
+    `;
+  });
+
+  grid.innerHTML = html;
+  syncHearts();
 }
