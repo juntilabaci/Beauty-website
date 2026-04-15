@@ -177,7 +177,7 @@
   </div>
 </header>
 
-<div class="product-grid" id="productGrid">
+<div class="product-grid" id="productGrid"></div>
 
 <script src="shop.js"></script>
 <div class="modal" id="modal">
@@ -193,6 +193,14 @@
     <span class="close" onclick="closeWishlist()">&times;</span>
     <h2>Wishlist</h2>
     <table id="wishlistTable"></table>
+  </div>
+</div>
+    <div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCart()">&times;</span>
+    <h2>Shporta</h2>
+    <table id="cartTable"></table>
+    <h3 id="cartTotal"></h3>
   </div>
 </div>
 </body>

@@ -189,3 +189,95 @@ window.addToCart = addToCart;
 window.addToWishlist = addToWishlist;
 window.openModal = openModal;
 window.applyFilters = applyFilters;
+function openFav() {
+  const modal = document.getElementById("wishlistModal");
+  const table = document.getElementById("wishlistTable");
+
+  const wishlist = getWishlist();
+
+  table.innerHTML = "";
+
+  if (wishlist.length === 0) {
+    table.innerHTML = "<tr><td>Wishlist is empty</td></tr>";
+  }
+
+  wishlist.forEach(p => {
+    table.innerHTML += `
+      <tr>
+        <td>${p.name}</td>
+        <td>€${p.price}</td>
+        <td><button onclick="removeWishlistItem('${p.id}')">X</button></td>
+      </tr>
+    `;
+  });
+
+  modal.style.display = "flex";
+}
+
+function openCart() {
+  const modal = document.getElementById("cartModal");
+  const table = document.getElementById("cartTable");
+  const totalEl = document.getElementById("cartTotal");
+
+  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+  table.innerHTML = "";
+
+  let total = 0;
+
+  if (cartItems.length === 0) {
+    table.innerHTML = "<tr><td>Cart is empty</td></tr>";
+  }
+
+  cartItems.forEach(p => {
+    total += Number(p.price);
+
+    table.innerHTML += `
+      <tr>
+        <td>${p.name}</td>
+        <td>€${Number(p.price).toFixed(2)}</td>
+        <td><button onclick="removeCartItem('${p.id}')">X</button></td>
+      </tr>
+    `;
+  });
+
+  totalEl.innerText = "Total: €" + total.toFixed(2);
+
+  modal.style.display = "flex";
+}
+
+function removeCartItem(id) {
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cartItems = cartItems.filter(p => String(p.id) !== String(id));
+
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+
+  openCart();
+  document.getElementById("cart-count").innerText = cartItems.length;
+}
+
+function removeWishlistItem(id) {
+  let wishlist = getWishlist();
+
+  wishlist = wishlist.filter(p => String(p.id) !== String(id));
+
+  saveWishlist(wishlist);
+
+  openFav();
+  updateWishlistCount();
+}
+
+function closeCart() {
+  document.getElementById("cartModal").style.display = "none";
+}
+
+function closeWishlist() {
+  document.getElementById("wishlistModal").style.display = "none";
+}
+window.openCart = openCart;
+window.openFav = openFav;
+window.removeCartItem = removeCartItem;
+window.removeWishlistItem = removeWishlistItem;
+window.closeCart = closeCart;
+window.closeWishlist = closeWishlist;
