@@ -538,3 +538,109 @@ button {
   color: #6b7280;
 }
 
+/* ================= BLOG HEADER ================= */
+.blog-header {
+  justify-content: center;
+  padding: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+/* LOGO LUXURY (fix për ty) */
+.luxury-logo a {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: black;
+  text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.blog-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.blog-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.blog-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.blog-hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.blog-hero-text p {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* ================= BLOG ================= */
+.blog-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* CARD */
+.blog-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.blog-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.blog-img {
+  width: 50%;
+  border-radius: 12px;
+}
+
+/* TEXT */
+.blog-text {
+  width: 50%;
+}
+
+.blog-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.blog-text p {
+  line-height: 1.7;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .blog-card {
+    flex-direction: column;
+  }
+
+  .blog-card.reverse {
+    flex-direction: column;
+  }
+
+  .blog-img,
+  .blog-text {
+    width: 100%;
+  }
+}
+
