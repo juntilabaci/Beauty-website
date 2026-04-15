@@ -220,7 +220,7 @@ searchInput.addEventListener("input", () => {
 
   if (!value) {
     suggestionsBox.style.display = "none";
-    renderProducts(); // kthen produktet normale
+    renderProducts();
     return;
   }
 
@@ -229,7 +229,7 @@ searchInput.addEventListener("input", () => {
     (p.brand || "").toLowerCase().includes(value)
   );
 
-  // 👉 SUGGESTIONS
+
   if (filtered.length === 0) {
     suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
   } else {
@@ -248,7 +248,7 @@ searchInput.addEventListener("input", () => {
 
   suggestionsBox.style.display = "block";
 
-  // 👉 🔥 KJO PJESA E RE (render në homepage)
+
   const grid = document.getElementById("productGrid");
 
   if (grid) {
@@ -292,33 +292,31 @@ searchInput.addEventListener("keydown", (e) => {
     }
   });
 });
-const loginModal = document.getElementById("loginModal");
+let loginModal;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loginModal = document.getElementById("loginModal");
+
+  if (loginModal) {
+    loginModal.addEventListener("click", (e) => {
+      if (e.target === loginModal) closeLogin();
+    });
+  }
+});
 
 function openLogin() {
+  if (!loginModal) return;
   loginModal.classList.add("show");
 }
 
 function closeLogin() {
+  if (!loginModal) return;
   loginModal.classList.remove("show");
 }
 
-loginModal.addEventListener("click", (e) => {
-  if (e.target === loginModal) closeLogin();
-});
-
-function showMessage(text) {
-  let box = document.getElementById("messageBox");
-  let msg = document.getElementById("messageText");
-
-  msg.innerText = text;
-  box.classList.add("show");
-
-  setTimeout(() => {
-    box.classList.remove("show");
-  }, 2000);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+  if (!loginModal) return;
+
   const buttons = loginModal.querySelectorAll("button");
 
   const loginBtn = buttons[0];
