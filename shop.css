@@ -1,17 +1,12 @@
-/* ================= GRID CLEAN ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
   padding: 40px;
-
-  /* ❌ FIX: ishte 260px (e shtynte shumë poshtë) */
   margin-top: 20px;
-
   align-items: stretch;
 }
 
-/* ================= CARD ================= */
 .card {
   background: white;
   border-radius: 14px;
@@ -28,7 +23,7 @@
   transform: translateY(-6px);
 }
 
-/* ================= IMAGE FIX ================= */
+
 .card img {
   width: 100%;
   height: 220px;
@@ -38,7 +33,7 @@
   background: #f2f2f2; /* fallback kur foto nuk ngarkohet */
 }
 
-/* ================= TEXT ================= */
+
 .card h4 {
   margin: 10px 0 5px;
   font-size: 15px;
@@ -55,7 +50,7 @@
   margin: 10px 0;
 }
 
-/* ================= BUTTONS ================= */
+
 .card button {
   padding: 6px 10px;
   border: none;
@@ -70,7 +65,7 @@
   background: #4da6ff;
 }
 
-/* ================= MODAL ================= */
+
 .modal {
   display: none;
   position: fixed;
@@ -95,7 +90,6 @@
   width: 100%;
 }
 
-/* ================= ANIMATION ================= */
 @keyframes fadeIn {
   from {
     transform: scale(0.95);
@@ -105,4 +99,35 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Playfair Display', serif;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+table button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+table button:hover {
+  background: #c0392b;
 }
