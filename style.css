@@ -537,4 +537,75 @@ button {
   padding-top: 15px;
   color: #6b7280;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.loyalty-container {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f5f7fb;
+}
+
+.loyalty-container h1 {
+  font-size: 40px;
+  color: #1e3a8a;
+}
+
+.loyalty-buttons {
+  margin-top: 20px;
+}
+
+.loyalty-buttons button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.join {
+  background: #f9a8d4;
+  color: white;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid #f9a8d4;
+  color: #f9a8d4;
+}
+
+.loyalty-sections {
+  padding: 40px;
+}
+
+.loyalty-card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
