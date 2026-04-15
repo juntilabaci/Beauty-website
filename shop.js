@@ -27,6 +27,7 @@ async function loadProducts() {
 
     products = Array.isArray(data) ? data : (data.products || []);
     filtered = products;
+    window.productsReady = true;
 
     render(filtered);
 
@@ -281,3 +282,165 @@ window.removeCartItem = removeCartItem;
 window.removeWishlistItem = removeWishlistItem;
 window.closeCart = closeCart;
 window.closeWishlist = closeWishlist;
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get("search");
+
+  if (!search) return;
+
+  const interval = setInterval(() => {
+    if (window.productsReady) {
+      applySearch(search);
+      clearInterval(interval);
+    }
+  }, 100);
+});
+
+function applySearch(value) {
+  value = value.toLowerCase();
+
+  filtered = products.filter(p =>
+    (p.name || "").toLowerCase().includes(value) ||
+    (p.brand || "").toLowerCase().includes(value)
+  );
+
+  render(filtered);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+
+  if (!searchInput) return;
+
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const value = searchInput.value.trim().toLowerCase();
+
+      if (!value) return;
+
+      applySearch(value);
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const suggestionsBox = document.getElementById("suggestions");
+
+  if (!searchInput || !suggestionsBox) return;
+
+  searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase().trim();
+
+    suggestionsBox.innerHTML = "";
+
+    if (!value) {
+      suggestionsBox.style.display = "none";
+      render(products);
+      return;
+    }
+
+    const results = products.filter(p =>
+      (p.name || "").toLowerCase().includes(value) ||
+      (p.brand || "").toLowerCase().includes(value)
+    );
+
+    if (results.length === 0) {
+      suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
+      suggestionsBox.style.display = "block";
+      return;
+    }
+
+    results.slice(0, 6).forEach(p => {
+      const div = document.createElement("div");
+      div.classList.add("suggestion-item");
+
+      div.innerText = `${p.name} (${p.brand})`;
+
+      div.onclick = () => {
+        suggestionsBox.style.display = "none";
+        searchInput.value = p.name;
+
+        applySearch(p.name);
+      };
+
+      suggestionsBox.appendChild(div);
+    });
+
+    suggestionsBox.style.display = "block";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrapper")) {
+      suggestionsBox.style.display = "none";
+    }
+  });
+});
+let loginModal;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loginModal = document.getElementById("loginModal");
+
+  if (loginModal) {
+    loginModal.addEventListener("click", (e) => {
+      if (e.target === loginModal) closeLogin();
+    });
+  }
+});
+
+function openLogin() {
+  if (!loginModal) return;
+  loginModal.classList.add("show");
+}
+
+function closeLogin() {
+  if (!loginModal) return;
+  loginModal.classList.remove("show");
+}
+
+function showMessage(text) {
+  const box = document.getElementById("messageBox");
+  const msg = document.getElementById("messageText");
+
+  msg.innerText = text;
+  box.classList.add("show");
+
+  setTimeout(() => {
+    box.classList.remove("show");
+  }, 2000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!loginModal) return;
+
+  const buttons = loginModal.querySelectorAll("button");
+
+  const loginBtn = buttons[0];
+  const registerBtn = buttons[1];
+
+  loginBtn.addEventListener("click", () => {
+    const user = document.getElementById("loginUser").value;
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPass").value;
+
+    if (!email || !pass) {
+      showMessage("Plotëso email dhe password!");
+      return;
+    }
+
+    showMessage(`Mirë se erdhe ${user || email} ✅`);
+    closeLogin();
+  });
+
+  registerBtn.addEventListener("click", () => {
+    const user = document.getElementById("loginUser").value;
+    const email = document.getElementById("loginEmail").value;
+    const pass = document.getElementById("loginPass").value;
+
+    if (!user || !email || !pass) {
+      showMessage("Plotëso të gjitha fushat!");
+      return;
+    }
+
+    showMessage(`U regjistrua me sukses ${user} 🎉`);
+    closeLogin();
+  });
+});
