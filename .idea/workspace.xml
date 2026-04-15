@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +30,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/juntilabaci/Beauty-website.git&quot;,
-    &quot;accountId&quot;: &quot;8457e025-36f8-44a9-b6e0-71389b9fcd0d&quot;
+    &quot;accountId&quot;: &quot;5196bfa4-5de5-467d-8e3b-f46deb2c3751&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -72,14 +66,13 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\Beauty-website" />
       <recent name="C:\Users\elitebook\OneDrive\Documents\Beauty-website\images" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+        <option value="bundled-python-sdk-02acdf704d18-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28539.27" />
       </set>
     </attachedChunks>
   </component>
@@ -225,21 +218,13 @@
     </task>
     <task id="LOCAL-00017" summary="modifikim vizual">
       <option name="closed" value="true" />
-      <created>1776199133699</created>
+      <created>1775863891962</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1776199133699</updated>
+      <updated>1775863891962</updated>
     </task>
-    <task id="LOCAL-00018" summary="modifikim vizual">
-      <option name="closed" value="true" />
-      <created>1776199253396</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1776199253396</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
