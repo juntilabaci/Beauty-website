@@ -98,53 +98,51 @@
 
 <section class="products">
 <h2>Our Essentials</h2>
-
 <div class="product-grid">
 
-  <div class="product" data-brand="cosrx" data-name="cosrx cleanser" data-price="12">
-    <div class="imgcleansers"></div>
-    <h3>COSRX Cleanser</h3>
-    <p>€12</p>
+  <div class="product" data-brand="beauty of joseon" data-name="beauty of joseon toner" data-price="19.81">
+   <img src="images/Toner.webp" alt="">
+    <h3>BEAUTY OF JOSEON Toner</h3>
+    <p>€19.81</p>
     <span class="heart" onclick="toggleHeart(this)">♡</span>
-    <button onclick="addToCart('COSRX Cleanser',12)">Add to cart</button>
+    <button onclick="addToCartFromCard(this)">Add to cart</button>
   </div>
 
-  <div class="product" data-brand="anua" data-name="anua wash" data-price="15">
-    <div class="imgwash"></div>
-    <h3>ANUA Wash</h3>
-    <p>€15</p>
+  <div class="product" data-brand="cerave" data-name="cerave cream" data-price="13.99">
+    <img src="images/cerave.jpg" alt="">
+    <h3>CERAVE Cream</h3>
+    <p>€13.99</p>
     <span class="heart" onclick="toggleHeart(this)">♡</span>
-    <button onclick="addToCart('ANUA Wash',15)">Add to cart</button>
+    <button onclick="addToCartFromCard(this)">Add to cart</button>
   </div>
 
-  <div class="product" data-brand="boj" data-name="boj moisturizer" data-price="18">
-    <div class="imgmoist"></div>
-    <h3>BOJ Moisturizer</h3>
-    <p>€18</p>
-    <span class="heart" onclick="toggleHeart(this)">♡</span>
-    <button onclick="addToCart('BOJ Moisturizer',18)">Add to cart</button>
-  </div>
+ <div class="product" data-brand="some by mi" data-name="some by mi moisturizer 9" data-price="22.92">
+  <img src="images/Some.jpg" alt="">
+  <h3>SOME BY MI Moisturizer</h3>
+  <p>€22.92</p>
+  <span class="heart" onclick="toggleHeart(this)">♡</span>
+  <button onclick="addToCartFromCard(this)">Add to cart</button>
+</div>
 
-  <div class="product" data-brand="cosrx" data-name="sunscreen spf" data-price="10">
-    <div class="imgsun"></div>
-    <h3>Sunscreen</h3>
-    <p>€10</p>
+  <div class="product" data-brand="innisfree" data-name="innisfree mask" data-price="34.66">
+    <img src="images/mask.jpg" alt="">
+    <h3>INNISFREE Mask</h3>
+    <p>€34.66</p>
     <span class="heart" onclick="toggleHeart(this)">♡</span>
-    <button onclick="addToCart('Sunscreen',10)">Add to cart</button>
+    <button onclick="addToCartFromCard(this)">Add to cart</button>
   </div>
 
 </div>
+</div>
 </section>
-
-<!-- MODALS -->
 
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeLogin()">&times;</span>
     <h2>Login / Register</h2>
-    <input type="text" placeholder="Username">
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
+   <input type="text" id="loginUser" placeholder="Username">
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPass" placeholder="Password">
     <button>Login</button>
     <button style="background:#10b981;">Register</button>
   </div>
@@ -169,17 +167,10 @@
 
 <footer class="footer">
 
-  <div class="newsletter">
-    <div class="newsletter-text">
-      <h3>Regjistrohu</h3>
-      <p>Merrni njoftime për oferta & ulje</p>
-    </div>
+ <div class="footer-center">
+  <h2>Solavie</h2>
+</div>
 
-    <div class="newsletter-form">
-      <input type="email" id="newsletterEmail" placeholder="E-mail">
-      <button onclick="subscribe()">Regjistrohu!</button>
-    </div>
-  </div>
 
   <div class="footer-content">
 
@@ -223,7 +214,9 @@
   </div>
 
 </footer>
-
+<div id="messageBox" class="message-box">
+  <p id="messageText"></p>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
