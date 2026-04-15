@@ -119,7 +119,6 @@ function closeCart() {
   document.getElementById("cartModal").style.display = "none";
 }
 
-/* ===================== WISHLIST ===================== */
 function getWishlist() {
   return JSON.parse(localStorage.getItem("wishlist")) || [];
 }
@@ -225,10 +224,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const filtered = products.filter(p =>
-      (p.name || "").toLowerCase().includes(value)
-    );
-
+   const filtered = products.filter(p =>
+  (p.name || "").toLowerCase().includes(value) ||
+  (p.brand || "").toLowerCase().includes(value)
+);
     if (filtered.length === 0) {
       suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
       suggestionsBox.style.display = "block";
@@ -238,31 +237,26 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach(p => {
       const div = document.createElement("div");
       div.classList.add("suggestion-item");
-      div.innerText = p.name;
+      div.innerText = `${p.name} (${p.brand})`;
 
-      div.onclick = () => {
-        searchInput.value = p.name;
-        suggestionsBox.style.display = "none";
-
-        const productEl = document.querySelector(`.product[data-name="${p.name}"]`);
-
-        if (productEl) {
-          productEl.scrollIntoView({ behavior: "smooth", block: "center" });
-
-          productEl.style.border = "2px solid #4da6ff";
-
-          setTimeout(() => {
-            productEl.style.border = "none";
-          }, 1500);
-        }
-      };
+     div.onclick = () => {
+  window.location.href = `shop.html?search=${encodeURIComponent(p.brand)}`;
+};
 
       suggestionsBox.appendChild(div);
     });
 
     suggestionsBox.style.display = "block";
   });
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const value = searchInput.value.trim();
 
+    if (!value) return;
+
+    window.location.href = `shop.html?search=${encodeURIComponent(value)}`;
+  }
+});
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-wrapper")) {
       suggestionsBox.style.display = "none";
@@ -348,4 +342,52 @@ function addToCart(name, price) {
   localStorage.setItem("cart", JSON.stringify(cartItems));
 
   updateCartCount();
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get("search");
+
+  if (!search) return;
+
+  const interval = setInterval(() => {
+    if (window.productsReady) {
+      applySearch(search);
+      clearInterval(interval);
+    }
+  }, 100);
+});
+
+function applySearch(value) {
+  value = value.toLowerCase();
+
+  const filtered = products.filter(p =>
+    (p.name || "").toLowerCase().includes(value) ||
+    (p.brand || "").toLowerCase().includes(value)
+  );
+
+  const grid = document.getElementById("productGrid");
+
+  let html = "";
+
+  filtered.forEach(p => {
+    html += `
+      <div class="product"
+        data-id="${p.id}"
+        data-name="${p.name}"
+        data-brand="${p.brand}"
+        data-price="${p.price}">
+
+        <img src="${p.image}">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <span>€${Number(p.price).toFixed(2)}</span>
+
+        <button onclick="addToCartFromCard(this)">Add to Cart</button>
+        <button onclick="toggleHeart(this)">♡</button>
+      </div>
+    `;
+  });
+
+  grid.innerHTML = html;
+  syncHearts();
 }

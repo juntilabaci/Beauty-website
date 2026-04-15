@@ -477,3 +477,64 @@ button {
   letter-spacing: 0.3px;
 }
 
+.footer {
+  background: #eaf4fb;
+  padding: 70px 40px 30px;
+  position: relative;
+  border-top: 1px solid #dbeafe;
+}
+
+
+.footer-center h2 {
+  color: rgba(0,0,0,0.05);
+}
+
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+
+.footer h4 {
+  color: #1f2937;
+  font-weight: 600;
+  position: relative;
+}
+
+
+.footer h4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #4da6ff;
+  margin-top: 6px;
+}
+
+
+.footer p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+
+.footer a {
+  color: #374151;
+  transition: 0.25s;
+}
+
+.footer a:hover {
+  color: #4da6ff;
+  transform: translateX(4px);
+}
+
+
+.footer-bottom {
+  border-top: 1px solid #dbeafe;
+  margin-top: 40px;
+  padding-top: 15px;
+  color: #6b7280;
+}
+
