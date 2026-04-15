@@ -213,41 +213,70 @@ function syncHearts() {
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const suggestionsBox = document.getElementById("suggestions");
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase().trim();
 
-  searchInput.addEventListener("input", () => {
-    const value = searchInput.value.toLowerCase().trim();
+  suggestionsBox.innerHTML = "";
 
-    suggestionsBox.innerHTML = "";
+  if (!value) {
+    suggestionsBox.style.display = "none";
+    renderProducts(); // kthen produktet normale
+    return;
+  }
 
-    if (!value) {
-      suggestionsBox.style.display = "none";
-      return;
-    }
+  const filtered = products.filter(p =>
+    (p.name || "").toLowerCase().includes(value) ||
+    (p.brand || "").toLowerCase().includes(value)
+  );
 
-   const filtered = products.filter(p =>
-  (p.name || "").toLowerCase().includes(value) ||
-  (p.brand || "").toLowerCase().includes(value)
-);
-    if (filtered.length === 0) {
-      suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
-      suggestionsBox.style.display = "block";
-      return;
-    }
-
+  // 👉 SUGGESTIONS
+  if (filtered.length === 0) {
+    suggestionsBox.innerHTML = "<div class='suggestion-item'>No results</div>";
+  } else {
     filtered.forEach(p => {
       const div = document.createElement("div");
       div.classList.add("suggestion-item");
-      div.innerText = `${p.name} (${p.brand})`;
+      div.innerText = p.name;
 
-     div.onclick = () => {
-  window.location.href = `shop.html?search=${encodeURIComponent(p.brand)}`;
-};
+      div.onclick = () => {
+        window.location.href = `shop.html?search=${encodeURIComponent(p.name)}`;
+      };
 
       suggestionsBox.appendChild(div);
     });
+  }
 
-    suggestionsBox.style.display = "block";
-  });
+  suggestionsBox.style.display = "block";
+
+  // 👉 🔥 KJO PJESA E RE (render në homepage)
+  const grid = document.getElementById("productGrid");
+
+  if (grid) {
+    let html = "";
+
+    filtered.forEach(p => {
+      html += `
+        <div class="product"
+          data-id="${p.id}"
+          data-name="${p.name}"
+          data-brand="${p.brand}"
+          data-price="${p.price}">
+
+          <img src="${p.image}">
+          <h3>${p.name}</h3>
+          <p>${p.desc}</p>
+          <span>€${Number(p.price).toFixed(2)}</span>
+
+          <button onclick="addToCartFromCard(this)">Add to Cart</button>
+          <button onclick="toggleHeart(this)">♡</button>
+        </div>
+      `;
+    });
+
+    grid.innerHTML = html;
+    syncHearts();
+  }
+});
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const value = searchInput.value.trim();
