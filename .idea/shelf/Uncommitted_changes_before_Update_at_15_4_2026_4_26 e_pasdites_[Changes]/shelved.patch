@@ -1,0 +1,199 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n<meta charset=\"UTF-8\">\r\n<title>Solavie</title>\r\n\r\n<link rel=\"stylesheet\" href=\"style.css\">\r\n<link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap\" rel=\"stylesheet\">\r\n<link href=\"https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap\" rel=\"stylesheet\">\r\n</head>\r\n\r\n<body>\r\n\r\n<div class=\"ticker\">\r\n  <span>Free Shipping in Albania • </span>\r\n  <span>Korean Skincare • </span>\r\n  <span>Dermatologist Inspired Formulas • </span>\r\n  <span>Special Offers Every Week • </span>\r\n  <span>Shop Solavie Now • </span>\r\n  <span>Free Shipping in Albania • </span>\r\n  <span>Korean Skincare •</span>\r\n  <span>Dermatologist Inspired Formulas • </span>\r\n  <span>Special Offers Every Week • </span>\r\n  <span>Shop Solavie Now • </span>\r\n</div>\r\n\r\n<header class=\"header\">\r\n\r\n  <div class=\"search-box\">\r\n    <div class=\"search-wrapper\">\r\n      <input type=\"text\" id=\"searchInput\" placeholder=\"Search products...\">\r\n      <div id=\"suggestions\" class=\"suggestions\"></div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"logo\">\r\n    <a href=\"index.html\">Solavie</a>\r\n  </div>\r\n\r\n  <div class=\"icons-right\">\r\n\r\n   <div class=\"icon-item\" onclick=\"openFav()\" title=\"Wishlist\">\r\n  <span style=\"font-size:20px; color:red;\">❤\uFE0F</span>\r\n  <b id=\"wishlist-count\">0</b>\r\n</div>\r\n\r\n    <div class=\"icon-item\" onclick=\"openCart()\" title=\"Cart\">\r\n      <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"black\" stroke-width=\"1.6\">\r\n        <path d=\"M6 6h15l-1.5 9h-12z\"/>\r\n        <path d=\"M6 6L5 3H2\"/>\r\n        <circle cx=\"9\" cy=\"20\" r=\"1\"/>\r\n        <circle cx=\"18\" cy=\"20\" r=\"1\"/>\r\n      </svg>\r\n\r\n      <b id=\"cart-count\">0</b>\r\n    </div>\r\n\r\n    <div class=\"icon-item\" title=\"Account\" onclick=\"openLogin()\">\r\n      <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"black\" stroke-width=\"1.6\">\r\n        <circle cx=\"12\" cy=\"8\" r=\"4\"/>\r\n        <path d=\"M4 20c2-4 14-4 16 0\"/>\r\n      </svg>\r\n    </div>\r\n\r\n  </div>\r\n\r\n</header>\r\n\r\n<nav class=\"menu\">\r\n  <a href=\"shop.html\">Kujdesi për lëkurë</a>\r\n\r\n  <div class=\"menu-item\">\r\n    <a href=\"#\">Brendet</a>\r\n    <div class=\"dropdown\">\r\n      <a onclick=\"filterBrand('cosrx')\">COSRX</a>\r\n      <a onclick=\"filterBrand('anua')\">ANUA</a>\r\n      <a onclick=\"filterBrand('boj')\">Beauty of Joseon</a>\r\n      <a onclick=\"filterBrand('all')\">All</a>\r\n    </div>\r\n  </div>\r\n\r\n  <a href=\"#\">Make Up</a>\r\n  <a href=\"#\">Flokët</a>\r\n  <a href=\"#\">Trupi</a>\r\n  <a href=\"#\">Parfume</a>\r\n  <a href=\"#\">Oferta</a>\r\n</nav>\r\n\r\n<section class=\"hero\">\r\n  <img src=\"images/img3.png\" class=\"hero-img\">\r\n  <div class=\"hero-text\">\r\n    <h1>Minimal skincare.<br>Maximum glow.</h1>\r\n    <p>Clean Korean beauty for your daily ritual.</p>\r\n    <a href=\"shop.html\"><button>Shop Now</button></a>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"products\">\r\n<h2>Our Essentials</h2>\r\n\r\n<div class=\"product-grid\">\r\n\r\n  <div class=\"product\" data-brand=\"cosrx\" data-name=\"cosrx cleanser\" data-price=\"12\">\r\n    <div class=\"imgcleansers\"></div>\r\n    <h3>COSRX Cleanser</h3>\r\n    <p>€12</p>\r\n    <span class=\"heart\" onclick=\"toggleHeart(this)\">♡</span>\r\n    <button onclick=\"addToCart('COSRX Cleanser',12)\">Add to cart</button>\r\n  </div>\r\n\r\n  <div class=\"product\" data-brand=\"anua\" data-name=\"anua wash\" data-price=\"15\">\r\n    <div class=\"imgwash\"></div>\r\n    <h3>ANUA Wash</h3>\r\n    <p>€15</p>\r\n    <span class=\"heart\" onclick=\"toggleHeart(this)\">♡</span>\r\n    <button onclick=\"addToCart('ANUA Wash',15)\">Add to cart</button>\r\n  </div>\r\n\r\n  <div class=\"product\" data-brand=\"boj\" data-name=\"boj moisturizer\" data-price=\"18\">\r\n    <div class=\"imgmoist\"></div>\r\n    <h3>BOJ Moisturizer</h3>\r\n    <p>€18</p>\r\n    <span class=\"heart\" onclick=\"toggleHeart(this)\">♡</span>\r\n    <button onclick=\"addToCart('BOJ Moisturizer',18)\">Add to cart</button>\r\n  </div>\r\n\r\n  <div class=\"product\" data-brand=\"cosrx\" data-name=\"sunscreen spf\" data-price=\"10\">\r\n    <div class=\"imgsun\"></div>\r\n    <h3>Sunscreen</h3>\r\n    <p>€10</p>\r\n    <span class=\"heart\" onclick=\"toggleHeart(this)\">♡</span>\r\n    <button onclick=\"addToCart('Sunscreen',10)\">Add to cart</button>\r\n  </div>\r\n\r\n</div>\r\n</section>\r\n\r\n<div id=\"loginModal\" class=\"modal\">\r\n  <div class=\"modal-content\">\r\n    <span class=\"close\" onclick=\"closeLogin()\">&times;</span>\r\n    <h2>Login / Register</h2>\r\n    <input type=\"text\" placeholder=\"Username\">\r\n    <input type=\"email\" placeholder=\"Email\">\r\n    <input type=\"password\" placeholder=\"Password\">\r\n    <button>Login</button>\r\n    <button style=\"background:#10b981;\">Register</button>\r\n  </div>\r\n</div>\r\n\r\n<div id=\"wishlistModal\" class=\"modal\">\r\n  <div class=\"modal-content\">\r\n    <span class=\"close\" onclick=\"closeWishlist()\">&times;</span>\r\n    <h2>Wishlist</h2>\r\n    <table id=\"wishlistTable\"></table>\r\n  </div>\r\n</div>\r\n\r\n<div id=\"cartModal\" class=\"modal\">\r\n  <div class=\"modal-content\">\r\n    <span class=\"close\" onclick=\"closeCart()\">&times;</span>\r\n    <h2>Shporta</h2>\r\n    <table id=\"cartTable\"></table>\r\n    <h3 id=\"cartTotal\"></h3>\r\n  </div>\r\n</div>\r\n\r\n<footer class=\"footer\">\r\n  <div class=\"newsletter\">\r\n    <div class=\"newsletter-text\">\r\n      <h3>Regjistrohu</h3>\r\n      <p>Merrni njoftime për oferta & ulje</p>\r\n    </div>\r\n\r\n    <div class=\"newsletter-form\">\r\n      <input type=\"email\" id=\"newsletterEmail\" placeholder=\"E-mail\">\r\n      <button onclick=\"subscribe()\">Regjistrohu!</button>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"footer-content\">\r\n\r\n    <div class=\"footer-brand\">\r\n      <h2>Solavie</h2>\r\n      <p>\r\n        Solavie sjell bukurinë moderne me produkte të kujdesit për lëkurën të zgjedhura me kujdes.\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"footer-links\">\r\n      <h4>Shërbimi i Klientit</h4>\r\n      <a href=\"#\">Llogaria ime</a>\r\n      <a href=\"#\">Porosi</a>\r\n      <a href=\"#\">Shporta</a>\r\n    </div>\r\n\r\n  </div>\r\n\r\n  <div class=\"footer-bottom\">\r\n    <p>© 2026 Solavie. Të gjitha të drejtat e rezervuara.</p>\r\n  </div>\r\n</footer>\r\n<script src=\"script.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 511ca55166f4006696bf07d7980fdafcedd6ade6)
++++ b/index.html	(date 1776263160172)
+@@ -43,7 +43,6 @@
+   <span style="font-size:20px; color:red;">❤️</span>
+   <b id="wishlist-count">0</b>
+ </div>
+-
+     <div class="icon-item" onclick="openCart()" title="Cart">
+       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
+         <path d="M6 6h15l-1.5 9h-12z"/>
+@@ -55,150 +54,6 @@
+       <b id="cart-count">0</b>
+     </div>
+ 
+-    <div class="icon-item" title="Account" onclick="openLogin()">
+-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6">
+-        <circle cx="12" cy="8" r="4"/>
+-        <path d="M4 20c2-4 14-4 16 0"/>
+-      </svg>
+-    </div>
+-
+-  </div>
+-
+-</header>
+-
+-<nav class="menu">
+-  <a href="shop.html">Kujdesi për lëkurë</a>
+-
+-  <div class="menu-item">
+-    <a href="#">Brendet</a>
+-    <div class="dropdown">
+-      <a onclick="filterBrand('cosrx')">COSRX</a>
+-      <a onclick="filterBrand('anua')">ANUA</a>
+-      <a onclick="filterBrand('boj')">Beauty of Joseon</a>
+-      <a onclick="filterBrand('all')">All</a>
+-    </div>
+-  </div>
+-
+-  <a href="#">Make Up</a>
+-  <a href="#">Flokët</a>
+-  <a href="#">Trupi</a>
+-  <a href="#">Parfume</a>
+-  <a href="#">Oferta</a>
+-</nav>
+-
+-<section class="hero">
+-  <img src="images/img3.png" class="hero-img">
+-  <div class="hero-text">
+-    <h1>Minimal skincare.<br>Maximum glow.</h1>
+-    <p>Clean Korean beauty for your daily ritual.</p>
+-    <a href="shop.html"><button>Shop Now</button></a>
+-  </div>
+-</section>
+-
+-<section class="products">
+-<h2>Our Essentials</h2>
+-
+-<div class="product-grid">
+-
+-  <div class="product" data-brand="cosrx" data-name="cosrx cleanser" data-price="12">
+-    <div class="imgcleansers"></div>
+-    <h3>COSRX Cleanser</h3>
+-    <p>€12</p>
+-    <span class="heart" onclick="toggleHeart(this)">♡</span>
+-    <button onclick="addToCart('COSRX Cleanser',12)">Add to cart</button>
+-  </div>
+-
+-  <div class="product" data-brand="anua" data-name="anua wash" data-price="15">
+-    <div class="imgwash"></div>
+-    <h3>ANUA Wash</h3>
+-    <p>€15</p>
+-    <span class="heart" onclick="toggleHeart(this)">♡</span>
+-    <button onclick="addToCart('ANUA Wash',15)">Add to cart</button>
+-  </div>
+-
+-  <div class="product" data-brand="boj" data-name="boj moisturizer" data-price="18">
+-    <div class="imgmoist"></div>
+-    <h3>BOJ Moisturizer</h3>
+-    <p>€18</p>
+-    <span class="heart" onclick="toggleHeart(this)">♡</span>
+-    <button onclick="addToCart('BOJ Moisturizer',18)">Add to cart</button>
+-  </div>
+-
+-  <div class="product" data-brand="cosrx" data-name="sunscreen spf" data-price="10">
+-    <div class="imgsun"></div>
+-    <h3>Sunscreen</h3>
+-    <p>€10</p>
+-    <span class="heart" onclick="toggleHeart(this)">♡</span>
+-    <button onclick="addToCart('Sunscreen',10)">Add to cart</button>
+-  </div>
+-
+-</div>
+-</section>
+-
+-<div id="loginModal" class="modal">
+-  <div class="modal-content">
+-    <span class="close" onclick="closeLogin()">&times;</span>
+-    <h2>Login / Register</h2>
+-    <input type="text" placeholder="Username">
+-    <input type="email" placeholder="Email">
+-    <input type="password" placeholder="Password">
+-    <button>Login</button>
+-    <button style="background:#10b981;">Register</button>
+-  </div>
+-</div>
+-
+-<div id="wishlistModal" class="modal">
+-  <div class="modal-content">
+-    <span class="close" onclick="closeWishlist()">&times;</span>
+-    <h2>Wishlist</h2>
+-    <table id="wishlistTable"></table>
+-  </div>
+-</div>
+-
+-<div id="cartModal" class="modal">
+-  <div class="modal-content">
+-    <span class="close" onclick="closeCart()">&times;</span>
+-    <h2>Shporta</h2>
+-    <table id="cartTable"></table>
+-    <h3 id="cartTotal"></h3>
+-  </div>
+-</div>
+-
+-<footer class="footer">
+-  <div class="newsletter">
+-    <div class="newsletter-text">
+-      <h3>Regjistrohu</h3>
+-      <p>Merrni njoftime për oferta & ulje</p>
+-    </div>
+-
+-    <div class="newsletter-form">
+-      <input type="email" id="newsletterEmail" placeholder="E-mail">
+-      <button onclick="subscribe()">Regjistrohu!</button>
+-    </div>
+-  </div>
+-
+-  <div class="footer-content">
+-
+-    <div class="footer-brand">
+-      <h2>Solavie</h2>
+-      <p>
+-        Solavie sjell bukurinë moderne me produkte të kujdesit për lëkurën të zgjedhura me kujdes.
+-      </p>
+-    </div>
+-
+-    <div class="footer-links">
+-      <h4>Shërbimi i Klientit</h4>
+-      <a href="#">Llogaria ime</a>
+-      <a href="#">Porosi</a>
+-      <a href="#">Shporta</a>
+-    </div>
+-
+-  </div>
+-
+-  <div class="footer-bottom">
+-    <p>© 2026 Solavie. Të gjitha të drejtat e rezervuara.</p>
+-  </div>
+-</footer>
+ <script src="script.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"11cc93a8-da9b-4e94-a5df-59709c1041ec\" name=\"Changes\" comment=\"modifikim vizual\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/cart.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/script.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/script.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/shop.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/shop.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/shop.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/shop.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/shop.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/shop.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/style.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/style.css\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/wishlist.js\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {}\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/juntilabaci/Beauty-website.git&quot;,\r\n    &quot;accountId&quot;: &quot;8457e025-36f8-44a9-b6e0-71389b9fcd0d&quot;\r\n  }\r\n}</component>\r\n  <component name=\"McpProjectServerCommands\">\r\n    <commands />\r\n    <urls />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3BUfpktH02KVjEqVeAD2OH2When\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,\r\n    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/Beauty-website&quot;,\r\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\Documents\\Beauty-website\" />\r\n      <recent name=\"C:\\Users\\elitebook\\OneDrive\\Documents\\Beauty-website\\images\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"11cc93a8-da9b-4e94-a5df-59709c1041ec\" name=\"Changes\" comment=\"\" />\r\n      <created>1774548754594</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1774548754594</updated>\r\n      <workItem from=\"1774548756276\" duration=\"738000\" />\r\n      <workItem from=\"1774550191871\" duration=\"810000\" />\r\n      <workItem from=\"1774551149669\" duration=\"2350000\" />\r\n      <workItem from=\"1775214239249\" duration=\"70000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1774552110043</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1774552110043</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775214353541</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775214353541</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775334971916</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775334971916</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"editim pamje\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775766182032</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775766182032</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"search bar dhe header edit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775770190919</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775770190919</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"search bar dhe header edit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775839639620</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775839639620</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"search bar dhe header edit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775839827854</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775839827854</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775843489600</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775843489600</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775857716437</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775857716437</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775858269122</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775858269122</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775859087983</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775859087983</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775860025839</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775860025839</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775860584397</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775860584397</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775861650353</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775861650353</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775862439105</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775862439105</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1775862619244</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1775862619244</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776199133699</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776199133699</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"modifikim vizual\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776199253396</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776199253396</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"19\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"editim pamje\" />\r\n    <MESSAGE value=\"search bar dhe header edit\" />\r\n    <MESSAGE value=\"modifikim vizual\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"modifikim vizual\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 511ca55166f4006696bf07d7980fdafcedd6ade6)
++++ b/.idea/workspace.xml	(date 1776261304041)
+@@ -4,17 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/cart.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/shop.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/shop.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/wishlist.js" beforeDir="false" />
+-    </list>
++    <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
