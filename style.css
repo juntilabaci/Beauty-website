@@ -175,12 +175,12 @@ body {
   position: relative;
   height: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
+  padding-left: 50px;
 }
-
 .hero-img {
   position: absolute;
   width: 100%;
