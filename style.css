@@ -540,20 +540,6 @@ button {
 }
 
 
-.blog-header {
-  justify-content: center;
-  padding: 25px;
-  border-bottom: 1px solid #eee;
-}
-
-
-.luxury-logo a {
-  font-family: 'Great Vibes', cursive;
-  font-size: 36px;
-  color: black;
-  text-decoration: none;
-}
-
 
 .blog-hero {
   position: relative;
