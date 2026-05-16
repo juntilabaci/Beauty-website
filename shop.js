@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadProducts() {
   try {
-    const res = await fetch("http://localhost:3000/products");
+    const res = await fetch("db.json");
 
     if (!res.ok) {
       console.log("Server error:", res.status);

@@ -1,17 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cart</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="shop.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shporta - Solavie</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-header {
+  background: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.page-header a.logo-link {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+.page-header .back-link {
+  font-size: 13px;
+  color: #4da6ff;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.cart-container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.cart-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.cart-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+.cart-row img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f5f7fb;
+  flex-shrink: 0;
+}
+.cart-info { flex: 1; min-width: 120px; }
+.cart-info h4 { font-size: 14px; font-weight: 600; margin: 0 0 4px; color: #111; }
+.cart-info p  { font-size: 13px; color: #888; margin: 0; }
+
+.cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f7fb;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+.cart-qty button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  margin: 0;
+  padding: 0;
+}
+.cart-qty span { min-width: 24px; text-align: center; font-weight: 600; }
+
+.cart-subtotal { font-weight: 600; font-size: 15px; min-width: 70px; text-align: right; }
+.cart-remove {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+}
+.cart-remove:hover { color: #e57373; }
+
+.cart-footer {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+#total {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.btn-checkout {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-checkout:hover { background: #3a95f0; color: white; }
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 16px;
+}
+.empty-state h3 { font-family: 'Playfair Display', serif; font-size: 26px; margin: 16px 0 8px; }
+.empty-state p  { color: #888; margin-bottom: 24px; }
+.btn-back {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #4da6ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.btn-back:hover { background: #3a95f0; color: white; }
+
+@media (max-width: 600px) {
+  .cart-row { gap: 10px; }
+  .cart-subtotal { min-width: auto; }
+}
+</style>
 </head>
 <body>
 
-<h1>🛒 My Cart</h1>
+<div class="page-header">
+  <a href="index.html" class="logo-link">Solavie</a>
+  <a href="index.html" class="back-link">← Kthehu</a>
+</div>
 
-<div id="cartGrid"></div>
-<h2 id="total"></h2>
+<div class="cart-container">
+  <h1>🛒 Shporta ime</h1>
+  <div id="cartGrid"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div id="total"></div>
+    <a href="#" class="btn-checkout" onclick="alert('Checkout i gatshëm së shpejti! 🚀')">Vazhdo me porosinë →</a>
+  </div>
+</div>
 
 <script src="cart.js"></script>
+<script>
+const origRender = renderCart;
+window.renderCart = function() {
+  origRender();
+  const footer = document.getElementById("cartFooter");
+  if (footer) footer.style.display = getCart().length ? "block" : "none";
+};
+window.renderCart();
+</script>
 </body>
 </html>

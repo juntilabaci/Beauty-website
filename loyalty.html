@@ -2,42 +2,503 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Loyalty Program - Solavie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programi i Besnikërisë - Solavie</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head>
+<style>
+.page-header {
+  background: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.page-header a.logo-link {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+.page-header .back-link {
+  font-size: 13px;
+  color: #4da6ff;
+  text-decoration: none;
+  margin-left: auto;
+}
 
+.loyalty-hero {
+  background: linear-gradient(135deg, #0f2747 0%, #4da6ff 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.loyalty-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+.loyalty-hero p { font-size: 16px; opacity: 0.85; }
+
+.points-card {
+  max-width: 500px;
+  margin: -40px auto 0;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.points-card .pts-value {
+  font-size: 60px;
+  font-weight: 700;
+  color: #4da6ff;
+  line-height: 1;
+}
+.points-card .pts-label { font-size: 14px; color: #888; margin-top: 4px; }
+
+.tier-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+.tier-bronze { background: #fdf3e7; color: #c87941; }
+.tier-silver { background: #f0f0f0; color: #666; }
+.tier-gold   { background: #fff8e1; color: #d4a017; }
+
+.tier-progress {
+  background: #f0f4f8;
+  border-radius: 8px;
+  height: 8px;
+  margin: 16px 0 6px;
+  overflow: hidden;
+}
+.tier-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4da6ff, #a8d8ff);
+  border-radius: 8px;
+  transition: width 0.6s ease;
+}
+.tier-progress-label { font-size: 12px; color: #aaa; }
+
+.loyalty-body { max-width: 860px; margin: 50px auto; padding: 0 20px; }
+
+.loyalty-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.benefit-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 22px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.benefit-card .icon { font-size: 36px; margin-bottom: 12px; }
+.benefit-card h3 { font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px; }
+.benefit-card p  { font-size: 13px; color: #666; line-height: 1.6; }
+
+.tiers-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.tier-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-top: 4px solid #ccc;
+  text-align: center;
+}
+.tier-card.bronze { border-top-color: #c87941; }
+.tier-card.silver { border-top-color: #999; }
+.tier-card.gold   { border-top-color: #d4a017; }
+.tier-card h4 { font-weight: 700; margin-bottom: 6px; }
+.tier-card .range { font-size: 12px; color: #888; margin-bottom: 12px; }
+.tier-card ul { list-style: none; padding: 0; margin: 0; font-size: 13px; color: #555; text-align: left; }
+.tier-card ul li::before { content: "✓ "; color: #4da6ff; }
+.tier-card ul li { margin-bottom: 5px; }
+
+.redeem-section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+.redeem-section h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 16px; }
+.redeem-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.redeem-option:last-child { border-bottom: none; }
+.redeem-option .redeem-info h5 { font-size: 15px; font-weight: 600; margin: 0 0 3px; }
+.redeem-option .redeem-info p  { font-size: 12px; color: #888; margin: 0; }
+.btn-redeem {
+  padding: 8px 18px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0;
+  width: auto;
+}
+.btn-redeem:hover { background: #3a95f0; }
+.btn-redeem:disabled { background: #ccc; cursor: not-allowed; }
+
+.auth-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+.auth-section h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; }
+.auth-section p  { color: #888; margin-bottom: 20px; }
+.auth-section input {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-join {
+  padding: 12px 32px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background 0.2s;
+  margin: 6px 4px;
+  width: auto;
+}
+.btn-join:hover { background: #3a95f0; }
+.btn-login-sec {
+  padding: 12px 32px;
+  background: white;
+  color: #4da6ff;
+  border: 2px solid #4da6ff;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: all 0.2s;
+  margin: 6px 4px;
+  width: auto;
+}
+.btn-login-sec:hover { background: #4da6ff; color: white; }
+.btn-logout-loy {
+  padding: 10px 24px;
+  background: #fff0f0;
+  color: #e57373;
+  border: 1px solid #fdd;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: auto;
+}
+
+#loy-msg {
+  display: none;
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 10px auto;
+  max-width: 320px;
+  font-size: 14px;
+}
+</style>
+</head>
 <body>
 
-<div class="loyalty-container">
+<div class="page-header">
+  <a href="index.html" class="logo-link">Solavie</a>
+  <a href="index.html" class="back-link">← Kthehu</a>
+</div>
 
-  <h1>Welcome</h1>
-  <p>Sign in to unlock exclusive features</p>
+<div class="loyalty-hero">
+  <h1>🎀 Programi i Besnikërisë</h1>
+  <p>Grumbullon pikë me çdo blerje dhe shpërblyhu me zbritje ekskluzive</p>
+</div>
 
-  <div class="loyalty-buttons">
-    <button class="join">Join now</button>
-    <button class="login">Log in</button>
+<div class="points-card" id="pointsCard">
+  <div class="pts-value" id="ptsDisplay">0</div>
+  <div class="pts-label">pikë të akumuluara</div>
+  <div class="tier-badge tier-bronze" id="tierBadge">🥉 Bronze</div>
+  <div class="tier-progress"><div class="tier-progress-bar" id="tierBar" style="width:0%"></div></div>
+  <div class="tier-progress-label" id="tierLabel">0 / 500 pikë deri te Silver</div>
+</div>
+
+<div class="loyalty-body">
+
+  <!-- Auth Section -->
+  <div id="guestSection" class="auth-section">
+    <h3>Bëhu anëtar i Solavie</h3>
+    <p>Krijo llogari ose hyr për të fituar pikë me çdo blerje.</p>
+    <div id="loy-msg"></div>
+    <div id="joinForm">
+      <input type="text" id="loyUser" placeholder="Emri">
+      <input type="email" id="loyEmail" placeholder="Email">
+      <input type="password" id="loyPass" placeholder="Fjalëkalimi">
+      <br>
+      <button class="btn-join" onclick="loyaltyRegister()">Regjistrohu</button>
+      <button class="btn-login-sec" onclick="showLoyaltyLogin()">Hyr</button>
+    </div>
+    <div id="loginForm" style="display:none;">
+      <input type="email" id="loyLoginEmail" placeholder="Email">
+      <input type="password" id="loyLoginPass" placeholder="Fjalëkalimi">
+      <br>
+      <button class="btn-join" onclick="loyaltyLogin()">Hyr</button>
+      <button class="btn-login-sec" onclick="showLoyaltyJoin()">Regjistrohu</button>
+    </div>
+  </div>
+
+  <div id="memberSection" style="display:none;" class="auth-section">
+    <div style="font-size:40px;">👤</div>
+    <h3 id="memberName">Mirë se erdhe!</h3>
+    <p>Vazhdo të blesh për të fituar më shumë pikë.</p>
+    <a href="shop.html" class="btn-join" style="text-decoration:none;display:inline-block;">Shko te Shop →</a>
+    <br>
+    <button class="btn-logout-loy" onclick="loyaltyLogout()">Çkyçu</button>
+  </div>
+
+  <!-- Benefits -->
+  <div class="loyalty-benefits">
+    <div class="benefit-card">
+      <div class="icon">🛒</div>
+      <h3>Pika me çdo blerje</h3>
+      <p>Fiton 1 pikë për çdo €1 të shpenzuar. Pikat akumulohen automatikisht.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="icon">🎁</div>
+      <h3>Bonus Anëtarësie</h3>
+      <p>Merr 50 pikë bonus kur krijon llogarinë tënde të parë.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="icon">👥</div>
+      <h3>Fto një Mik</h3>
+      <p>Merr 100 pikë për çdo mik që fton dhe regjistrohet.</p>
+    </div>
+  </div>
+
+  <!-- Tiers -->
+  <div class="tiers-section">
+    <h2>Nivelet e Besnikërisë</h2>
+    <div class="tiers-grid">
+      <div class="tier-card bronze">
+        <h4>🥉 Bronze</h4>
+        <div class="range">0 – 499 pikë</div>
+        <ul>
+          <li>Zbritje 5% në blerjen e ardhshme</li>
+          <li>Qasje e hershme në ofertat</li>
+          <li>Email newsletter ekskluziv</li>
+        </ul>
+      </div>
+      <div class="tier-card silver">
+        <h4>🥈 Silver</h4>
+        <div class="range">500 – 999 pikë</div>
+        <ul>
+          <li>Zbritje 10% në çdo blerje</li>
+          <li>Dërgim falas për porosi mbi €30</li>
+          <li>Produkt surprizë me porosi</li>
+        </ul>
+      </div>
+      <div class="tier-card gold">
+        <h4>🥇 Gold</h4>
+        <div class="range">1000+ pikë</div>
+        <ul>
+          <li>Zbritje 15% në çdo blerje</li>
+          <li>Dërgim falas pa minimum</li>
+          <li>Produkt ekskluziv çdo muaj</li>
+          <li>Mbështetje prioritare</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redeem -->
+  <div class="redeem-section">
+    <h2>Shpërblyhu me pikët tua</h2>
+    <div class="redeem-option">
+      <div class="redeem-info">
+        <h5>€5 zbritje</h5>
+        <p>Kosto: 100 pikë</p>
+      </div>
+      <button class="btn-redeem" id="redeem100" onclick="redeem(100, '€5 zbritje')">Shpërblyhu</button>
+    </div>
+    <div class="redeem-option">
+      <div class="redeem-info">
+        <h5>€15 zbritje</h5>
+        <p>Kosto: 250 pikë</p>
+      </div>
+      <button class="btn-redeem" id="redeem250" onclick="redeem(250, '€15 zbritje')">Shpërblyhu</button>
+    </div>
+    <div class="redeem-option">
+      <div class="redeem-info">
+        <h5>Dërgim falas</h5>
+        <p>Kosto: 50 pikë</p>
+      </div>
+      <button class="btn-redeem" id="redeem50" onclick="redeem(50, 'Dërgim falas')">Shpërblyhu</button>
+    </div>
   </div>
 
 </div>
 
-<div class="loyalty-sections">
+<script>
+function getPoints() { return parseInt(localStorage.getItem("loyaltyPoints") || "0"); }
+function setPoints(p) { localStorage.setItem("loyaltyPoints", p); }
 
-  <div class="loyalty-card">
-    <h3>Earn Points on Every Purchase</h3>
-    <p>Earn 1 point for every Lek 1 spent on completed orders.</p>
-  </div>
+function getTier(pts) {
+  if (pts >= 1000) return { name: "🥇 Gold", cls: "tier-gold", next: null, nextPts: 0 };
+  if (pts >= 500)  return { name: "🥈 Silver", cls: "tier-silver", next: "Gold", nextPts: 1000 };
+  return { name: "🥉 Bronze", cls: "tier-bronze", next: "Silver", nextPts: 500 };
+}
 
-  <div class="loyalty-card">
-    <h3>New Member Bonus</h3>
-    <p>Create an account and earn points on your first purchase.</p>
-  </div>
+function updatePointsUI() {
+  const pts = getPoints();
+  document.getElementById("ptsDisplay").innerText = pts;
+  const tier = getTier(pts);
+  const badge = document.getElementById("tierBadge");
+  badge.innerText = tier.name;
+  badge.className = "tier-badge " + tier.cls;
 
-  <div class="loyalty-card">
-    <h3>Invite a friend</h3>
-    <p>Get discounts when your friends join.</p>
-  </div>
+  if (tier.next) {
+    const pct = Math.min(100, Math.round((pts / tier.nextPts) * 100));
+    document.getElementById("tierBar").style.width = pct + "%";
+    document.getElementById("tierLabel").innerText = `${pts} / ${tier.nextPts} pikë deri te ${tier.next}`;
+  } else {
+    document.getElementById("tierBar").style.width = "100%";
+    document.getElementById("tierLabel").innerText = "Niveli maksimal i arritur! 🎉";
+  }
 
-</div>
+  updateRedeemButtons(pts);
+}
 
+function updateRedeemButtons(pts) {
+  document.getElementById("redeem100").disabled = pts < 100;
+  document.getElementById("redeem250").disabled = pts < 250;
+  document.getElementById("redeem50").disabled = pts < 50;
+}
+
+function showLoyMsg(text, color) {
+  const el = document.getElementById("loy-msg");
+  el.style.display = "block";
+  el.style.color = color || "#16a34a";
+  el.innerText = text;
+  setTimeout(() => el.style.display = "none", 3000);
+}
+
+function loyaltyRegister() {
+  const user = document.getElementById("loyUser").value.trim();
+  const email = document.getElementById("loyEmail").value.trim();
+  const pass = document.getElementById("loyPass").value;
+  if (!user || !email || !pass) { showLoyMsg("Plotëso të gjitha fushat!", "#c0392b"); return; }
+
+  let users = JSON.parse(localStorage.getItem("solavieUsers") || "[]");
+  if (users.find(u => u.email === email)) { showLoyMsg("Ky email ekziston tashmë!", "#c0392b"); return; }
+
+  users.push({ user, email, pass });
+  localStorage.setItem("solavieUsers", JSON.stringify(users));
+  localStorage.setItem("loggedUser", JSON.stringify({ user, email }));
+
+  const currentPts = getPoints();
+  if (currentPts === 0) setPoints(50);
+
+  checkAuthState();
+  showLoyMsg("Mirë se erdhe! +50 pikë bonus! 🎉");
+  updatePointsUI();
+}
+
+function showLoyaltyLogin() {
+  document.getElementById("joinForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "block";
+}
+
+function showLoyaltyJoin() {
+  document.getElementById("loginForm").style.display = "none";
+  document.getElementById("joinForm").style.display = "block";
+}
+
+function loyaltyLogin() {
+  const email = document.getElementById("loyLoginEmail").value.trim();
+  const pass = document.getElementById("loyLoginPass").value;
+  const users = JSON.parse(localStorage.getItem("solavieUsers") || "[]");
+  const found = users.find(u => u.email === email && u.pass === pass);
+  if (!found) { showLoyMsg("Email ose fjalëkalim i gabuar!", "#c0392b"); return; }
+
+  localStorage.setItem("loggedUser", JSON.stringify(found));
+  checkAuthState();
+  showLoyMsg("Mirë se erdhe! ✅");
+}
+
+function loyaltyLogout() {
+  localStorage.removeItem("loggedUser");
+  checkAuthState();
+}
+
+function checkAuthState() {
+  const loggedUser = JSON.parse(localStorage.getItem("loggedUser") || "null");
+  if (loggedUser) {
+    document.getElementById("guestSection").style.display = "none";
+    document.getElementById("memberSection").style.display = "block";
+    document.getElementById("memberName").innerText = `Mirë se erdhe, ${loggedUser.user || loggedUser.email}!`;
+  } else {
+    document.getElementById("guestSection").style.display = "block";
+    document.getElementById("memberSection").style.display = "none";
+  }
+}
+
+function redeem(cost, reward) {
+  const pts = getPoints();
+  if (pts < cost) { alert("Nuk ke pikë të mjaftueshme!"); return; }
+  setPoints(pts - cost);
+  updatePointsUI();
+  alert(`✅ Ke shpërbyer "${reward}"! Kodi do të shfaqet në checkout.`);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updatePointsUI();
+  checkAuthState();
+});
+</script>
 </body>
 </html>
