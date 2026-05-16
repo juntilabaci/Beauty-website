@@ -30,7 +30,7 @@
   object-fit: cover;
   display: block;
   cursor: pointer;
-  background: #f2f2f2; /* fallback kur foto nuk ngarkohet */
+  background: #f2f2f2;
 }
 
 

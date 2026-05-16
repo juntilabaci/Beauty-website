@@ -1,0 +1,65 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Fshi Postimin — Solavie{% endblock %}
+
+{% block extra_style %}
+  .delete-wrap {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  .delete-card {
+    background: white;
+    border-radius: 16px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  .delete-icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: #fdecea;
+    border: 1px solid #e57373;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 22px;
+    color: #c0392b;
+  }
+  .delete-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  .delete-msg  { color: #888; font-size: 14px; margin-bottom: 6px; }
+  .delete-post-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #c0392b;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+  .delete-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+{% endblock %}
+
+{% block content %}
+<div class="delete-wrap">
+  <div class="delete-card">
+    <div class="delete-icon">✕</div>
+    <h1 class="delete-title">Fshi këtë postim?</h1>
+    <p class="delete-msg">Po fshini përgjithmonë:</p>
+    <p class="delete-post-title">"{{ post.title }}"</p>
+    <div class="delete-actions">
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Po, fshi</button>
+      </form>
+      <a href="{% url 'blog:post_list' %}" class="btn btn-outline">Mbaje</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

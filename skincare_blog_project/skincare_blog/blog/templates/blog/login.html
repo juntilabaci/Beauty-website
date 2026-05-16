@@ -1,0 +1,90 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Hyr — Solavie{% endblock %}
+
+{% block extra_style %}
+  .login-wrap {
+    max-width: 420px;
+    margin: 40px auto;
+  }
+  .login-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .login-logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #000;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .login-sub {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
+  }
+  .login-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  .login-footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f4f8;
+  }
+  .login-footer .btn { width: 100%; justify-content: center; }
+  .back-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #888;
+  }
+  .back-link a { color: #4da6ff; text-decoration: none; }
+  .back-link a:hover { color: #2f8ee0; }
+{% endblock %}
+
+{% block content %}
+<div class="login-wrap">
+  <div class="login-header">
+    <span class="login-logo">Solavie</span>
+    <p class="login-sub">Journal Access</p>
+  </div>
+
+  <div class="login-card">
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">Përdoruesi</label>
+        {{ form.username }}
+        {% if form.username.errors %}
+          <ul class="errorlist">{% for e in form.username.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.password.id_for_label }}">Fjalëkalimi</label>
+        {{ form.password }}
+        {% if form.password.errors %}
+          <ul class="errorlist">{% for e in form.password.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+
+      {% if form.non_field_errors %}
+        <div class="msg error" style="margin-bottom:14px">
+          {% for e in form.non_field_errors %}{{ e }}{% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="login-footer">
+        <button type="submit" class="btn btn-primary">Hyr</button>
+      </div>
+    </form>
+  </div>
+
+  <p class="back-link"><a href="{% url 'blog:post_list' %}">← Kthehu te Journal</a></p>
+</div>
+{% endblock %}
