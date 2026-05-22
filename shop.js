@@ -98,7 +98,7 @@ function render(list) {
       <div class="card">
 
         <img
-          src="${getImage(p.type, p.id)}"
+          src="${p.image || getImage(p.type, p.id)}"
           onclick="openModal('${p.id}')"
         >
 
@@ -169,7 +169,7 @@ function openModal(id) {
   const p = products.find(x => String(x.id) === String(id));
   if (!p) return;
 
-  document.getElementById("modalImg").src = getImage(p.type, p.id);
+  document.getElementById("modalImg").src = p.image || getImage(p.type, p.id);
   document.getElementById("modalTitle").innerText = p.name;
   document.getElementById("modalDesc").innerText = p.desc || "";
   document.getElementById("modalPrice").innerText = "€" + Number(p.price).toFixed(2);

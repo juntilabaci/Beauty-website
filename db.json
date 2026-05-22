@@ -1,4 +1,4 @@
-{
+﻿{
   "products": [
     {
       "id": 1,
@@ -6,7 +6,7 @@
       "brand": "Abib",
       "type": "mask",
       "price": 15.99,
-      "image": "https://www.yesstyle.com/image/pid/1078949026/image/700x700/",
+      "image": "images/product-1.jpg",
       "desc": "Maskë fletë me pH të butë acidik me ekstrakt të trëndafilit Jericho për lëkurë të qetësuar dhe të hidratuar."
     },
     {
@@ -15,7 +15,7 @@
       "brand": "Abib",
       "type": "cleanser",
       "price": 16.50,
-      "image": "https://m.media-amazon.com/images/I/61QIlDFCZrL._SL1000_.jpg",
+      "image": "images/Foaming Cleanser.jpg",
       "desc": "Pastrues shkumë me pH të butë acidik dhe ekstrakt heartleaf për lëkurë të ndjeshme."
     },
     {
@@ -24,7 +24,7 @@
       "brand": "Abib",
       "type": "mask",
       "price": 17.90,
-      "image": "https://m.media-amazon.com/images/I/71Tt3aGVPzL._SL1500_.jpg",
+      "image": "images/product-3.jpg",
       "desc": "Maskë fletë me kollagjen për elasticitet dhe hidratim të thellë të lëkurës."
     },
     {
@@ -33,7 +33,7 @@
       "brand": "Abib",
       "type": "cream",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/61NhG6iGUOL._SL1000_.jpg",
+      "image": "images/Calming Cream.jpg",
       "desc": "Krem qetësues me ekstrakt Jericho Rose për lëkurë të thatë dhe të ndjeshme."
     },
     {
@@ -42,7 +42,7 @@
       "brand": "Aestura",
       "type": "cream",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/71bqeWVF5pL._SL1500_.jpg",
+      "image": "images/Hydro Day Cream.webp",
       "desc": "Krem barrierë me ceramide dhe ekstrakt bimor për lëkurë atopike dhe shumë të thatë."
     },
     {
@@ -51,7 +51,7 @@
       "brand": "Aestura",
       "type": "moisturizer",
       "price": 24.50,
-      "image": "https://m.media-amazon.com/images/I/71x5SYsYGNL._SL1500_.jpg",
+      "image": "images/product-6.png",
       "desc": "Locion hidratues i lehtë me ceramide të natyral për lëkurë sensitive dhe atopike."
     },
     {
@@ -60,7 +60,7 @@
       "brand": "Aestura",
       "type": "serum",
       "price": 26.99,
-      "image": "https://m.media-amazon.com/images/I/71EuaM19YAL._SL1500_.jpg",
+      "image": "images/Blemish Control Gel.webp",
       "desc": "Ser anti-akne me niacinamidë dhe acid salisililik për lëkurë të lyer me puçrra."
     },
     {
@@ -69,7 +69,7 @@
       "brand": "Altruist",
       "type": "sunscreen",
       "price": 4.50,
-      "image": "https://altruistsun.com/cdn/shop/products/altruist-sunscreen-spf50-200ml.jpg",
+      "image": "images/SPF 50 Sunscreen Mousse.webp",
       "desc": "Krem diell SPF50 me mbrojtje të lartë UVA/UVB i krijuar nga dermatologë për çdo ditë."
     },
     {
@@ -78,7 +78,7 @@
       "brand": "Altruist",
       "type": "sunscreen",
       "price": 5.99,
-      "image": "https://altruistsun.com/cdn/shop/products/sun-fluid-spf50.jpg",
+      "image": "images/product-9.png",
       "desc": "Fluid i lehtë dielli SPF50+ pa aroma dhe i shkëlqyer për lëkurë yndyrore."
     },
     {
@@ -87,7 +87,7 @@
       "brand": "Altruist",
       "type": "sunscreen",
       "price": 6.99,
-      "image": "https://altruistsun.com/cdn/shop/products/oily-skin-spf50.jpg",
+      "image": "images/product-10.png",
       "desc": "Krem diell SPF50 i formuluar posaçërisht për lëkurë yndyrore pa shkëlqim."
     },
     {
@@ -96,7 +96,7 @@
       "brand": "Anua",
       "type": "cleanser",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71L7mLuVrJL._SL1500_.jpg",
+      "image": "images/Skincare Specialist Oil 200ml.webp",
       "desc": "Vaj pastrues me ekstrakt heartleaf që largon efektivisht makjapin dhe ndytësinë nga poret."
     },
     {
@@ -105,7 +105,7 @@
       "brand": "Anua",
       "type": "toner",
       "price": 19.90,
-      "image": "https://m.media-amazon.com/images/I/71MVe0GfVEL._SL1500_.jpg",
+      "image": "images/Heartleaf Toner.jpg",
       "desc": "Tonik qetësues me 77% ekstrakt Heartleaf për lëkurë të kuqe dhe të ndjeshme."
     },
     {
@@ -114,7 +114,7 @@
       "brand": "Anua",
       "type": "serum",
       "price": 24.99,
-      "image": "https://m.media-amazon.com/images/I/61wqZ5MfxOL._SL1000_.jpg",
+      "image": "images/Heartleaf Quercetinol Foam.jpg",
       "desc": "Ser me kuercetin dhe ekstrakt heartleaf që minimizon poret dhe qetëson lëkurën."
     },
     {
@@ -123,7 +123,7 @@
       "brand": "Anua",
       "type": "sunscreen",
       "price": 21.50,
-      "image": "https://m.media-amazon.com/images/I/61Bt-oNWLuL._SL1000_.jpg",
+      "image": "images/Heartleaf Moisturizer.webp",
       "desc": "Krem diell SPF50+ me heartleaf për mbrojtje dhe hidratim njëkohësisht."
     },
     {
@@ -132,7 +132,7 @@
       "brand": "APLB",
       "type": "serum",
       "price": 18.90,
-      "image": "https://m.media-amazon.com/images/I/71H0fChT0kL._SL1500_.jpg",
+      "image": "images/Glutathione Niacinamide.jpg",
       "desc": "Ser shkëlqimi me glutathione dhe niacinamidë që ndriçon dhe unifikon tonin e lëkurës."
     },
     {
@@ -141,7 +141,7 @@
       "brand": "APLB",
       "type": "cream",
       "price": 15.99,
-      "image": "https://m.media-amazon.com/images/I/71eMi3U6fkL._SL1500_.jpg",
+      "image": "images/Niacinamide Serum.jpg",
       "desc": "Krem i lehtë me glutathione dhe niacinamidë për lëkurë më të ndritshme."
     },
     {
@@ -150,7 +150,7 @@
       "brand": "APLB",
       "type": "serum",
       "price": 17.50,
-      "image": "https://m.media-amazon.com/images/I/71y6Oo2kgkL._SL1500_.jpg",
+      "image": "images/Collagen Niacinamide.jpeg",
       "desc": "Ser me kollagjen dhe niacinamidë për lëkurë të shëndoshë dhe të rilindur."
     },
     {
@@ -159,7 +159,7 @@
       "brand": "Arencia",
       "type": "cleanser",
       "price": 19.00,
-      "image": "https://arencia.us/cdn/shop/products/arencia-fresh-broccoli-cleanser.jpg",
+      "image": "images/product-18.png",
       "desc": "Pastrues shkumë e butë me ekstrakt brokoli i pasur me antioksidantë për lëkurë të ndritshme."
     },
     {
@@ -168,7 +168,7 @@
       "brand": "Arencia",
       "type": "toner",
       "price": 21.00,
-      "image": "https://arencia.us/cdn/shop/products/arencia-fresh-broccoli-toner.jpg",
+      "image": "images/product-19.png",
       "desc": "Tonik esencial me ekstrakt brokoli që hidratat dhe qetëson lëkurën pas pastrimit."
     },
     {
@@ -177,7 +177,7 @@
       "brand": "Arencia",
       "type": "cream",
       "price": 25.00,
-      "image": "https://arencia.us/cdn/shop/products/arencia-fresh-broccoli-cream.jpg",
+      "image": "images/product-20.png",
       "desc": "Krem hidratues i pasur me ekstrakt brokoli dhe vitamina për lëkurë të shëndoshë."
     },
     {
@@ -186,7 +186,7 @@
       "brand": "Aromatica",
       "type": "oil",
       "price": 27.00,
-      "image": "https://m.media-amazon.com/images/I/61S0QgCHjCL._SL1000_.jpg",
+      "image": "images/Rose Hip Seed Oil.webp",
       "desc": "Vaj fytyre me mënyrrë trëndafili i mbushur me vitamina C dhe E për lëkurë të ndritshme."
     },
     {
@@ -195,7 +195,7 @@
       "brand": "Aromatica",
       "type": "serum",
       "price": 24.50,
-      "image": "https://m.media-amazon.com/images/I/71UxG8LMqZL._SL1500_.jpg",
+      "image": "images/Centella Asiatica.jpg",
       "desc": "Ser rimëkëmbës me cica dhe bimë biológjike për lëkurë të dëmtuar dhe të ndjeshme."
     },
     {
@@ -204,7 +204,7 @@
       "brand": "Aromatica",
       "type": "cleanser",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71d-mBE8aAL._SL1500_.jpg",
+      "image": "images/Exfoliating Cleanser.jpg",
       "desc": "Pastrues eksfoliues me kripë Qipro dhe vaj bimor për lëkurë të pastruar dhe të lëmuar."
     },
     {
@@ -213,7 +213,7 @@
       "brand": "Balmain",
       "type": "shampoo",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/71V1kL4ATWL._SL1500_.jpg",
+      "image": "images/product-24.jpg",
       "desc": "Shampo illuminuese për flokë bionde që ruan gjallërinë e ngjyrës dhe shkëlqimin."
     },
     {
@@ -222,7 +222,7 @@
       "brand": "Balmain",
       "type": "conditioner",
       "price": 34.00,
-      "image": "https://m.media-amazon.com/images/I/71IEaGJHKQL._SL1500_.jpg",
+      "image": "images/product-25.jpg",
       "desc": "Gërshet vëllimues me formulë të lehtë për flokë pa peshë dhe me shkëlqim."
     },
     {
@@ -231,7 +231,7 @@
       "brand": "Balmain",
       "type": "treatment",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/61RJ1aZ0bNL._SL1000_.jpg",
+      "image": "images/product-26.jpg",
       "desc": "Spray kripe stilizues për teksturë natyrale dhe vëllim me imazh të plazh."
     },
     {
@@ -240,7 +240,7 @@
       "brand": "Beauty of Joseon",
       "type": "serum",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/81OQLUP6rHL._SL1500_.jpg",
+      "image": "images/Beauty of Joseon.jpg",
       "desc": "Ser shkëlqimi me propolisë dhe niacinamidë i frymëzuar nga ritualet koreane tradicionale."
     },
     {
@@ -249,7 +249,7 @@
       "brand": "Beauty of Joseon",
       "type": "sunscreen",
       "price": 15.50,
-      "image": "https://m.media-amazon.com/images/I/71Nah5EJw-L._SL1500_.jpg",
+      "image": "images/Relief Sun SPF50+.jpg",
       "desc": "Krem diell legjend me oriz dhe probiotikë për mbrojtje dhe ndriçim të lëkurës."
     },
     {
@@ -258,7 +258,7 @@
       "brand": "Beauty of Joseon",
       "type": "cream",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71Nah5EJw-L._SL1500_.jpg",
+      "image": "images/product-29.webp",
       "desc": "Krem mbretëror me bimë orientale dhe bajakui mbretëror për lëkurë elastike."
     },
     {
@@ -267,7 +267,7 @@
       "brand": "Beauty of Joseon",
       "type": "serum",
       "price": 14.50,
-      "image": "https://m.media-amazon.com/images/I/71K2B3rPIJL._SL1500_.jpg",
+      "image": "images/Calming Serum.webp",
       "desc": "Ser qetësues me çaj jeshil dhe panthenol për lëkurë të qetësuar dhe të hidratuar."
     },
     {
@@ -276,7 +276,7 @@
       "brand": "Beauty of Joseon",
       "type": "toner",
       "price": 16.00,
-      "image": "https://m.media-amazon.com/images/I/61W5V1WMQXL._SL1000_.jpg",
+      "image": "images/product-31.jpg",
       "desc": "Ujë esencë me xhensen dhe bimë tradicionale koreane për lëkurë rilindëse."
     },
     {
@@ -285,7 +285,7 @@
       "brand": "Bee Factor",
       "type": "cream",
       "price": 22.00,
-      "image": "https://www.greeknaturalproducts.eu/wp-content/uploads/bee-factor-blue-shield.jpg",
+      "image": "images/product-32.jpg",
       "desc": "Krem mbrojtjeje urbane me cera bletë greke për lëkurë të mbrojtur nga ndotja."
     },
     {
@@ -294,7 +294,7 @@
       "brand": "Bee Factor",
       "type": "cream",
       "price": 28.00,
-      "image": "https://www.greeknaturalproducts.eu/wp-content/uploads/bee-factor-ageless-you.jpg",
+      "image": "images/Calming Cream.jpg",
       "desc": "Krem anti-moshë me propolisë greke dhe përbërës natyralë për lëkurë të rinuar."
     },
     {
@@ -303,7 +303,7 @@
       "brand": "Bee Factor",
       "type": "cream",
       "price": 24.00,
-      "image": "https://www.greeknaturalproducts.eu/wp-content/uploads/bee-factor-shine-bright.jpg",
+      "image": "images/Glowy Skin.webp",
       "desc": "Krem shkëlqimi me mjaltë greke dhe ekstrakte bimë për lëkurë të ndritshme natyrshëm."
     },
     {
@@ -312,7 +312,7 @@
       "brand": "Be Plain",
       "type": "serum",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71U4Nw5P+dL._SL1500_.jpg",
+      "image": "images/product-35.jpg",
       "desc": "Ampull me cica dhe Centella Asiatica për rigjenerim të shpejtë të lëkurës së ndjeshme."
     },
     {
@@ -321,7 +321,7 @@
       "brand": "Be Plain",
       "type": "cleanser",
       "price": 16.50,
-      "image": "https://m.media-amazon.com/images/I/61WumLr2u6L._SL1000_.jpg",
+      "image": "images/Squalane Cleanser.jpg",
       "desc": "Pastrues me pH të balancuar dhe ekstrakt Centella për pastrues të butë çdo ditë."
     },
     {
@@ -330,7 +330,7 @@
       "brand": "Be Plain",
       "type": "toner",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71fYNUSIolL._SL1500_.jpg",
+      "image": "images/Toner.webp",
       "desc": "Tonik ujor me acid hialuronik dhe oriz për hidratim të thellë dhe lëkurë të lëmuar."
     },
     {
@@ -339,7 +339,7 @@
       "brand": "Biodance",
       "type": "mask",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/81xOh+WKSEL._SL1500_.jpg",
+      "image": "images/Bio-Collagen.png",
       "desc": "Maskë hidrogel me kollagjen bio që plotësohet plotësisht duke mbajtur pastaj lëkurën elastike."
     },
     {
@@ -348,7 +348,7 @@
       "brand": "Biodance",
       "type": "mask",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71DFjrpMX1L._SL1500_.jpg",
+      "image": "images/Hydro Cera-Nol.jpg",
       "desc": "Maskë hidrogel me ceramide dhe niacinamidë për lëkurë të hidratuar dhe të barrieruar."
     },
     {
@@ -357,7 +357,7 @@
       "brand": "Biodance",
       "type": "mask",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71AHXYuWlBL._SL1500_.jpg",
+      "image": "images/Collagen Gel.jpg",
       "desc": "Maskë gjumi me mjaltë dhe kollagjen për lëkurë të ushqyer dhe të butë ndërsa flini."
     },
     {
@@ -366,7 +366,7 @@
       "brand": "Bioderma",
       "type": "cleanser",
       "price": 16.99,
-      "image": "https://m.media-amazon.com/images/I/61ow4RqBMKL._SL1500_.jpg",
+      "image": "images/product-41.jpg",
       "desc": "Ujë micellar ikonik për heqjen e delikatë të makjapit nga lëkura sensitive."
     },
     {
@@ -375,7 +375,7 @@
       "brand": "Bioderma",
       "type": "cleanser",
       "price": 12.50,
-      "image": "https://m.media-amazon.com/images/I/61FH8l6u4jL._SL1000_.jpg",
+      "image": "images/product-42.jpg",
       "desc": "Xhel pastrues shkumë për lëkurë yndyrore dhe me akne pa tharë lëkurën."
     },
     {
@@ -384,7 +384,7 @@
       "brand": "Bioderma",
       "type": "moisturizer",
       "price": 19.90,
-      "image": "https://m.media-amazon.com/images/I/71sWtWM5u3L._SL1500_.jpg",
+      "image": "images/product-43.jpg",
       "desc": "Balsam intensiv për lëkurë atopike dhe shumë të thatë me ceramide dhe lipide."
     },
     {
@@ -393,7 +393,7 @@
       "brand": "Bioderma",
       "type": "cream",
       "price": 14.90,
-      "image": "https://m.media-amazon.com/images/I/51EW6RsMidL._SL1000_.jpg",
+      "image": "images/product-44.jpg",
       "desc": "Krem rregullues me mbrojtje dielli SPF50+ për lëkurë të irrituar dhe pas trajtimesh."
     },
     {
@@ -402,7 +402,7 @@
       "brand": "Celimax",
       "type": "serum",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71K4t6xYjpL._SL1500_.jpg",
+      "image": "images/product-45.jpg",
       "desc": "Ampull energjizuese me ekstrakt noni që ndriçon dhe rigjallëron lëkurën e lodhur."
     },
     {
@@ -411,7 +411,7 @@
       "brand": "Celimax",
       "type": "serum",
       "price": 20.00,
-      "image": "https://m.media-amazon.com/images/I/61l3yxXjxmL._SL1000_.jpg",
+      "image": "images/Glowy Skin.webp",
       "desc": "Ser shkëlqimi me ekstraktin e frutit noni që barazon tonin e lëkurës."
     },
     {
@@ -420,7 +420,7 @@
       "brand": "Celimax",
       "type": "cream",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/61MtCCJECxL._SL1000_.jpg",
+      "image": "images/Calamine Pore Control.webp",
       "desc": "Krem qetësues me noni dhe peptide për lëkurë të hidratuar dhe të qetë gjatë gjithë ditës."
     },
     {
@@ -429,7 +429,7 @@
       "brand": "COSRX",
       "type": "essence",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71p6GmXFpCL._SL1500_.jpg",
+      "image": "images/Advanced Snail.webp",
       "desc": "Esencë ikonike me 96% mucin kërmill për rigjenerim dhe hidratim intensiv të lëkurës."
     },
     {
@@ -438,7 +438,7 @@
       "brand": "COSRX",
       "type": "cleanser",
       "price": 12.00,
-      "image": "https://m.media-amazon.com/images/I/61Y8Tt0DjHL._SL1500_.jpg",
+      "image": "images/Low pH Cleanser.webp",
       "desc": "Pastrues xhel me pH të ulët dhe acid salisililik për lëkurë të pastër dhe të ekuilibruar."
     },
     {
@@ -447,7 +447,7 @@
       "brand": "COSRX",
       "type": "cleanser",
       "price": 13.50,
-      "image": "https://m.media-amazon.com/images/I/61KcS+f9DvL._SL1000_.jpg",
+      "image": "images/Salicylic Cleanser.webp",
       "desc": "Pastrues i butë me acid salisililik për pastrues të thellë të poreve dhe kontroll të akneve."
     },
     {
@@ -456,7 +456,7 @@
       "brand": "COSRX",
       "type": "toner",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/71PcRFrNS-L._SL1500_.jpg",
+      "image": "images/Clarifying Exfoliant.webp",
       "desc": "Tonik eksfoliues me AHA dhe BHA për pastrues të thellë dhe lëkurë të qartë."
     },
     {
@@ -465,7 +465,7 @@
       "brand": "COSRX",
       "type": "serum",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71JAXB1NvXL._SL1500_.jpg",
+      "image": "images/Vitamin C.webp",
       "desc": "Ser me 23% vitaminë C pure për ndriçim të fortë dhe mbrojtje antioksidante të lëkurës."
     },
     {
@@ -474,7 +474,7 @@
       "brand": "Debby",
       "type": "makeup",
       "price": 11.90,
-      "image": "https://debbymakeup.com/cdn/shop/products/debby-fondotinta-mat-perfect.jpg",
+      "image": "images/product-53.jpg",
       "desc": "Fondotinta mat italiane me efekt mat të qëndrueshëm dhe mbrojtje dielli SPF15."
     },
     {
@@ -483,7 +483,7 @@
       "brand": "Debby",
       "type": "makeup",
       "price": 9.90,
-      "image": "https://debbymakeup.com/cdn/shop/products/debby-bb-cream.jpg",
+      "image": "images/Glowy Skin.webp",
       "desc": "BB Cream shumëfunksionale me SPF30 për mbulim natyral dhe kujdes të lëkurës njëkohësisht."
     },
     {
@@ -492,7 +492,7 @@
       "brand": "Debby",
       "type": "makeup",
       "price": 7.50,
-      "image": "https://debbymakeup.com/cdn/shop/products/debby-lipstick-matte.jpg",
+      "image": "images/product-55.jpg",
       "desc": "Buzëkuqe matte italiane me pigmentim të intensë dhe qëndrueshmëri të gjatë."
     },
     {
@@ -501,7 +501,7 @@
       "brand": "Davines",
       "type": "shampoo",
       "price": 26.00,
-      "image": "https://m.media-amazon.com/images/I/61mZ7bWTZ2L._SL1000_.jpg",
+      "image": "images/product-56.jpg",
       "desc": "Shampo lëmuese për flokë kaçurrelë ose të paekuilibruar me formulë të qëndrueshme."
     },
     {
@@ -510,7 +510,7 @@
       "brand": "Davines",
       "type": "conditioner",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/71vJ4Q9K4NL._SL1500_.jpg",
+      "image": "images/product-57.jpg",
       "desc": "Gërshet lëmues i pasur me ButterExtract që zbut dhe kontrollon flokët kaçurrelë."
     },
     {
@@ -519,7 +519,7 @@
       "brand": "Davines",
       "type": "treatment",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/61cqTHbYl4L._SL1000_.jpg",
+      "image": "images/product-58.jpg",
       "desc": "Lëng multifunksional me vaj Roucou që redukton kocrrat dhe jep shkëlqim natyral flokëve."
     },
     {
@@ -528,7 +528,7 @@
       "brand": "Dr. Althea",
       "type": "serum",
       "price": 21.00,
-      "image": "https://m.media-amazon.com/images/I/71sNT4QEyJL._SL1500_.jpg",
+      "image": "images/Melaclear Cream (Dark Spots).webp",
       "desc": "Ser me vitaminë C të stabilizuar dhe peptide për lëkurë më të ndritshme dhe të rinuar."
     },
     {
@@ -537,7 +537,7 @@
       "brand": "Dr. Althea",
       "type": "toner",
       "price": 17.50,
-      "image": "https://m.media-amazon.com/images/I/71K9Ts0hvNL._SL1500_.jpg",
+      "image": "images/Toner.webp",
       "desc": "Tonik pro-hidratues me acid hialuronik dhe panthenol për lëkurë të ekuilibruar."
     },
     {
@@ -546,7 +546,7 @@
       "brand": "Dr. Althea",
       "type": "serum",
       "price": 23.00,
-      "image": "https://m.media-amazon.com/images/I/61hNxVJY7mL._SL1000_.jpg",
+      "image": "images/Collagen EGF.webp",
       "desc": "Ser me peptide të fuqishme për shtrëngim dhe antiaging të shpejtë të lëkurës."
     },
     {
@@ -555,7 +555,7 @@
       "brand": "Dr. Reju-All",
       "type": "cream",
       "price": 38.00,
-      "image": "https://m.media-amazon.com/images/I/71HRuBL5MgL._SL1500_.jpg",
+      "image": "images/Caviar PDRN.webp",
       "desc": "Krem rigjenerues me 1200ppm PDRN prej salmoni për lëkurë si qelq dhe të rilindur."
     },
     {
@@ -564,7 +564,7 @@
       "brand": "Dr. Reju-All",
       "type": "cream",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/71ABxQJdnAL._SL1500_.jpg",
+      "image": "images/Moisture Shield.webp",
       "desc": "Krem barrierë me ceramide me zinxhir të gjatë për mbrojtje dhe hidratim intensiv."
     },
     {
@@ -573,7 +573,7 @@
       "brand": "Dr. Reju-All",
       "type": "serum",
       "price": 35.00,
-      "image": "https://m.media-amazon.com/images/I/71LZhC8DPPL._SL1500_.jpg",
+      "image": "images/The Vita A Retinal.jpg",
       "desc": "Ser me retinoid HPR dhe niacinamidë për korrigjim të njollave dhe antiaging klinik."
     },
     {
@@ -582,7 +582,7 @@
       "brand": "D'Alba",
       "type": "serum",
       "price": 38.00,
-      "image": "https://dalba.com/cdn/shop/files/dalba-white-truffle-spray-serum-100ml.jpg",
+      "image": "images/product-65.png",
       "desc": "Ser-spray ikonik vegan me tarte të bardhë nga Italia që hidratat dhe jep shkëlqim menjëherë."
     },
     {
@@ -591,7 +591,7 @@
       "brand": "D'Alba",
       "type": "cream",
       "price": 45.00,
-      "image": "https://dalba.com/cdn/shop/products/dalba-double-serum-cream.jpg",
+      "image": "images/product-66.png",
       "desc": "Formulë 2-në-1 me trufull të bardhë dhe kollagjen për lëkurë të lëmuar dhe elastike."
     },
     {
@@ -600,7 +600,7 @@
       "brand": "D'Alba",
       "type": "serum",
       "price": 35.00,
-      "image": "https://dalba.com/cdn/shop/products/dalba-vital-spray-serum.jpg",
+      "image": "images/product-67.png",
       "desc": "Ser-spray vital me trufull të bardhë të Piemontit për hidratim dhe shkëlqim intensiv."
     },
     {
@@ -609,7 +609,7 @@
       "brand": "Fino",
       "type": "treatment",
       "price": 12.00,
-      "image": "https://m.media-amazon.com/images/I/71S9lV8l9UL._SL1500_.jpg",
+      "image": "images/product-68.jpg",
       "desc": "Maskë intensive japoneze me 6 serum bukurie që rigjallëron dhe zbutet flokët e dëmtuar."
     },
     {
@@ -618,7 +618,7 @@
       "brand": "Fino",
       "type": "oil",
       "price": 10.50,
-      "image": "https://m.media-amazon.com/images/I/71qPbS5rz-L._SL1500_.jpg",
+      "image": "images/oil.jpg",
       "desc": "Vaj lënës japonez pa shpëlarje me serum bukurie për flokë të lëmuar dhe me shkëlqim."
     },
     {
@@ -627,7 +627,7 @@
       "brand": "Fino",
       "type": "treatment",
       "price": 16.00,
-      "image": "https://m.media-amazon.com/images/I/71QFr5P8gML._SL1500_.jpg",
+      "image": "images/mask.jpg",
       "desc": "Maskë intensive me formulë të pasur me keratin dhe serum përpara për riparim total."
     },
     {
@@ -636,7 +636,7 @@
       "brand": "Geek & Gorgeous",
       "type": "cleanser",
       "price": 10.00,
-      "image": "https://geekandgorgeous.us/cdn/shop/products/jelly-joker-cleanser.jpg",
+      "image": "images/Oil Cleanser.webp",
       "desc": "Pastrues xheli i butë pa alkool dhe parfum për të gjitha llojet e lëkurës."
     },
     {
@@ -645,7 +645,7 @@
       "brand": "Geek & Gorgeous",
       "type": "cleanser",
       "price": 11.00,
-      "image": "https://geekandgorgeous.us/cdn/shop/products/slip-it-off-balm.jpg",
+      "image": "images/Seoul 1988 Cleansing Oil.jpg",
       "desc": "Balsam pastrues që shkrihet me kujdes makjapin dhe ndotësinë pa irrituar lëkurën."
     },
     {
@@ -654,7 +654,7 @@
       "brand": "Geek & Gorgeous",
       "type": "serum",
       "price": 14.00,
-      "image": "https://geekandgorgeous.us/cdn/shop/products/c-glow-vitamin-c-serum.jpg",
+      "image": "images/Green C Serum Mask.webp",
       "desc": "Ser me vitaminë C të stabilizuar për ndriçim dhe mbrojtje antioksidante me çmim të arsyeshëm."
     },
     {
@@ -663,7 +663,7 @@
       "brand": "Geek & Gorgeous",
       "type": "serum",
       "price": 12.00,
-      "image": "https://geekandgorgeous.us/cdn/shop/products/a-game-retinol-serum.jpg",
+      "image": "images/Retinol.webp",
       "desc": "Ser me 0.25% retinol i formuluar shkencërisht për fillimtarë me çmim të përballueshëm."
     },
     {
@@ -672,7 +672,7 @@
       "brand": "Haruharu Wonder",
       "type": "sunscreen",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71EH7BPJYQL._SL1500_.jpg",
+      "image": "images/Glass Skin Sunscreen SPF50.jpg",
       "desc": "Krem diell i lehtë dhe transparentë me oriz të zi dhe niacinamidë pa mbetje të bardha."
     },
     {
@@ -681,7 +681,7 @@
       "brand": "Haruharu Wonder",
       "type": "toner",
       "price": 16.00,
-      "image": "https://m.media-amazon.com/images/I/71h5CDmfEFL._SL1500_.jpg",
+      "image": "images/Black Rice.webp",
       "desc": "Tonik me acid hialuronik dhe ekstrakt orizi të zi për hidratim të thellë dhe ekuilibër."
     },
     {
@@ -690,7 +690,7 @@
       "brand": "Haruharu Wonder",
       "type": "serum",
       "price": 21.00,
-      "image": "https://m.media-amazon.com/images/I/71Z1RA5MSKL._SL1500_.jpg",
+      "image": "images/product-77.png",
       "desc": "Ser antioksidant me oriz të zi dhe ekstraktet bimore për lëkurë të ndritshme dhe rinuese."
     },
     {
@@ -699,7 +699,7 @@
       "brand": "iUNIK",
       "type": "cream",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/71D3RXYuIqL._SL1500_.jpg",
+      "image": "images/Cica Cera Cream.webp",
       "desc": "Krem xhel qetësues me 70% Centella Asiatica për lëkurë të kuqe dhe irrituar."
     },
     {
@@ -708,7 +708,7 @@
       "brand": "iUNIK",
       "type": "serum",
       "price": 11.00,
-      "image": "https://m.media-amazon.com/images/I/71t+7HaLCGL._SL1500_.jpg",
+      "image": "images/Vita Niacinamide.webp",
       "desc": "Ser me propolisë dhe vitamina B3, B5, C, E për lëkurë të ndritshme dhe të ushqyer."
     },
     {
@@ -717,7 +717,7 @@
       "brand": "iUNIK",
       "type": "moisturizer",
       "price": 15.00,
-      "image": "https://m.media-amazon.com/images/I/71bE7C7FPPL._SL1500_.jpg",
+      "image": "images/Oat-in Calming.webp",
       "desc": "Krem hidratues ditor me beta-glucan dhe acid hialuronik për hidratim gjatë gjithë ditës."
     },
     {
@@ -726,7 +726,7 @@
       "brand": "Jessup",
       "type": "makeup",
       "price": 24.00,
-      "image": "https://m.media-amazon.com/images/I/81Wbw+yYIbL._SL1500_.jpg",
+      "image": "images/product-81.jpg",
       "desc": "Set i kompletuar me 14 furça makjapi sintetike të cilësisë profesionale me çmim të arsyeshëm."
     },
     {
@@ -735,7 +735,7 @@
       "brand": "Jessup",
       "type": "makeup",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/81nPpqc6X5L._SL1500_.jpg",
+      "image": "images/product-82.jpg",
       "desc": "Set i plotë me 20 furça të bardha elegante me flokë sintetikë dhe dorezë luksoze."
     },
     {
@@ -744,7 +744,7 @@
       "brand": "Jessup",
       "type": "makeup",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71Ty5XR6xLL._SL1500_.jpg",
+      "image": "images/product-83.jpg",
       "desc": "Set furçash kontured profesionale për aplikim të saktë dhe teknikë të avancuar makjapi."
     },
     {
@@ -753,7 +753,7 @@
       "brand": "K18",
       "type": "treatment",
       "price": 75.00,
-      "image": "https://m.media-amazon.com/images/I/71Z0yE4RrqL._SL1500_.jpg",
+      "image": "images/product-84.jpg",
       "desc": "Maskë lënëse revolucionare me peptidë biomimatikë që riparon zinxhirët e keratinës brenda minutave."
     },
     {
@@ -762,7 +762,7 @@
       "brand": "K18",
       "type": "shampoo",
       "price": 40.00,
-      "image": "https://m.media-amazon.com/images/I/71LJ8-xS5iL._SL1500_.jpg",
+      "image": "images/product-85.jpg",
       "desc": "Shampo mbrojtëse me pH të ekuilibruar që pastron butësisht dhe ruan integritetin e flokut."
     },
     {
@@ -771,7 +771,7 @@
       "brand": "K18",
       "type": "shampoo",
       "price": 42.00,
-      "image": "https://m.media-amazon.com/images/I/71y+2E5b8ML._SL1500_.jpg",
+      "image": "images/product-86.jpg",
       "desc": "Shampo detoks me peptide që largon produktet e akumuluara dhe rifreskom flokët."
     },
     {
@@ -780,7 +780,7 @@
       "brand": "Kerastase",
       "type": "shampoo",
       "price": 30.00,
-      "image": "https://m.media-amazon.com/images/I/71f2sUJjJsL._SL1500_.jpg",
+      "image": "images/product-87.jpg",
       "desc": "Shampo ushqyese ikonike me satin texture për flokë të thatë që kanë nevojë për hidratim."
     },
     {
@@ -789,7 +789,7 @@
       "brand": "Kerastase",
       "type": "treatment",
       "price": 48.00,
-      "image": "https://m.media-amazon.com/images/I/71G4YQTzVFL._SL1500_.jpg",
+      "image": "images/product-88.jpg",
       "desc": "Maskë intensive e pasur me iridin dhe glukozë për flokë shumë të tharë dhe të dëmtuar."
     },
     {
@@ -798,7 +798,7 @@
       "brand": "Kerastase",
       "type": "treatment",
       "price": 52.00,
-      "image": "https://m.media-amazon.com/images/I/71wRi7JkyoL._SL1500_.jpg",
+      "image": "images/product-89.jpg",
       "desc": "Serum fortifikues për lëkurën e kokës që lufton rënien e flokëve nga thyerja dhe dobësimi."
     },
     {
@@ -807,7 +807,7 @@
       "brand": "Killys",
       "type": "treatment",
       "price": 7.50,
-      "image": "https://makeupstore.com/media/products/killys-nail-treatment.jpg",
+      "image": "images/crm.webp",
       "desc": "Trajtim fortifikues thonjsh me vitamina dhe vaj ushqyes për thonj të dobët dhe të brishtë."
     },
     {
@@ -816,7 +816,7 @@
       "brand": "Killys",
       "type": "treatment",
       "price": 9.00,
-      "image": "https://makeupstore.com/media/products/killys-microfiber-turban.jpg",
+      "image": "images/mask.jpg",
       "desc": "Turban peshqiri mikrofibër ultra i butë që thahet shpejt pa dëmtuar flokët e lagur."
     },
     {
@@ -825,7 +825,7 @@
       "brand": "Killys",
       "type": "cleanser",
       "price": 6.90,
-      "image": "https://makeupstore.com/media/products/killys-makeup-remover.jpg",
+      "image": "images/Oil Cleanser.webp",
       "desc": "Rrëmues bimësh dhe sysh i bifazikë me formulë të butë pa irritime."
     },
     {
@@ -834,7 +834,7 @@
       "brand": "Ksecret",
       "type": "mask",
       "price": 17.00,
-      "image": "https://www.yesstyle.com/image/pid/1125957890/image/700x700/",
+      "image": "images/Overnight Cream.png",
       "desc": "Maskë gjumi me kollagjen dhe ekstrakt ginseng të zi për lëkurë të ripërtëritur gjatë natës."
     },
     {
@@ -843,7 +843,7 @@
       "brand": "Ksecret",
       "type": "sunscreen",
       "price": 19.00,
-      "image": "https://www.yesstyle.com/image/pid/1125957901/image/700x700/",
+      "image": "images/Quick Sunstick.webp",
       "desc": "Locion diell SPF50+ me kollagjen dhe snail mucin për mbrojtje dhe kujdes njëkohësisht."
     },
     {
@@ -852,7 +852,7 @@
       "brand": "Ksecret",
       "type": "serum",
       "price": 22.00,
-      "image": "https://www.yesstyle.com/image/pid/1134552450/image/700x700/",
+      "image": "images/Seoul 1988 Cleansing Oil.jpg",
       "desc": "Ser me xhensen të zi dhe retinal liposome 2% të linjës Seoul 1988 për antiaging klinik."
     },
     {
@@ -861,7 +861,7 @@
       "brand": "Laneige",
       "type": "treatment",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71oRnQ3rPRL._SL1500_.jpg",
+      "image": "images/Lip Sleeping Mask.webp",
       "desc": "Maskë gjumi ikonike për buzë me berry mix complex që ushqen dhe zbuton buzët gjatë natës."
     },
     {
@@ -870,7 +870,7 @@
       "brand": "Laneige",
       "type": "mask",
       "price": 25.00,
-      "image": "https://m.media-amazon.com/images/I/71jSoG9AsFLL._SL1500_.jpg",
+      "image": "images/Water Sleeping Mask.webp",
       "desc": "Maskë gjumi me teknologjinë Sleep-tox që pastron dhe hidratat lëkurën gjatë gjumit."
     },
     {
@@ -879,7 +879,7 @@
       "brand": "Laneige",
       "type": "toner",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/71v0ZB9j57L._SL1500_.jpg",
+      "image": "images/Supple Preparation.jpg",
       "desc": "Tonik-krem hibrid me ceramide dhe peptide për lëkurë të butë dhe të hidratuar gjerë."
     },
     {
@@ -888,7 +888,7 @@
       "brand": "Laneige",
       "type": "makeup",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/71gYLF4t7VL._SL1500_.jpg",
+      "image": "images/product-99.jpg",
       "desc": "Kushinë fondotinte matte me SPF42 dhe coberturë mesatare me finish të papërsosur."
     },
     {
@@ -897,7 +897,7 @@
       "brand": "Lysse",
       "type": "makeup",
       "price": 24.00,
-      "image": "https://m.media-amazon.com/images/I/71SdSV4YEzL._SL1500_.jpg",
+      "image": "images/Melaclear Cream (Dark Spots).webp",
       "desc": "Fondotinte matte me SPF30 dhe coberturë të plotë nga brend clean beauty i zezëve."
     },
     {
@@ -906,7 +906,7 @@
       "brand": "Lysse",
       "type": "moisturizer",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71A1vKVLt9L._SL1500_.jpg",
+      "image": "images/Hydro Day Cream.webp",
       "desc": "Hidratues me ngjyrë dhe SPF20 i lehtë me 35 nuanca për coberturë natyrale gjatë gjithë ditës."
     },
     {
@@ -915,7 +915,7 @@
       "brand": "Lysse",
       "type": "makeup",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/71xHiY1rrNL._SL1500_.jpg",
+      "image": "images/Lip Sleeping Mask.webp",
       "desc": "Gloss buzësh hidratues me finish me shkëlqim dhe acid hialuronik për buzë të mbushura."
     },
     {
@@ -924,7 +924,7 @@
       "brand": "Medicube",
       "type": "toner",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/71A8nRwT5dL._SL1500_.jpg",
+      "image": "images/Zero Pore Pad.jpg",
       "desc": "Jastëkë toner eksfoliuese me AHA, BHA dhe niacinamidë për pore të minimizuara."
     },
     {
@@ -933,7 +933,7 @@
       "brand": "Medicube",
       "type": "serum",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/711TMxDpkdL._SL1500_.jpg",
+      "image": "images/Red Collagen.jpg",
       "desc": "Ser me tre lloje kollagjeni dhe PDRN për lëkurë elastike si qelq me efekt koreano-klinik."
     },
     {
@@ -942,7 +942,7 @@
       "brand": "Medicube",
       "type": "serum",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/717Ssk3nFXL._SL1500_.jpg",
+      "image": "images/Collagen EGF.webp",
       "desc": "Ser sy me peptide, niacinamidë dhe skualane për rrudhat, rrathët e errët dhe fryrjet."
     },
     {
@@ -951,7 +951,7 @@
       "brand": "Medicube",
       "type": "toner",
       "price": 28.00,
-      "image": "https://m.media-amazon.com/images/I/71T-rxu1eRL._SL1500_.jpg",
+      "image": "images/BLOODY PEEL 30ml.jpg",
       "desc": "Jastëkë eksfoliuese me acid sukcinik dhe BHA për lëkurë të pastër dhe pa bllokime."
     },
     {
@@ -960,7 +960,7 @@
       "brand": "Medicerapy",
       "type": "cream",
       "price": 29.00,
-      "image": "https://m.media-amazon.com/images/I/71fZJ7Z1mEL._SL1500_.jpg",
+      "image": "images/Collagen EGF.webp",
       "desc": "Krem ngritës premium me kollagjen dhe ar nanog për elasticitet dhe rinisim të lëkurës."
     },
     {
@@ -969,7 +969,7 @@
       "brand": "Medicerapy",
       "type": "serum",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71dIJqfkZkL._SL1500_.jpg",
+      "image": "images/Snail Cream.webp",
       "desc": "Ampull intensive me mucin kërmill 100% për rigjenerim dhe riparim i thellë lëkurës."
     },
     {
@@ -978,7 +978,7 @@
       "brand": "Medicerapy",
       "type": "serum",
       "price": 25.00,
-      "image": "https://m.media-amazon.com/images/I/71hBGZxiJKL._SL1000_.jpg",
+      "image": "images/Deep Vita C Capsule Cream.webp",
       "desc": "Ser ndriçues me vitaminë C të stabilizuar dhe niacinamidë për unifikim të tonit."
     },
     {
@@ -987,7 +987,7 @@
       "brand": "Missha",
       "type": "serum",
       "price": 25.00,
-      "image": "https://m.media-amazon.com/images/I/71d3DXWF8oL._SL1500_.jpg",
+      "image": "images/Time Revolution Essence.jpg",
       "desc": "Ampull nate me probiotikë, bifida fermenti dhe lakto për lëkurë të ripërtëritur."
     },
     {
@@ -996,7 +996,7 @@
       "brand": "Missha",
       "type": "makeup",
       "price": 17.00,
-      "image": "https://m.media-amazon.com/images/I/71+7YUQ5hkL._SL1500_.jpg",
+      "image": "images/product-111.png",
       "desc": "BB Cream ikonike koreane me SPF42 PA+++ dhe coberturë të plotë për finish natyral."
     },
     {
@@ -1005,7 +1005,7 @@
       "brand": "Missha",
       "type": "toner",
       "price": 16.00,
-      "image": "https://m.media-amazon.com/images/I/71q0F+SNZNL._SL1500_.jpg",
+      "image": "images/Super Aqua Cell.jpg",
       "desc": "Tonik ultra hidratues me acid hialuronik të trefishtë për lëkurë të mbushur me ujë."
     },
     {
@@ -1014,7 +1014,7 @@
       "brand": "Mjuuk",
       "type": "treatment",
       "price": 22.00,
-      "image": "https://nordicbeautyworld.com/cdn/shop/products/mjuuk-curl-defining-cream.jpg",
+      "image": "images/crm.webp",
       "desc": "Krem stilizues Nordic për kaçurrelë të definuara me formulë pa sulfate dhe pa silikone."
     },
     {
@@ -1023,7 +1023,7 @@
       "brand": "Mjuuk",
       "type": "shampoo",
       "price": 24.00,
-      "image": "https://nordicbeautyworld.com/cdn/shop/products/mjuuk-hydrating-shampoo.jpg",
+      "image": "images/Foaming Cleanser.jpg",
       "desc": "Shampo hidratuese nordike me ekstrakte bimore për flokë kaçurrelë të lëmuar dhe të shkëlqyer."
     },
     {
@@ -1032,7 +1032,7 @@
       "brand": "Mjuuk",
       "type": "conditioner",
       "price": 20.00,
-      "image": "https://nordicbeautyworld.com/cdn/shop/products/mjuuk-leave-in-spray.jpg",
+      "image": "images/Heartleaf Soothing.webp",
       "desc": "Gërshet lënës spray nordik pa shpëlarje që zbut dhe kontrollon flokët kaçurrelë çdo ditë."
     },
     {
@@ -1041,7 +1041,7 @@
       "brand": "Nam",
       "type": "serum",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71NBWJ9DBNL._SL1500_.jpg",
+      "image": "images/Niacinamide Serum.jpg",
       "desc": "Ser me xhensen dhe peptide për lëkurë energjike, të hidratuar dhe me shkëlqim."
     },
     {
@@ -1050,7 +1050,7 @@
       "brand": "Nam",
       "type": "toner",
       "price": 15.00,
-      "image": "https://m.media-amazon.com/images/I/71xVwqJHq2L._SL1500_.jpg",
+      "image": "images/Toner.webp",
       "desc": "Tonik esencë me acid hialuronik të trefishtë për hidratim të thellë dhe lëkurë të butë."
     },
     {
@@ -1059,7 +1059,7 @@
       "brand": "Nam",
       "type": "moisturizer",
       "price": 17.00,
-      "image": "https://m.media-amazon.com/images/I/71QBnFM5ywL._SL1500_.jpg",
+      "image": "images/Hydro Day Cream.webp",
       "desc": "Krem hidratues me ceramide për rigjenerim të barrierës dhe mbrojtje të lëkurës."
     },
     {
@@ -1068,7 +1068,7 @@
       "brand": "Panoxyl",
       "type": "cleanser",
       "price": 10.50,
-      "image": "https://m.media-amazon.com/images/I/61X9zORsE6L._SL1000_.jpg",
+      "image": "images/Acne Cream Oil Control.webp",
       "desc": "Pastrues shkumë me 10% benzoil peroksid i numrit 1 në SHBA për luftimin e akneve."
     },
     {
@@ -1077,7 +1077,7 @@
       "brand": "Panoxyl",
       "type": "cleanser",
       "price": 9.90,
-      "image": "https://m.media-amazon.com/images/I/71kLTrODNVL._SL1500_.jpg",
+      "image": "images/Blemish Control Cleanser.webp",
       "desc": "Pastrues kremoze me 4% benzoil peroksid i butë për trajtimin ditor të akneve."
     },
     {
@@ -1086,7 +1086,7 @@
       "brand": "Panoxyl",
       "type": "moisturizer",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/71I9pYIzN7L._SL1500_.jpg",
+      "image": "images/Acne Cream Oil Control.webp",
       "desc": "Hidratues ditor me SPF30 dhe niacinamidë i formuluar posaçërisht për lëkurë me akne."
     },
     {
@@ -1095,7 +1095,7 @@
       "brand": "Purito",
       "type": "sunscreen",
       "price": 13.99,
-      "image": "https://m.media-amazon.com/images/I/61F6kQCBhQL._SL1000_.jpg",
+      "image": "images/product-122.png",
       "desc": "Krem diell shumë i butë me formulë minerale-kimike hibride pa rezidue të bardha."
     },
     {
@@ -1104,7 +1104,7 @@
       "brand": "Purito",
       "type": "serum",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71rr2nkevCL._SL1500_.jpg",
+      "image": "images/123.webp",
       "desc": "Serum pa aromë me 49% Centella Asiatica për lëkurë të qetësuar dhe të lëkurës sensitive."
     },
     {
@@ -1113,7 +1113,7 @@
       "brand": "Purito",
       "type": "cream",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71VY9kDz+FL._SL1500_.jpg",
+      "image": "images/product-124.jpg",
       "desc": "Krem me Centella Asiatica dhe peptide pa parfum për lëkurë të ndjeshme dhe të qetësuar."
     },
     {
@@ -1122,7 +1122,7 @@
       "brand": "Purito",
       "type": "cleanser",
       "price": 12.50,
-      "image": "https://m.media-amazon.com/images/I/71oB0Xu1rrL._SL1500_.jpg",
+      "image": "images/Exfoliating Cleanser.jpg",
       "desc": "Pastrues shkumë i thellë me ekstrakte bimore organike pa sulfate dhe pa parfum."
     },
     {
@@ -1131,7 +1131,7 @@
       "brand": "Redken",
       "type": "shampoo",
       "price": 23.00,
-      "image": "https://m.media-amazon.com/images/I/71MnJaZ5cEL._SL1500_.jpg",
+      "image": "images/product-126.jpg",
       "desc": "Shampo zbususë me argan oil për flokë të thata dhe të brishtë që kanë nevojë për ushqim."
     },
     {
@@ -1140,7 +1140,7 @@
       "brand": "Redken",
       "type": "conditioner",
       "price": 25.00,
-      "image": "https://m.media-amazon.com/images/I/71eMsFuT3XL._SL1500_.jpg",
+      "image": "images/product-127.jpg",
       "desc": "Gërshet i pasur me RCT Protein Complex dhe vaj argani për flokë të zbusur dhe të lëmuar."
     },
     {
@@ -1149,7 +1149,7 @@
       "brand": "Redken",
       "type": "shampoo",
       "price": 24.00,
-      "image": "https://m.media-amazon.com/images/I/71A9kEMXi1L._SL1500_.jpg",
+      "image": "images/product-128.jpg",
       "desc": "Shampo fortifikuese me Ceramide Rx për flokë të dëmtuara dhe të brishtë."
     },
     {
@@ -1158,7 +1158,7 @@
       "brand": "Redken",
       "type": "shampoo",
       "price": 24.00,
-      "image": "https://m.media-amazon.com/images/I/71HsqWLzjQL._SL1500_.jpg",
+      "image": "images/product-129.jpg",
       "desc": "Shampo me amino ion complex që ruan gjallërinë e ngjyrës dhe mbron flokët e lyera."
     },
     {
@@ -1167,7 +1167,7 @@
       "brand": "Round Lab",
       "type": "toner",
       "price": 19.00,
-      "image": "https://m.media-amazon.com/images/I/71B-axWVxLL._SL1500_.jpg",
+      "image": "images/product-130.png",
       "desc": "Tonik me ujë deti të thellë Dokdo dhe beta-glucan për hidratim dhe ekuilibrim lëkure."
     },
     {
@@ -1176,7 +1176,7 @@
       "brand": "Round Lab",
       "type": "serum",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71+hIjKUJHL._SL1500_.jpg",
+      "image": "images/Birch Juice SPF50+.webp",
       "desc": "Ser hidratues me lëng thupre dhe acid hialuronik për lëkurë të freskët dhe të shëndoshë."
     },
     {
@@ -1185,7 +1185,7 @@
       "brand": "Round Lab",
       "type": "cleanser",
       "price": 15.00,
-      "image": "https://m.media-amazon.com/images/I/71yZ2e1oS4L._SL1500_.jpg",
+      "image": "images/product-132.webp",
       "desc": "Pastrues me ujë deti Dokdo dhe peptide minerale që pastron butësisht pa tharë lëkurën."
     },
     {
@@ -1194,7 +1194,7 @@
       "brand": "Skin1004",
       "type": "serum",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71V2bGG-YHL._SL1500_.jpg",
+      "image": "images/Centella Asiatica.jpg",
       "desc": "Ampull me 100% Centella Asiatica e papastërtuar nga Madagaskari për qetësim dhe rigjenerim."
     },
     {
@@ -1203,7 +1203,7 @@
       "brand": "Skin1004",
       "type": "sunscreen",
       "price": 18.50,
-      "image": "https://m.media-amazon.com/images/I/71z3qTbpUiL._SL1500_.jpg",
+      "image": "images/Centella Sun Serum.webp",
       "desc": "Serum diell me acid hialuronik dhe cica pa mbetje të bardha për lëkurë sensitive."
     },
     {
@@ -1212,7 +1212,7 @@
       "brand": "Skin1004",
       "type": "serum",
       "price": 16.00,
-      "image": "https://m.media-amazon.com/images/I/71RVhpVsEgL._SL1500_.jpg",
+      "image": "images/TXA Dark Spot Serum.jpg",
       "desc": "Ampull ndriçuese me centella dhe niacinamidë 10% për unifikim të tonit dhe reduktim njollash."
     },
     {
@@ -1221,7 +1221,7 @@
       "brand": "Skin1004",
       "type": "cleanser",
       "price": 14.00,
-      "image": "https://m.media-amazon.com/images/I/71w6tGcLVTL._SL1500_.jpg",
+      "image": "images/Zero Pore Blackhead Cleansing Oil.webp",
       "desc": "Pastrues i shpejtë me centella madagaskari dhe zinc që minimizon poret dhe kontrollon yndyrën."
     },
     {
@@ -1230,7 +1230,7 @@
       "brand": "Skinfoot",
       "type": "treatment",
       "price": 12.00,
-      "image": "https://m.media-amazon.com/images/I/71tg3vmFgLL._SL1500_.jpg",
+      "image": "images/CeraVe Cream.jpg",
       "desc": "Balsam riparues për thembrat e çara me urea 10% dhe shea butter për këmbë të buta."
     },
     {
@@ -1239,7 +1239,7 @@
       "brand": "Skinfoot",
       "type": "mask",
       "price": 8.00,
-      "image": "https://m.media-amazon.com/images/I/71GCkU2DKZL._SL1500_.jpg",
+      "image": "images/mask.jpg",
       "desc": "Maska eksoliuese si çorape për këmbë me acid laktik dhe fruktik që heqin lëkurën e vjetër."
     },
     {
@@ -1248,7 +1248,7 @@
       "brand": "Skinfoot",
       "type": "moisturizer",
       "price": 9.50,
-      "image": "https://m.media-amazon.com/images/I/71BVd8ztQ9L._SL1500_.jpg",
+      "image": "images/Hydro Day Cream.webp",
       "desc": "Krem hidratues për këmbë me urea 5% dhe glycerin për lëkurë të butë dhe të ushqyer."
     },
     {
@@ -1257,7 +1257,7 @@
       "brand": "Skintegra",
       "type": "cream",
       "price": 24.00,
-      "image": "https://purish.com/cdn/shop/products/skintegra-lunar-retinol.jpg",
+      "image": "images/Retinol2.webp",
       "desc": "Krem nate me retinol i dermatologjikisht testuar dhe certifikuar farmaceutikisht."
     },
     {
@@ -1266,7 +1266,7 @@
       "brand": "Skintegra",
       "type": "sunscreen",
       "price": 22.00,
-      "image": "https://purish.com/cdn/shop/products/skintegra-mineral-spf50.jpg",
+      "image": "images/product-141.png",
       "desc": "Krem diell mineral SPF50+ me filtra fizikë pa parfum për lëkurë shumë sensitive."
     },
     {
@@ -1275,7 +1275,7 @@
       "brand": "Skintegra",
       "type": "serum",
       "price": 26.00,
-      "image": "https://purish.com/cdn/shop/products/skintegra-tropics-vitamin-c.jpg",
+      "image": "images/product-142.png",
       "desc": "Ser me vitaminë C të stabilizuar dhe ekstrakte tropikale për ndriçim dhe mbrojtje antioksidante."
     },
     {
@@ -1284,7 +1284,7 @@
       "brand": "Some By Mi",
       "type": "toner",
       "price": 18.00,
-      "image": "https://m.media-amazon.com/images/I/71k1n0e1OFL._SL1500_.jpg",
+      "image": "images/30 Days Miracle Toner.webp",
       "desc": "Tonik mrekullie me AHA, BHA dhe PHA për lëkurë të pastër dhe pa akne brenda 30 ditëve."
     },
     {
@@ -1293,7 +1293,7 @@
       "brand": "Some By Mi",
       "type": "serum",
       "price": 20.00,
-      "image": "https://m.media-amazon.com/images/I/71A8GqA8oFL._SL1500_.jpg",
+      "image": "images/Some.jpg",
       "desc": "Ser me tri acide eksfoliuese për lëkurë të qartë dhe me bark të lëmuar."
     },
     {
@@ -1302,7 +1302,7 @@
       "brand": "Some By Mi",
       "type": "serum",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71BuNPh+TiL._SL1500_.jpg",
+      "image": "images/Brightening.webp",
       "desc": "Ser ndriçues me yuzu dhe niacinamidë 10% për njolla, hiperpigmentim dhe ton jouniform."
     },
     {
@@ -1311,7 +1311,7 @@
       "brand": "Sungboon Editor",
       "type": "serum",
       "price": 22.00,
-      "image": "https://m.media-amazon.com/images/I/71M0G1x8aAL._SL1500_.jpg",
+      "image": "images/product-146.png",
       "desc": "Krem-serum me 5% Volufiline dhe 58% kollagjen me molekulë të ulët për elasticitet dhe hidratim."
     },
     {
@@ -1320,7 +1320,7 @@
       "brand": "Sungboon Editor",
       "type": "toner",
       "price": 27.00,
-      "image": "https://m.media-amazon.com/images/I/71NjPBl+JkL._SL1500_.jpg",
+      "image": "images/147.jpg",
       "desc": "Tonik-ampull me domate të gjelbra për shtrëngim të poreve dhe lëkurë me prodhim të ekuilibruar vajor."
     },
     {
@@ -1329,7 +1329,7 @@
       "brand": "Sungboon Editor",
       "type": "cream",
       "price": 29.00,
-      "image": "https://m.media-amazon.com/images/I/71sGYT-PKLL._SL1500_.jpg",
+      "image": "images/Probio-Cica Enrich Cream.webp",
       "desc": "Krem riparues barrierë me probiotikë lakto dhe ceramide për lëkurë të ndjeshme."
     },
     {
@@ -1338,7 +1338,7 @@
       "brand": "NYC",
       "type": "makeup",
       "price": 5.99,
-      "image": "https://m.media-amazon.com/images/I/61P-8fqC3ML._SL1000_.jpg",
+      "image": "images/product-149.jpg",
       "desc": "Fondotinte liquid me mbulim natyral për lëkurë të lëmuar me çmim të përballueshëm."
     },
     {
@@ -1347,7 +1347,7 @@
       "brand": "NYC",
       "type": "makeup",
       "price": 4.99,
-      "image": "https://m.media-amazon.com/images/I/61NUlr3nIzL._SL1000_.jpg",
+      "image": "images/Lip Sleeping Mask.webp",
       "desc": "Buzëkuqe me rezistencë të gjatë dhe ngjyrë intensive nga koleksioni i qytetit të New York."
     },
     {
@@ -1356,7 +1356,7 @@
       "brand": "NYC",
       "type": "makeup",
       "price": 5.50,
-      "image": "https://m.media-amazon.com/images/I/71JUWB-FJFL._SL1500_.jpg",
+      "image": "images/Brightening.webp",
       "desc": "Pudër bronzante me formulë natyrale për ngjyrosje delikate dhe pamje verore."
     },
     {
@@ -1365,7 +1365,7 @@
       "brand": "Olaplex",
       "type": "treatment",
       "price": 30.00,
-      "image": "https://m.media-amazon.com/images/I/71JaZHRJJjL._SL1500_.jpg",
+      "image": "images/product-152.png",
       "desc": "Trajtim ikonik rregullues i flokëve që ripërtërin lidhjet e thyera para shampos."
     },
     {
@@ -1374,7 +1374,7 @@
       "brand": "Olaplex",
       "type": "shampoo",
       "price": 30.00,
-      "image": "https://m.media-amazon.com/images/I/71nG7g8EFKL._SL1500_.jpg",
+      "image": "images/product-153.png",
       "desc": "Shampo riparuese me teknologjinë bond-building që pastron dhe forcon çdo lloj floku."
     },
     {
@@ -1383,7 +1383,7 @@
       "brand": "Olaplex",
       "type": "conditioner",
       "price": 30.00,
-      "image": "https://m.media-amazon.com/images/I/71aBNdvh4OL._SL1500_.jpg",
+      "image": "images/product-154.png",
       "desc": "Gërshet riparues me teknologjinë patented Olaplex që riparimëson lidhjet e dëmtuara."
     },
     {
@@ -1392,7 +1392,7 @@
       "brand": "Olaplex",
       "type": "treatment",
       "price": 30.00,
-      "image": "https://m.media-amazon.com/images/I/71T4q-5w+RL._SL1500_.jpg",
+      "image": "images/product-155.png",
       "desc": "Krem stilizues lënës pa shpëlarje që kontrollon kocrrat dhe jep shkëlqim pa peshë."
     },
     {
@@ -1401,7 +1401,7 @@
       "brand": "Olaplex",
       "type": "oil",
       "price": 32.00,
-      "image": "https://m.media-amazon.com/images/I/71j6sMq4XlL._SL1500_.jpg",
+      "image": "images/product-156.png",
       "desc": "Vaj lidhjesh ultralehtë që rrit gjallërinë e ngjyrës dhe mbron flokët nga nxehtësia deri 230°C."
     }
   ]
