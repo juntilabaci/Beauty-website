@@ -47,7 +47,9 @@ function applyFilters() {
       brand === "all" || (p.brand || "").toLowerCase() === brand;
 
     const matchType =
-      type === "all" || (p.type || "").toLowerCase() === type;
+      type === "ofertat"
+        ? p.offer === true
+        : type === "all" || (p.type || "").toLowerCase() === type;
 
     const matchConcern =
       concern === "all" || (p.concern || "").toLowerCase().includes(concern);
@@ -102,9 +104,14 @@ function render(list) {
           onclick="openModal('${p.id}')"
         >
 
+        ${p.offer ? `<div class="offer-badge">🏷️ ${p.discount || 20}% OFF</div>` : ""}
         <h4>${p.name}</h4>
         <p>${p.desc || ""}</p>
-        <span>€${Number(p.price).toFixed(2)}</span>
+        ${p.offer
+          ? `<span class="old-price">€${Number(p.price).toFixed(2)}</span>
+             <span class="new-price">€${(Number(p.price) * (1 - (p.discount || 20) / 100)).toFixed(2)}</span>`
+          : `<span>€${Number(p.price).toFixed(2)}</span>`
+        }
 
         <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
           <button onclick="addToCart('${p.id}')">Add to Cart</button>

@@ -7,6 +7,30 @@
   align-items: stretch;
 }
 
+.offer-badge {
+  background: #e11d48;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 8px 0 4px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+.new-price {
+  color: #e11d48;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .card {
   background: white;
   border-radius: 14px;

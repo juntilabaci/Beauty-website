@@ -6,6 +6,8 @@
       "brand": "Abib",
       "type": "mask",
       "price": 15.99,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-1.jpg",
       "desc": "Maskë fletë me pH të butë acidik me ekstrakt të trëndafilit Jericho për lëkurë të qetësuar dhe të hidratuar."
     },
@@ -240,6 +242,8 @@
       "brand": "Beauty of Joseon",
       "type": "serum",
       "price": 14.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Beauty of Joseon.jpg",
       "desc": "Ser shkëlqimi me propolisë dhe niacinamidë i frymëzuar nga ritualet koreane tradicionale."
     },
@@ -249,6 +253,8 @@
       "brand": "Beauty of Joseon",
       "type": "sunscreen",
       "price": 15.50,
+      "offer": true,
+      "discount": 20,
       "image": "images/Relief Sun SPF50+.jpg",
       "desc": "Krem diell legjend me oriz dhe probiotikë për mbrojtje dhe ndriçim të lëkurës."
     },
@@ -312,6 +318,8 @@
       "brand": "Be Plain",
       "type": "serum",
       "price": 19.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-35.jpg",
       "desc": "Ampull me cica dhe Centella Asiatica për rigjenerim të shpejtë të lëkurës së ndjeshme."
     },
@@ -429,6 +437,8 @@
       "brand": "COSRX",
       "type": "essence",
       "price": 19.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Advanced Snail.webp",
       "desc": "Esencë ikonike me 96% mucin kërmill për rigjenerim dhe hidratim intensiv të lëkurës."
     },
@@ -465,6 +475,8 @@
       "brand": "COSRX",
       "type": "serum",
       "price": 22.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Vitamin C.webp",
       "desc": "Ser me 23% vitaminë C pure për ndriçim të fortë dhe mbrojtje antioksidante të lëkurës."
     },
@@ -555,6 +567,8 @@
       "brand": "Dr. Reju-All",
       "type": "cream",
       "price": 38.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Caviar PDRN.webp",
       "desc": "Krem rigjenerues me 1200ppm PDRN prej salmoni për lëkurë si qelq dhe të rilindur."
     },
@@ -582,6 +596,8 @@
       "brand": "D'Alba",
       "type": "serum",
       "price": 38.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-65.png",
       "desc": "Ser-spray ikonik vegan me tarte të bardhë nga Italia që hidratat dhe jep shkëlqim menjëherë."
     },
@@ -753,6 +769,8 @@
       "brand": "K18",
       "type": "treatment",
       "price": 75.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-84.jpg",
       "desc": "Maskë lënëse revolucionare me peptidë biomimatikë që riparon zinxhirët e keratinës brenda minutave."
     },
@@ -780,6 +798,8 @@
       "brand": "Kerastase",
       "type": "shampoo",
       "price": 30.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-87.jpg",
       "desc": "Shampo ushqyese ikonike me satin texture për flokë të thatë që kanë nevojë për hidratim."
     },
@@ -861,6 +881,8 @@
       "brand": "Laneige",
       "type": "treatment",
       "price": 22.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Lip Sleeping Mask.webp",
       "desc": "Maskë gjumi ikonike për buzë me berry mix complex që ushqen dhe zbuton buzët gjatë natës."
     },
@@ -987,6 +1009,8 @@
       "brand": "Missha",
       "type": "serum",
       "price": 25.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Time Revolution Essence.jpg",
       "desc": "Ampull nate me probiotikë, bifida fermenti dhe lakto për lëkurë të ripërtëritur."
     },
@@ -1194,6 +1218,8 @@
       "brand": "Skin1004",
       "type": "serum",
       "price": 18.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/Centella Asiatica.jpg",
       "desc": "Ampull me 100% Centella Asiatica e papastërtuar nga Madagaskari për qetësim dhe rigjenerim."
     },
@@ -1284,6 +1310,8 @@
       "brand": "Some By Mi",
       "type": "toner",
       "price": 18.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/30 Days Miracle Toner.webp",
       "desc": "Tonik mrekullie me AHA, BHA dhe PHA për lëkurë të pastër dhe pa akne brenda 30 ditëve."
     },
@@ -1365,6 +1393,8 @@
       "brand": "Olaplex",
       "type": "treatment",
       "price": 30.00,
+      "offer": true,
+      "discount": 20,
       "image": "images/product-152.png",
       "desc": "Trajtim ikonik rregullues i flokëve që ripërtërin lidhjet e thyera para shampos."
     },
