@@ -439,6 +439,7 @@
       "price": 19.00,
       "offer": true,
       "discount": 20,
+      "bestseller": true,
       "image": "images/Advanced Snail.webp",
       "desc": "Esencë ikonike me 96% mucin kërmill për rigjenerim dhe hidratim intensiv të lëkurës."
     },
@@ -448,6 +449,7 @@
       "brand": "COSRX",
       "type": "cleanser",
       "price": 12.00,
+      "bestseller": true,
       "image": "images/Low pH Cleanser.webp",
       "desc": "Pastrues xhel me pH të ulët dhe acid salisililik për lëkurë të pastër dhe të ekuilibruar."
     },
@@ -477,6 +479,7 @@
       "price": 22.00,
       "offer": true,
       "discount": 20,
+      "bestseller": true,
       "image": "images/Vitamin C.webp",
       "desc": "Ser me 23% vitaminë C pure për ndriçim të fortë dhe mbrojtje antioksidante të lëkurës."
     },
@@ -1312,6 +1315,7 @@
       "price": 18.00,
       "offer": true,
       "discount": 20,
+      "bestseller": true,
       "image": "images/30 Days Miracle Toner.webp",
       "desc": "Tonik mrekullie me AHA, BHA dhe PHA për lëkurë të pastër dhe pa akne brenda 30 ditëve."
     },

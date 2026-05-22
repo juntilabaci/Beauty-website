@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 async function loadProducts() {
+  if (grid) {
+    grid.innerHTML = Array(8).fill('').map(() =>
+      `<div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line w-40"></div><div class="skeleton-line w-70"></div><div class="skeleton-line w-55"></div></div></div>`
+    ).join('');
+  }
   try {
     const res = await fetch("db.json");
 
@@ -29,13 +34,29 @@ async function loadProducts() {
     filtered = products;
     window.productsReady = true;
 
-    // Lexo URL parametrin ?type=ofertat
-    const urlParams = new URLSearchParams(window.location.search);
-    const typeParam = urlParams.get("type");
+    populateFilters();
+
+    // Lexo URL parametrin ?type=ofertat / ?brand=x / ?search=x
+    const urlParams   = new URLSearchParams(window.location.search);
+    const typeParam   = urlParams.get("type");
+    const brandParam  = urlParams.get("brand");
+    const searchParam = urlParams.get("search");
+
     if (typeParam) {
       const typeFilter = document.getElementById("typeFilter");
       if (typeFilter) typeFilter.value = typeParam;
+    }
+    if (brandParam) {
+      const brandFilter = document.getElementById("brandFilter");
+      if (brandFilter) brandFilter.value = brandParam.toLowerCase();
+    }
+
+    if (typeParam || brandParam) {
       applyFilters();
+    } else if (searchParam) {
+      applySearch(searchParam);
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput) searchInput.value = searchParam;
     } else {
       render(filtered);
     }
@@ -46,10 +67,88 @@ async function loadProducts() {
 }
 
 
+function populateFilters() {
+  /* ── Brands ── */
+  const brands = [...new Set(
+    products
+      .map(p => (p.brand || "").trim())
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b));
+
+  const brandSel = document.getElementById("brandFilter");
+  brands.forEach(b => {
+    const opt = document.createElement("option");
+    opt.value = b.toLowerCase();
+    opt.textContent = b;
+    brandSel.appendChild(opt);
+  });
+
+  /* ── Types ── */
+  const typeLabels = {
+    cleanser:   "Cleanser",
+    serum:      "Serum",
+    toner:      "Toner",
+    cream:      "Cream",
+    sunscreen:  "Sunscreen",
+    mask:       "Mask",
+    patch:      "Patch",
+    gel:        "Gel",
+    essence:    "Essence",
+    exfoliant:  "Exfoliant",
+    retinol:    "Retinol",
+    oil:        "Oil",
+    moisturizer:"Moisturizer",
+    lipcare:    "Lip Care",
+    pad:        "Pad",
+    peel:       "Peel",
+    lotion:     "Lotion",
+  };
+
+  const types = [...new Set(
+    products
+      .map(p => (p.type || "").trim().toLowerCase())
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b));
+
+  const typeSel = document.getElementById("typeFilter");
+  types.forEach(t => {
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = typeLabels[t] || (t.charAt(0).toUpperCase() + t.slice(1));
+    typeSel.appendChild(opt);
+  });
+
+  // Shto ofertën gjithmonë në fund
+  const offerOpt = document.createElement("option");
+  offerOpt.value = "ofertat";
+  offerOpt.textContent = "🏷️ Ofertat";
+  typeSel.appendChild(offerOpt);
+
+  /* ── Concerns ── */
+  const concerns = [...new Set(
+    products
+      .map(p => (p.concern || "").trim())
+      .filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b));
+
+  const concernSel = document.getElementById("concernFilter");
+  if (concerns.length === 0) {
+    if (concernSel) concernSel.style.display = "none";
+  } else {
+    concerns.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c.toLowerCase();
+      opt.textContent = c.charAt(0).toUpperCase() + c.slice(1);
+      concernSel.appendChild(opt);
+    });
+  }
+}
+
+
 function applyFilters() {
-  const brand = document.getElementById("brandFilter").value.toLowerCase();
-  const type = document.getElementById("typeFilter").value.toLowerCase();
-  const concern = document.getElementById("concernFilter").value.toLowerCase();
+  const brand   = (document.getElementById("brandFilter")?.value   || "all").toLowerCase();
+  const type    = (document.getElementById("typeFilter")?.value    || "all").toLowerCase();
+  const concern = (document.getElementById("concernFilter")?.value || "all").toLowerCase();
 
   filtered = products.filter(p => {
     const matchBrand =
@@ -95,39 +194,62 @@ function render(list) {
   if (!grid) return;
 
   if (!Array.isArray(list) || list.length === 0) {
-    grid.innerHTML = "<p>No products found</p>";
+    grid.innerHTML = `
+      <div style="text-align:center;padding:70px 20px;grid-column:1/-1;">
+        <div style="font-size:48px;margin-bottom:14px;">🔍</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:22px;margin-bottom:8px;color:#111;">Asnjë produkt nuk u gjet</h3>
+        <p style="color:#888;margin-bottom:22px;">Provo me terma të tjera ose shiko të gjitha produktet.</p>
+        <a href="shop.html" style="display:inline-block;padding:11px 26px;background:#111;color:#fff;border-radius:8px;text-decoration:none;font-size:14px;">Shiko të gjitha →</a>
+      </div>`;
     return;
   }
 
   const wishlist = getWishlist();
 
   grid.innerHTML = list.map(p => {
-    const isFav = wishlist.some(w => String(w.id) === String(p.id));
+    const isFav      = wishlist.some(w => String(w.id) === String(p.id));
+    const discount   = p.discount || 20;
+    const finalPrice = p.offer
+      ? (Number(p.price) * (1 - discount / 100)).toFixed(2)
+      : null;
+    const desc = (p.desc || "").length > 72
+      ? p.desc.substring(0, 72) + "…"
+      : (p.desc || "");
 
     return `
-      <div class="card">
-
-        <img
-          src="${p.image || getImage(p.type, p.id)}"
-          onclick="openModal('${p.id}')"
-        >
-
-        ${p.offer ? `<div class="offer-badge">🏷️ ${p.discount || 20}% OFF</div>` : ""}
-        <h4>${p.name}</h4>
-        <p>${p.desc || ""}</p>
-        ${p.offer
-          ? `<span class="old-price">€${Number(p.price).toFixed(2)}</span>
-             <span class="new-price">€${(Number(p.price) * (1 - (p.discount || 20) / 100)).toFixed(2)}</span>`
-          : `<span>€${Number(p.price).toFixed(2)}</span>`
-        }
-
-        <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
-          <button onclick="addToCart('${p.id}')">Add to Cart</button>
-          <button onclick="addToWishlist('${p.id}', this)">
+      <div class="card" onclick="goToProduct('${p.id}')">
+        <div class="card-img-box">
+          <img src="${p.image || getImage(p.type, p.id)}" alt="${p.name}"
+               onerror="this.src='https://via.placeholder.com/400x400?text=No+Image'">
+          ${p.offer ? `<span class="offer-ribbon">-${discount}%</span>` : ""}
+          <button class="card-wish${isFav ? " wished" : ""}"
+                  onclick="event.stopPropagation(); addToWishlist('${p.id}', this)">
             ${isFav ? "❤️" : "♡"}
           </button>
+          <div class="card-overlay">
+            <button class="card-overlay-btn"
+                    onclick="event.stopPropagation(); addToCart('${p.id}')">
+              Shto në Shportë
+            </button>
+          </div>
         </div>
-
+        <div class="card-body">
+          <span class="card-brand-tag">${p.brand || ""}</span>
+          <h4>${p.name}</h4>
+          <p class="card-desc">${desc}</p>
+          <div class="card-footer">
+            <div class="card-prices">
+              ${p.offer
+                ? `<span class="old-price">€${Number(p.price).toFixed(2)}</span>
+                   <span class="new-price">€${finalPrice}</span>`
+                : `<span class="card-price">€${Number(p.price).toFixed(2)}</span>`
+              }
+            </div>
+            <button class="card-add-btn"
+                    onclick="event.stopPropagation(); addToCart('${p.id}')"
+                    title="Shto në shportë">+</button>
+          </div>
+        </div>
       </div>
     `;
   }).join("");
@@ -138,10 +260,16 @@ function addToCart(id) {
   const item = products.find(p => String(p.id) === String(id));
   if (!item) return;
 
-  cart.push(item);
-  localStorage.setItem("cart", JSON.stringify(cart));
+  const existing = cart.find(i => String(i.id) === String(id));
+  if (existing) {
+    existing.qty = (existing.qty || 1) + 1;
+  } else {
+    cart.push({ ...item, qty: 1 });
+  }
 
-  document.getElementById("cart-count").innerText = cart.length;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  const total = cart.reduce((s, i) => s + (i.qty || 1), 0);
+  document.getElementById("cart-count").innerText = total;
 }
 
 
@@ -180,31 +308,29 @@ function updateWishlistCount() {
 }
 
 
-function openModal(id) {
-  const p = products.find(x => String(x.id) === String(id));
-  if (!p) return;
-
-  document.getElementById("modalImg").src = p.image || getImage(p.type, p.id);
-  document.getElementById("modalTitle").innerText = p.name;
-  document.getElementById("modalDesc").innerText = p.desc || "";
-  document.getElementById("modalPrice").innerText = "€" + Number(p.price).toFixed(2);
-
-  document.getElementById("modal").style.display = "flex";
+function goToProduct(id) {
+  window.location.href = "product.html?id=" + id;
 }
 
-
-window.onclick = function (e) {
-  const modal = document.getElementById("modal");
-  if (modal && e.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
+function filterBrand(brand) {
+  const sel = document.getElementById("brandFilter");
+  if (!sel) return;
+  const val = brand.toLowerCase();
+  // Nëse opcioni ekziston ende (produktet mund të mos jenë ngarkuar)
+  const wait = setInterval(() => {
+    if (!window.productsReady) return;
+    clearInterval(wait);
+    sel.value = val;
+    applyFilters();
+    document.getElementById("mainNav")?.classList.remove("open");
+  }, 50);
+}
 
 window.addToCart = addToCart;
 window.addToWishlist = addToWishlist;
-window.openModal = openModal;
+window.goToProduct = goToProduct;
 window.applyFilters = applyFilters;
+window.filterBrand = filterBrand;
 function openFav() {
   const modal = document.getElementById("wishlistModal");
   const table = document.getElementById("wishlistTable");

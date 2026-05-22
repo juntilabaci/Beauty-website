@@ -10,11 +10,18 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHamburger();
   setupLoginModal();
   setupSearch();
+  updateLoyaltyBadge();
 });
 
 // ─── Products ───────────────────────────────────────────────────────────────
 
 async function loadProducts() {
+  const grid = document.getElementById("productGrid");
+  if (grid) {
+    grid.innerHTML = Array(4).fill('').map(() =>
+      `<div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line w-40"></div><div class="skeleton-line w-70"></div><div class="skeleton-line w-55"></div></div></div>`
+    ).join('');
+  }
   try {
     const res = await fetch("db.json");
     if (!res.ok) return;
@@ -27,16 +34,65 @@ async function loadProducts() {
 function renderProducts() {
   const grid = document.getElementById("productGrid");
   if (!grid) return;
-  grid.innerHTML = products.map(p => `
-    <div class="product" data-id="${p.id}" data-name="${p.name}" data-brand="${p.brand}" data-price="${p.price}">
-      <img src="${p.image}" onerror="this.src='https://via.placeholder.com/400x400'" alt="${p.name}">
-      <h3>${p.name}</h3>
-      <p>${p.desc}</p>
-      <span>€${Number(p.price).toFixed(2)}</span>
-      <button class="btn-add" onclick="addToCartFromCard(this)">Add to Cart</button>
-      <span class="heart" onclick="toggleHeart(this)">♡</span>
-    </div>
-  `).join("");
+
+  const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+  const shown = products.filter(p => p.bestseller === true).slice(0, 4);
+
+  grid.innerHTML = shown.map(p => {
+    const isFav      = wishlist.some(w => String(w.id) === String(p.id));
+    const isOffer    = p.offer === true;
+    const discount   = p.discount || 20;
+    const finalPrice = isOffer
+      ? (Number(p.price) * (1 - discount / 100)).toFixed(2)
+      : Number(p.price).toFixed(2);
+    const desc = (p.desc || "").length > 72
+      ? p.desc.substring(0, 72) + "…"
+      : (p.desc || "");
+
+    return `
+      <div class="product"
+           data-id="${p.id}"
+           data-name="${p.name}"
+           data-brand="${p.brand}"
+           data-price="${isOffer ? (Number(p.price) * (1 - discount / 100)).toFixed(2) : p.price}"
+           onclick="window.location.href='product.html?id=${p.id}'"
+           style="cursor:pointer;">
+        <div class="product-img-box">
+          <img src="${p.image}" alt="${p.name}"
+               onerror="this.src='https://via.placeholder.com/400x400'">
+          ${isOffer ? `<span class="offer-ribbon">-${discount}%</span>` : ""}
+          <span class="heart${isFav ? " active" : ""}"
+                onclick="event.stopPropagation(); toggleHeart(this)">
+            ${isFav ? "❤️" : "♡"}
+          </span>
+          <div class="product-overlay">
+            <button class="btn-add btn-overlay-add"
+                    onclick="event.stopPropagation(); addToCartFromCard(this)">
+              Shto në Shportë
+            </button>
+          </div>
+        </div>
+        <div class="product-body">
+          <span class="product-brand-tag">${p.brand || ""}</span>
+          <h3>${p.name}</h3>
+          <p class="product-desc-small">${desc}</p>
+          <div class="product-footer">
+            <div>
+              ${isOffer
+                ? `<span style="font-size:12px;color:#bbb;text-decoration:line-through;margin-right:4px;">€${Number(p.price).toFixed(2)}</span>
+                   <span class="product-price-tag" style="color:#ef4444;">€${finalPrice}</span>`
+                : `<span class="product-price-tag">€${finalPrice}</span>`
+              }
+            </div>
+            <button class="btn-add btn-add-circle"
+                    onclick="event.stopPropagation(); addToCartFromCard(this)"
+                    title="Shto në shportë">+</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
   syncHearts();
 }
 
@@ -168,8 +224,9 @@ function saveWishlist(wishlist) {
 }
 
 function toggleHeart(btn) {
-  const card = btn.closest(".product");
-  const name = card.dataset.name;
+  const card  = btn.closest(".product");
+  const id    = card.dataset.id    || null;
+  const name  = card.dataset.name;
   const price = parseFloat(card.dataset.price);
   const image = card.querySelector("img")?.src || "";
 
@@ -177,7 +234,7 @@ function toggleHeart(btn) {
   const exists = wishlist.find(p => p.name === name);
 
   if (!exists) {
-    wishlist.push({ name, price, image });
+    wishlist.push({ id, name, price, image });
     btn.innerText = "❤️";
     showMessage("❤️ Shtuar në wishlist");
   } else {
@@ -255,6 +312,12 @@ function syncHearts() {
 function addLoyaltyPoints(pts) {
   const current = parseInt(localStorage.getItem("loyaltyPoints") || "0");
   localStorage.setItem("loyaltyPoints", current + pts);
+}
+
+function updateLoyaltyBadge() {
+  const pts = parseInt(localStorage.getItem("loyaltyPoints") || "0");
+  const el  = document.getElementById("loyalty-pts");
+  if (el && pts > 0) { el.textContent = pts; el.style.display = "inline-block"; }
 }
 
 // ─── Login ───────────────────────────────────────────────────────────────────

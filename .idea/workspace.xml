@@ -5,109 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11cc93a8-da9b-4e94-a5df-59709c1041ec" name="Changes" comment="modifikim vizual">
-      <change afterPath="$PROJECT_DIR$/.idea/Beauty-website.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatbot-widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-111.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-113.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-122.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-124.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-126.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-127.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-129.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-130.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-132.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-141.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-141.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-142.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-142.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-146.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-149.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-153.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-154.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-155.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-156.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-29.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-54.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-56.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-57.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-58.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-65.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-67.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-68.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-77.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-81.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-82.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-83.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-84.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-85.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-86.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-87.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-88.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-89.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/product-99.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/migrations/0002_post_author_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/post_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/post_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/post_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/shop/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/skincare_project/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/skincare_project/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/skincare_project/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/skincare_project/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wishlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbot.css" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/faq.html" afterDir="false" />
@@ -117,8 +18,10 @@
       <change beforePath="$PROJECT_DIR$/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/skincare_blog_project/skincare_blog/blog/templates/blog/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +73,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/User/Documents/Beauty-website",
