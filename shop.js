@@ -29,7 +29,16 @@ async function loadProducts() {
     filtered = products;
     window.productsReady = true;
 
-    render(filtered);
+    // Lexo URL parametrin ?type=ofertat
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get("type");
+    if (typeParam) {
+      const typeFilter = document.getElementById("typeFilter");
+      if (typeFilter) typeFilter.value = typeParam;
+      applyFilters();
+    } else {
+      render(filtered);
+    }
 
   } catch (err) {
     console.log("FETCH ERROR:", err);
