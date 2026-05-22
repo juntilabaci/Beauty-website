@@ -91,7 +91,6 @@ function getImage(type, id) {
   return images[0];
 }
 
-
 function render(list) {
   if (!grid) return;
 
