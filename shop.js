@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadProducts() {
   try {
-    const res = await fetch("http://localhost:3000/products");
+    const res = await fetch("db.json");
 
     if (!res.ok) {
       console.log("Server error:", res.status);
@@ -29,7 +29,16 @@ async function loadProducts() {
     filtered = products;
     window.productsReady = true;
 
-    render(filtered);
+    // Lexo URL parametrin ?type=ofertat
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get("type");
+    if (typeParam) {
+      const typeFilter = document.getElementById("typeFilter");
+      if (typeFilter) typeFilter.value = typeParam;
+      applyFilters();
+    } else {
+      render(filtered);
+    }
 
   } catch (err) {
     console.log("FETCH ERROR:", err);
@@ -47,7 +56,9 @@ function applyFilters() {
       brand === "all" || (p.brand || "").toLowerCase() === brand;
 
     const matchType =
-      type === "all" || (p.type || "").toLowerCase() === type;
+      type === "ofertat"
+        ? p.offer === true
+        : type === "all" || (p.type || "").toLowerCase() === type;
 
     const matchConcern =
       concern === "all" || (p.concern || "").toLowerCase().includes(concern);
@@ -80,7 +91,6 @@ function getImage(type, id) {
   return images[0];
 }
 
-
 function render(list) {
   if (!grid) return;
 
@@ -98,13 +108,18 @@ function render(list) {
       <div class="card">
 
         <img
-          src="${getImage(p.type, p.id)}"
+          src="${p.image || getImage(p.type, p.id)}"
           onclick="openModal('${p.id}')"
         >
 
+        ${p.offer ? `<div class="offer-badge">🏷️ ${p.discount || 20}% OFF</div>` : ""}
         <h4>${p.name}</h4>
         <p>${p.desc || ""}</p>
-        <span>€${Number(p.price).toFixed(2)}</span>
+        ${p.offer
+          ? `<span class="old-price">€${Number(p.price).toFixed(2)}</span>
+             <span class="new-price">€${(Number(p.price) * (1 - (p.discount || 20) / 100)).toFixed(2)}</span>`
+          : `<span>€${Number(p.price).toFixed(2)}</span>`
+        }
 
         <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
           <button onclick="addToCart('${p.id}')">Add to Cart</button>
@@ -169,7 +184,7 @@ function openModal(id) {
   const p = products.find(x => String(x.id) === String(id));
   if (!p) return;
 
-  document.getElementById("modalImg").src = getImage(p.type, p.id);
+  document.getElementById("modalImg").src = p.image || getImage(p.type, p.id);
   document.getElementById("modalTitle").innerText = p.name;
   document.getElementById("modalDesc").innerText = p.desc || "";
   document.getElementById("modalPrice").innerText = "€" + Number(p.price).toFixed(2);

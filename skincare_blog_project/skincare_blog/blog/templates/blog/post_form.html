@@ -1,0 +1,88 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ action }} Post — Solavie{% endblock %}
+
+{% block extra_style %}
+  .form-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .form-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 8px;
+  }
+  .form-sub {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #dbeafe;
+  }
+  .form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .form-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #f0f4f8;
+  }
+{% endblock %}
+
+{% block content %}
+<div class="form-wrap">
+  <h1 class="form-heading">{{ action }} Post</h1>
+  <p class="form-sub">SOLAVIE JOURNAL</p>
+
+  <div class="form-card">
+    <form method="post" novalidate>
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Titulli *</label>
+        {{ form.title }}
+        {% if form.title.errors %}
+          <ul class="errorlist">{% for e in form.title.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.author.id_for_label }}">Autori</label>
+        {{ form.author }}
+        {% if form.author.errors %}
+          <ul class="errorlist">{% for e in form.author.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.content.id_for_label }}">Përmbajtja</label>
+        {{ form.content }}
+        {% if form.content.errors %}
+          <ul class="errorlist">{% for e in form.content.errors %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% endif %}
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="btn btn-primary">
+          {% if action == 'Edit' %}Ruaj Ndryshimet{% else %}Publiko Postimin{% endif %}
+        </button>
+        <a href="{% url 'blog:post_list' %}" class="btn btn-outline">Anulo</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

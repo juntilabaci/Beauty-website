@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Debby international - ">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://debbymakeup.com/xmlrpc.php">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://debbymakeup.com/wp-content/themes/debby/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://debbymakeup.com/wp-content/themes/debby/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://debbymakeup.com/wp-content/themes/debby/favicon-16x16.png">
+    <link rel="manifest" href="https://debbymakeup.com/wp-content/themes/debby/site.webmanifest">
+    <link rel="mask-icon" href="https://debbymakeup.com/wp-content/themes/debby/safari-pinned-tab.svg" color="#e5007d">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+        ! function(w, d, t) {
+
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function(t, e) {
+                t[e] = function() {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            };
+            for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+            ttq.instance = function(t) {
+                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++
+
+                ) ttq.setAndDefer(e, ttq.methods[n]);
+                return e
+            }, ttq.load = function(e, n) {
+                var i = 'https://analytics.tiktok.com/i18n/pixel/events.js';
+                ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                n = document.createElement("script");
+                n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
+                e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(n, e)
+            };
+
+
+
+            ttq.load('CKKHF1BC77U2JMMJ5LTG');
+
+            ttq.page();
+
+        }(window, document, 'ttq');
+    </script>
+    
+    
+    <script type="text/javascript" data-cookieconsent="ignore">
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+
+	gtag("consent", "default", {
+		ad_personalization: "denied",
+		ad_storage: "denied",
+		ad_user_data: "denied",
+		analytics_storage: "denied",
+		functionality_storage: "denied",
+		personalization_storage: "denied",
+		security_storage: "granted",
+		wait_for_update: 500,
+	});
+	gtag("set", "ads_data_redaction", true);
+	</script>
+<script type="text/javascript" data-cookieconsent="ignore">
+		(function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(
+		window,
+		document,
+		'script',
+		'dataLayer',
+		'GTM-M8G89LB'
+	);
+</script>
+<script type="text/javascript"
+		id="Cookiebot"
+		src="https://consent.cookiebot.com/uc.js"
+		data-implementation="wp"
+		data-cbid="eb8a3272-59d0-4a45-b8e1-cd474d765b61"
+						data-culture="EN"
+				data-blockingmode="auto"
+	></script>
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found - Debby international</title>
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found - Debby international" />
+	<meta property="og:site_name" content="Debby international" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://debbymakeup.com/#website","url":"https://debbymakeup.com/","name":"Debby international","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://debbymakeup.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel="alternate" type="application/rss+xml" title="Debby international &raquo; Feed" href="https://debbymakeup.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Debby international &raquo; Comments Feed" href="https://debbymakeup.com/comments/feed/" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='nl-double-opt-in-css' href='https://debbymakeup.com/wp-content/plugins/nl-double-opt-in/public/css/nl-double-opt-in-public.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='simple-locator-css' href='https://debbymakeup.com/wp-content/plugins/simple-locator//assets/css/simple-locator.css' media='all' />
+<link rel='stylesheet' id='parkside-styles-css' href='https://use.typekit.net/rmc8zay.css' media='all' />
+<link rel='stylesheet' id='futurapt-styles-css' href='https://use.typekit.net/lyt5foa.css' media='all' />
+<link rel='stylesheet' id='child-understrap-styles-css' href='https://debbymakeup.com/wp-content/themes/debby/css/child-theme.min.css?ver=v.2.1.1' media='all' />
+<link rel='stylesheet' id='child-new-styles-css' href='https://debbymakeup.com/wp-content/themes/debby/css/child-new.css?ver=20231016' media='all' />
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://debbymakeup.com/wp-content/plugins/nl-double-opt-in/public/js/nl-double-opt-in-public.js?ver=1.0.0" id="nl-double-opt-in-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-content/themes/debby/js/greensock/TweenLite.min.js?ver=2.0.1" id="tweenlite-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-content/themes/debby/js/greensock/plugins/CSSPlugin.min.js?ver=1.20.5" id="CSSPlugin-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-content/themes/debby/js/greensock/plugins/ScrollToPlugin.min.js?ver=1.9.1" id="ScrollToPlugin-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-content/themes/debby/js/greensock/TimelineLite.min.js?ver=2.0.1" id="timelinelite-js"></script>
+<script data-cookieconsent="ignore" src="https://debbymakeup.com/wp-content/themes/debby/js/rellax.min.js?ver=1.0.0" id="rellax-js"></script>
+<script src="https://debbymakeup.com/wp-content/themes/debby/js/parsley.min.js?ver=2.8.1" id="parsley-js"></script>
+<script src="https://debbymakeup.com/wp-content/themes/debby/js/js.cookie.js?ver=2.2.0" id="cookie-js"></script>
+<script src="https://debbymakeup.com/wp-content/themes/debby/js/juicerjs.js?ver=1.0.0" id="juicer-js"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyAK8CZOdn3XA0wYzjPvgrrqyhvvS7sAzaA&amp;libraries=places&amp;ver=6.9" id="google-maps-js"></script>
+<link rel="https://api.w.org/" href="https://debbymakeup.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://debbymakeup.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Debby international - ">
+
+
+</head>
+
+<body class="error404 wp-embed-responsive wp-theme-understrap wp-child-theme-debby hfeed understrap-has-sidebar">
+    
+    
+    <div id="preloader"></div>
+    <div class="open-filters-bg"></div>
+
+
+
+
+    <div class="hfeed site" id="page">
+
+
+        
+<div class="wrapper" id="error-404-wrapper">
+
+    <div class="container-fluid" id="content" tabindex="-1">
+
+        <div class="row">
+
+            <div class="col-md-12 content-area" id="primary">
+
+                <main class="site-main" id="main">
+
+                    <section class="error-404 not-found">
+
+                        <header class="page-header">
+                            <a id="logo" class="error-brand" rel="home" href="https://debbymakeup.com/" title="Debby international" itemprop="url">Debby international</a>
+                            
+                        </header><!-- .page-header -->
+
+                        <div class="page-content">
+                            <div class="text-container">
+                                <p>Ooops, there's a small mistake! Let's see if the developers are re-doing their nails!</p>
+                            </div>
+                        </div><!-- .page-content -->
+                        <div class="page-error">
+                            <div class="error-message"></div>
+                        </div>
+                         <div class="page-footer">
+                            <a rel="home" href="https://debbymakeup.com/" class="button">
+                                Go back to Homepage                            </a>
+                        </div><!-- .page-content -->
+                    </section><!-- .error-404 -->
+
+                </main><!-- #main -->
+
+            </div><!-- #primary -->
+
+        </div><!-- .row -->
+
+    </div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
+
+
+
+
+
+</body>
+
+</html>
