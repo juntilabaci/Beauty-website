@@ -1,11 +1,11 @@
 (function () {
-  // --- CSS ---
+
   const style = document.createElement("style");
   style.textContent = `
     #cw-toggle {
       position: fixed;
-      bottom: 120px;
-      right: 24px;
+      bottom: 24px;
+      right: 90px;
       width: 56px;
       height: 56px;
       border-radius: 50%;
@@ -25,8 +25,8 @@
 
     #cw-panel {
       position: fixed;
-      bottom: 186px;
-      right: 24px;
+      bottom: 90px;
+      right: 90px;
       width: 340px;
       height: 480px;
       border-radius: 16px;
@@ -126,7 +126,7 @@
   `;
   document.head.appendChild(style);
 
-  // --- HTML ---
+
   const toggle = document.createElement("button");
   toggle.id = "cw-toggle";
   toggle.title = "Skincare AI";
@@ -153,7 +153,7 @@
   document.body.appendChild(panel);
   document.body.appendChild(toggle);
 
-  // --- Logic ---
+
   const box    = panel.querySelector("#cw-box");
   const input  = panel.querySelector("#cw-input");
   const send   = panel.querySelector("#cw-send");
