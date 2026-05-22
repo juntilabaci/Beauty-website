@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porositë e Mia - Solavie</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.orders-page {
+  max-width: 700px;
+  margin: 70px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.orders-page h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.orders-page .subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.order-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-card .order-left h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.order-card .order-left p {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.order-badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-delivered { background: #d1fae5; color: #065f46; }
+.badge-processing { background: #fef3c7; color: #92400e; }
+.badge-cancelled  { background: #fee2e2; color: #991b1b; }
+
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  color: #aaa;
+}
+
+.empty-state .icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+.btn-shop-now {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 28px;
+  background: #111;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn-shop-now:hover { background: #333; color: #fff; }
+
+.not-logged {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.not-logged h3 { font-size: 18px; margin-bottom: 8px; }
+.not-logged p  { font-size: 14px; color: #888; }
+
+.btn-login-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 28px;
+  background: #10b981;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn-login-link:hover { background: #0e9f6e; color: #fff; }
+</style>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">Solavie</a>
+  </div>
+</header>
+
+<div class="orders-page">
+  <h1>📦 Porositë e Mia</h1>
+  <p class="subtitle">Historiku i porosive tuaja</p>
+
+  <div id="ordersContent"></div>
+</div>
+
+<script>
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser') || 'null');
+const container  = document.getElementById('ordersContent');
+
+if (!loggedUser) {
+  container.innerHTML = `
+    <div class="not-logged">
+      <div style="font-size:52px;margin-bottom:16px;">🔒</div>
+      <h3>Duhet të hysh në llogari</h3>
+      <p>Për të parë porositë tuaja, ju lutem hyni në llogarinë tuaj.</p>
+      <a href="account.html" class="btn-login-link">Hyr / Regjistrohu</a>
+    </div>`;
+} else {
+  const key    = 'solavieOrders_' + loggedUser.email;
+  const orders = JSON.parse(localStorage.getItem(key) || '[]');
+
+  if (orders.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <div class="icon">📭</div>
+        <h3>Nuk keni porosi ende</h3>
+        <p>Porositë tuaja do të shfaqen këtu pasi të bëni blerjen e parë.</p>
+        <a href="shop.html" class="btn-shop-now">Shko te Shop</a>
+      </div>`;
+  } else {
+    const statusLabel = { delivered: 'Dorëzuar', processing: 'Në proces', cancelled: 'Anuluar' };
+    const statusClass = { delivered: 'badge-delivered', processing: 'badge-processing', cancelled: 'badge-cancelled' };
+
+    container.innerHTML = orders.map(o => `
+      <div class="order-card">
+        <div class="order-left">
+          <h4>Porosi #${o.id}</h4>
+          <p>${o.date} &nbsp;•&nbsp; ${o.items} produkt(e) &nbsp;•&nbsp; €${o.total}</p>
+        </div>
+        <span class="order-badge ${statusClass[o.status] || 'badge-processing'}">
+          ${statusLabel[o.status] || o.status}
+        </span>
+      </div>`).join('');
+  }
+}
+</script>
+
+<script src="chatbot-widget.js"></script>
+</body>
+</html>
