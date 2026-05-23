@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Si të ndërtosh rutinën koreane skincare",
+      "category": "lekura",
+      "categoryLabel": "Kujdesi për Lëkurë",
+      "date": "2026-05-10",
+      "image": "images/img2.png",
+      "excerpt": "Rutina koreane skincare është e njohur për rezultatet e jashtëzakonshme që jep me produkte të thjeshta. Zbulo hapat bazë dhe si t'i përshtasësh për lëkurën tënde.",
+      "content": "Rutina koreane skincare ndjek parimin 'less is more' por me produkte strategjike. Hapat kryesorë janë: 1) Pastrimi i dyfishtë (double cleansing) — filloni me vaj ose balsam për të hequr makeup-in dhe SPF, pastaj me shkumë ose xhel. 2) Toniku — riequilibron pH-in e lëkurës dhe përgatit porinat. 3) Serumi — produkti më i koncentruar, zgjidhet sipas nevojës (vitaminë C për shkëlqim, niacinamidë për pore, retinol për antiaging). 4) Kremi hidratues — mbyll rutinën dhe mban hidratimin. 5) Kremit diell SPF50+ çdo mëngjes — ky është sekreti i vërtetë i lëkurës koreane. Filloni me produkte të thjeshta dhe shtoni gradualisht. Konsistenca është çelësi — rezultatet shihen pas 4-6 javësh."
+    },
+    {
+      "id": 2,
+      "title": "Double Cleansing — pse ia vlen dhe si bëhet",
+      "category": "lekura",
+      "categoryLabel": "Kujdesi për Lëkurë",
+      "date": "2026-05-03",
+      "image": "images/img3.png",
+      "excerpt": "Double cleansing është metoda koreane e pastrimit me dy hapa. Mëso pse një pastrim i vetëm nuk mjafton dhe si ta bësh saktë.",
+      "content": "Double cleansing fillon me një pastrues me bazë vaji — si vaj kokosi, micellar oil ose cleansing balm — i cili shpërndan makeup-in, kremën diell dhe papastërtitë me bazë yndyre. Produktet me ujë nuk e heqin dot këtë lloj ndotjeje. Hapi i dytë është me pastrues me ujë — shkumë, xhel ose krem — i cili heq ndotjet e mbetura, djersën dhe bakteriet. Cila metodë të zgjedhësh? Nëse ke lëkurë të thatë, zgjidhni balsam ose vaj të butë. Nëse ke lëkurë yndyrore, micellar oil ose xhel pastrues me bazë yndyre janë zgjedhja e duhur. Produktet e rekomanduara: Abib Mild Acidic Cleanser, Geek & Gorgeous Slip It Off Cleansing Balm."
+    },
+    {
+      "id": 3,
+      "title": "Serum vs Krem — çfarë dallimi ka dhe cilin të zgjedhësh",
+      "category": "lekura",
+      "categoryLabel": "Kujdesi për Lëkurë",
+      "date": "2026-04-25",
+      "image": "images/Advanced Snail.webp",
+      "excerpt": "Shumë njerëz pyesin: a duhet të përdor serum nëse kam krem hidratues? Përgjigja është po — dhe ja pse janë plotësuese, jo alternative.",
+      "content": "Serumi ka molekula të vogla dhe koncentrim të lartë të përbërësve aktivë — penetron thellë në lëkurë dhe trajton probleme specifike. Kremrat kanë molekula më të mëdha dhe funksionojnë si barriëra — mbyllin hidratimin dhe mbrojnë nga faktorët e jashtëm. Si t'i kombinosh: Apliko serumin e hollë mbi lëkurën e pastër, lejo të absorbohet 1-2 minuta, pastaj apliko kremin. Nëse ke lëkurë të yndyrshme, mund ta kapërcesh kremin gjatë ditës verore. Shumë serumesh nuk zëvendësojnë hidratimin — janë të dizajnuara për të punuar bashkë me kremin."
+    },
+    {
+      "id": 4,
+      "title": "Sunscreen çdo ditë — pse nuk ka shkak tjetër",
+      "category": "lekura",
+      "categoryLabel": "Kujdesi për Lëkurë",
+      "date": "2026-04-18",
+      "image": "images/Glass Skin Sunscreen SPF50.jpg",
+      "excerpt": "SPF nuk është vetëm për plazh. 80% e plakjes së lëkurës vjen nga rrezet UV — zbulo pse kremit diell duhet të jetë hapi i fundit i çdo rutine.",
+      "content": "Rrezet UVA depërtojnë përmes qelqit dhe shkaktojnë plakje — ato janë të pranishme edhe ditët me re dhe gjatë gjithë vitit. Rrezet UVB shkaktojnë djegie dhe kancer të lëkurës. SPF50+ bllokuese 98% të rrezeve UVB. Kriteri PA++++ tregon mbrojtjen nga UVA. Si të zgjedhësh: për lëkurë yndyrore zgjidhni formula ujore ose fluide; për lëkurë të thatë formulat me krem ose tint hidratues. Mos harro: apliko 15-20 minuta para ekspozimit dhe ripërsërit çdo 2 orë nëse je jashtë. Rekomandime: Haruharu Wonder SPF50+, Altruist SPF50 — mbrojtje maksimale me çmim të arsyeshëm."
+    },
+    {
+      "id": 5,
+      "title": "Kujdesi për flokët — hapat themelorë sipas llojit",
+      "category": "floket",
+      "categoryLabel": "Flokët",
+      "date": "2026-04-12",
+      "image": "images/img1.png",
+      "excerpt": "Flokët kaçurrelë kanë nevojë të ndryshme nga ata të drejtë. Zbulo si të zgjedhësh shampo, gërshet dhe trajtim sipas llojit të flokut.",
+      "content": "Flokët kaçurrelë humbasin lagështi më shpejt — kanë nevojë për shampo sulfate-free dhe gërshet të pasur me butter. Metoda Curly Girl (CGM) rekomandon të shmangësh sulfate dhe silicone. Flokët e drejtë por të brishtë: zgjidhni shampo fortifikuese si Redken Extreme ose Olaplex No.4. Flokët e lyera: shampo color-safe si Redken Color Extend ruan ngjyrën më gjatë. Trajtimi javë pas jave: maskë riparuese si Kérastase Masquintense ose Fino Hair Mask japin rezultate të dukshme pas 2-3 herësh. Vaji pa shpëlarje pas çdo lajeje (si Olaplex No.7) mbron nga nxehtësia e drejtuesit dhe i jep shkëlqim flokëve."
+    },
+    {
+      "id": 6,
+      "title": "Make Up natyral — teknika për pamje 'no-makeup makeup'",
+      "category": "makeup",
+      "categoryLabel": "Make Up",
+      "date": "2026-04-05",
+      "image": "images/Glowy Skin.webp",
+      "excerpt": "Look-u 'no-makeup makeup' kërkon teknikë të saktë. Mëso si të arrish pamje natyrale të freskët me pak produkte.",
+      "content": "Sekreti i look-ut natyral fillon me lëkurën — hidratim i mirë para makeup-it i bën produktet të duken si lëkurë, jo si maskë. Hapat: 1) BB Cream ose kushion me coberturë të lehtë si Laneige Neo Cushion ose Missha Perfect Cover — aplikoje me gishta ose sfungjer i lagur. 2) Concealer vetëm ku nevojitet — nën sy dhe mbi njolla. 3) Bronzer/blush me dorë të lehtë — buzët e fytyrës, hundën, ballë. 4) Mascara, bronzer dhe lip balm janë gjithçka tjetër. Furçat Jessup japin aplikim preciz pa tepri produkti. Shmang poudër të rëndë — lëkura duhet të duket e gjallë, jo e sheshtë."
+    },
+    {
+      "id": 7,
+      "title": "Kujdesi për trupin — pse nuk duhet harruar pas fytyrës",
+      "category": "trupi",
+      "categoryLabel": "Trupi",
+      "date": "2026-03-28",
+      "image": "images/Hydro Day Cream.webp",
+      "excerpt": "Lëkura e trupit ka nevojë po aq kujdes sa ajo e fytyrës. Zbulo rutinën e plotë të kujdesit për trupin nga pastrimi te moisturizing.",
+      "content": "Rutina e trupit fillon në dush — xheli i dushit duhet të jetë i butë dhe jo agresiv. Some By Mi Body Wash me AHA/BHA eksfolon butësisht ndërkohë që pastron. Pas dushit, apliko locion ose krem trupi menjëherë — brenda 3 minutave ndërkohë lëkura është ende pak e lagur, absorbohet më mirë. Palmer's Cocoa Butter dhe Nivea Soft janë ideale për hidratim të gjatë. Mos harro zonat e thata si bërrylat, gjunjët dhe thembrat — Skinfoot Heel Balm me urea 10% i rigjeneron ato. Skrab 1-2 herë në javë (St. Ives Apricot Scrub) heq qelizat e vdekura dhe lëkura bëhet e butë dhe e freskët."
+    },
+    {
+      "id": 8,
+      "title": "Parfumet koreane — aroma të lehta për çdo ditë",
+      "category": "parfume",
+      "categoryLabel": "Parfume",
+      "date": "2026-03-20",
+      "image": "images/123.webp",
+      "excerpt": "Parfumet koreane dallojnë nga ato europiane — janë të lehta, delikate dhe të dizajnuara për përdorim të përditshëm. Zbulo brendet kryesore.",
+      "content": "Kultura koreane e parfumit ndjek parimin 'skin scent' — aroma duhet të ndihet si lëkura jote, jo si të të kenë hedhur parfum. Tamburins Egg Musk është shembulli i pastër i kësaj filozofie — mushu i bardhë dhe sandalwood i butë krijon një aromë delikate që ndjek gjatë gjithë ditës. NACIFIC Perfume Fix Spray me trëndafil natyral është ideale për rifreskimin gjatë ditës. Innisfree Green Tea Body Mist sjell natyrën e Jeju — i freskët dhe bimor. Misti i trupit mund të aplikohet mbi rroba dhe flokë gjithashtu — shtresa e fundit e rutinës bukurie. Këshillë: plasi pak në ajër dhe kalo nën re-në e mist-it për shpërndarje uniforme."
+    }
+  ]
+}

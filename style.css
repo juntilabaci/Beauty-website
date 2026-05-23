@@ -12,19 +12,23 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: relative;
 }
-.ticker span {
-  display: inline-block;
+.ticker-track {
+  display: flex;
   white-space: nowrap;
+  animation: ticker-scroll 22s linear infinite;
+  flex-shrink: 0;
+}
+.ticker-track span {
+  display: inline-block;
   padding-right: 60px;
   font-size: 12px;
   letter-spacing: 0.5px;
-  animation: scroll 8s linear infinite;
+  white-space: nowrap;
 }
-@keyframes scroll {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ─── Header ─────────────────────────────────────────────────────────────── */
@@ -703,23 +707,6 @@ body {
 .skeleton-line.w-70 { width: 70%; }
 .skeleton-line.w-55 { width: 55%; }
 
-/* ─── Blog (legacy, kept for reference) ─────────────────────────────────── */
-.blog-hero { position: relative; height: 60vh; overflow: hidden; }
-.blog-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(80%); }
-.blog-hero-text {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; text-align: center;
-}
-.blog-hero-text h1 { font-family: 'Playfair Display', serif; font-size: 48px; }
-.blog-hero-text p  { font-size: 16px; letter-spacing: 2px; }
-.blog-container { max-width: 1100px; margin: auto; padding: 80px 20px; }
-.blog-card { display: flex; align-items: center; gap: 40px; margin-bottom: 80px; }
-.blog-card.reverse { flex-direction: row-reverse; }
-.blog-img { width: 50%; border-radius: 12px; }
-.blog-text { width: 50%; }
-.blog-text h3 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 15px; }
-.blog-text p   { line-height: 1.7; color: #555; }
 
 /* ─── About / Values (secondary pages) ──────────────────────────────────── */
 .about-hero {
@@ -830,7 +817,8 @@ body {
     padding-left: 20px;
     background: #fafafa;
   }
-  .menu-item:hover .dropdown { display: block; }
+  .menu-item:hover .dropdown,
+  .menu-item.open .dropdown { display: block; }
 
   /* Hero */
   .hero { height: 320px; padding-left: 24px; }

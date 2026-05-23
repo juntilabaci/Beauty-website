@@ -32,6 +32,7 @@ async function loadProducts() {
 }
 
 function renderProducts() {
+  if (document.getElementById("brandFilter")) return; // shop.js handles shop page
   const grid = document.getElementById("productGrid");
   if (!grid) return;
 
@@ -122,7 +123,6 @@ function addToCartFromCard(btn) {
     cart.push({ name, price, image, qty: 1 });
   }
   saveCart(cart);
-  addLoyaltyPoints(Math.floor(price));
   showMessage(`✅ Shtuar në shportë`);
 }
 
@@ -135,7 +135,6 @@ function addToCart(name, price, image = "") {
     cart.push({ name, price, image, qty: 1 });
   }
   saveCart(cart);
-  addLoyaltyPoints(Math.floor(price));
   showMessage(`✅ Shtuar në shportë`);
 }
 
@@ -315,6 +314,8 @@ function addLoyaltyPoints(pts) {
 }
 
 function updateLoyaltyBadge() {
+  const loggedUser = JSON.parse(localStorage.getItem("loggedUser") || "null");
+  if (!loggedUser) return;
   const pts = parseInt(localStorage.getItem("loyaltyPoints") || "0");
   const el  = document.getElementById("loyalty-pts");
   if (el && pts > 0) { el.textContent = pts; el.style.display = "inline-block"; }
@@ -413,6 +414,19 @@ function setupHamburger() {
   btn.addEventListener("click", () => {
     nav.classList.toggle("open");
     btn.classList.toggle("active");
+  });
+
+  // Touch-friendly dropdown toggle for mobile
+  nav.querySelectorAll(".menu-item > a").forEach(link => {
+    link.addEventListener("click", e => {
+      if (window.innerWidth > 768) return;
+      const item = link.closest(".menu-item");
+      if (!item.querySelector(".dropdown")) return;
+      e.preventDefault();
+      const isOpen = item.classList.contains("open");
+      nav.querySelectorAll(".menu-item.open").forEach(el => el.classList.remove("open"));
+      if (!isOpen) item.classList.add("open");
+    });
   });
 }
 

@@ -14,16 +14,18 @@
 <body>
 
 <div class="ticker">
-  <span>Free Shipping in Albania • </span>
-  <span>Korean Skincare • </span>
-  <span>Dermatologist Inspired Formulas • </span>
-  <span>Special Offers Every Week • </span>
-  <span>Shop Solavie Now • </span>
-  <span>Free Shipping in Albania • </span>
-  <span>Korean Skincare •</span>
-  <span>Dermatologist Inspired Formulas • </span>
-  <span>Special Offers Every Week • </span>
-  <span>Shop Solavie Now • </span>
+  <div class="ticker-track">
+    <span>Free Shipping in Albania • </span>
+    <span>Korean Skincare • </span>
+    <span>Dermatologist Inspired Formulas • </span>
+    <span>Special Offers Every Week • </span>
+    <span>Shop Solavie Now • </span>
+    <span>Free Shipping in Albania • </span>
+    <span>Korean Skincare • </span>
+    <span>Dermatologist Inspired Formulas • </span>
+    <span>Special Offers Every Week • </span>
+    <span>Shop Solavie Now • </span>
+  </div>
 </div>
 
 <header class="header">
@@ -70,7 +72,20 @@
 </div>
 
 <nav class="menu" id="mainNav">
-  <a href="shop.html">Kujdesi për lëkurë</a>
+  <div class="menu-item">
+    <a href="shop.html?category=skincare">Kujdesi për lëkurë</a>
+    <div class="dropdown">
+      <a href="shop.html?category=skincare">Të gjitha</a>
+      <a href="shop.html?category=skincare&type=cleanser">Cleanser</a>
+      <a href="shop.html?category=skincare&type=toner">Toner</a>
+      <a href="shop.html?category=skincare&type=serum">Serum</a>
+      <a href="shop.html?category=skincare&type=cream">Cream</a>
+      <a href="shop.html?category=skincare&type=moisturizer">Moisturizer</a>
+      <a href="shop.html?category=skincare&type=sunscreen">Sunscreen</a>
+      <a href="shop.html?category=skincare&type=mask">Mask</a>
+      <a href="shop.html?category=skincare&type=essence">Essence</a>
+    </div>
+  </div>
   <div class="menu-item">
     <a href="#">Brendet</a>
     <div class="dropdown">
@@ -80,11 +95,48 @@
       <a href="shop.html">All</a>
     </div>
   </div>
-  <a href="shop.html">Make Up</a>
-  <a href="shop.html">Flokët</a>
-  <a href="shop.html">Trupi</a>
-  <a href="shop.html">Parfume</a>
+  <div class="menu-item">
+    <a href="shop.html?category=makeup">Make Up</a>
+    <div class="dropdown">
+      <a href="shop.html?category=makeup">Të gjitha Make Up</a>
+      <a href="shop.html?category=makeup&type=foundation">Fytyrë</a>
+      <a href="shop.html?category=makeup&type=lipstick">Buzët</a>
+      <a href="shop.html?category=makeup&type=powder">Pudër &amp; Bronzer</a>
+      <a href="shop.html?category=makeup&type=brushes">Furça &amp; Aksesorë</a>
+    </div>
+  </div>
+  <div class="menu-item">
+    <a href="shop.html?category=hair">Flokët</a>
+    <div class="dropdown">
+      <a href="shop.html?category=hair">Të gjitha Flokët</a>
+      <a href="shop.html?category=hair&type=shampoo">Shampo</a>
+      <a href="shop.html?category=hair&type=conditioner">Gërshet</a>
+      <a href="shop.html?category=hair&type=treatment">Maskë &amp; Trajtim</a>
+      <a href="shop.html?category=hair&type=oil">Vajra &amp; Serum</a>
+    </div>
+  </div>
+  <div class="menu-item">
+    <a href="shop.html?category=body">Trupi</a>
+    <div class="dropdown">
+      <a href="shop.html?category=body">Të gjitha Trupi</a>
+      <a href="shop.html?category=body&type=body-lotion">Krem &amp; Locion</a>
+      <a href="shop.html?category=body&type=body-wash">Pastrues Trupi</a>
+      <a href="shop.html?category=body&type=body-scrub">Skrab</a>
+      <a href="shop.html?category=body&type=body-oil">Vajra Trupi</a>
+      <a href="shop.html?category=body&type=foot-cream">Duar &amp; Këmbë</a>
+    </div>
+  </div>
+  <div class="menu-item">
+    <a href="shop.html?category=parfum">Parfume</a>
+    <div class="dropdown">
+      <a href="shop.html?category=parfum">Të gjitha Parfume</a>
+      <a href="shop.html?category=parfum&type=edp">Eau de Parfum</a>
+      <a href="shop.html?category=parfum&type=edt">Eau de Toilette</a>
+      <a href="shop.html?category=parfum&type=body-mist">Body Mist</a>
+    </div>
+  </div>
   <a href="shop.html?type=ofertat">Oferta</a>
+  <a href="blog.html">Blog</a>
 </nav>
 
 <section class="hero">
@@ -182,7 +234,7 @@
       <a href="about.html">Rreth Nesh</a>
       <a href="contact.html">Kontakt</a>
       <a href="careers.html">Karriera</a>
-      <a href="http://127.0.0.1:8000/blog/" target="_blank">Blog</a>
+      <a href="blog.html">Blog</a>
     </div>
   </div>
   <div class="footer-bottom">

@@ -204,7 +204,8 @@
       "id": 23,
       "name": "Aromatica Cyprus Salt Scrub Cleanser 300g",
       "brand": "Aromatica",
-      "type": "cleanser",
+      "type": "body-scrub",
+      "category": "body",
       "price": 18.00,
       "image": "images/Exfoliating Cleanser.jpg",
       "desc": "Pastrues eksfoliues me kripë Qipro dhe vaj bimor për lëkurë të pastruar dhe të lëmuar."
@@ -214,6 +215,7 @@
       "name": "Balmain Paris Hair Couture Shampoo Illuminating Blonde 300ml",
       "brand": "Balmain",
       "type": "shampoo",
+      "category": "hair",
       "price": 32.00,
       "image": "images/product-24.jpg",
       "desc": "Shampo illuminuese për flokë bionde që ruan gjallërinë e ngjyrës dhe shkëlqimin."
@@ -223,6 +225,7 @@
       "name": "Balmain Paris Hair Couture Conditioner Volume 300ml",
       "brand": "Balmain",
       "type": "conditioner",
+      "category": "hair",
       "price": 34.00,
       "image": "images/product-25.jpg",
       "desc": "Gërshet vëllimues me formulë të lehtë për flokë pa peshë dhe me shkëlqim."
@@ -232,6 +235,7 @@
       "name": "Balmain Paris Hair Couture Texturising Salt Spray 200ml",
       "brand": "Balmain",
       "type": "treatment",
+      "category": "hair",
       "price": 28.00,
       "image": "images/product-26.jpg",
       "desc": "Spray kripe stilizues për teksturë natyrale dhe vëllim me imazh të plazh."
@@ -487,7 +491,8 @@
       "id": 53,
       "name": "Debby Fondotinta Mat & Perfect SPF15",
       "brand": "Debby",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 11.90,
       "image": "images/product-53.jpg",
       "desc": "Fondotinta mat italiane me efekt mat të qëndrueshëm dhe mbrojtje dielli SPF15."
@@ -496,7 +501,8 @@
       "id": 54,
       "name": "Debby BB Cream Perfect Skin SPF30",
       "brand": "Debby",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 9.90,
       "image": "images/Glowy Skin.webp",
       "desc": "BB Cream shumëfunksionale me SPF30 për mbulim natyral dhe kujdes të lëkurës njëkohësisht."
@@ -505,7 +511,8 @@
       "id": 55,
       "name": "Debby Rossetto Vellutato Matte Lipstick",
       "brand": "Debby",
-      "type": "makeup",
+      "type": "lipstick",
+      "category": "makeup",
       "price": 7.50,
       "image": "images/product-55.jpg",
       "desc": "Buzëkuqe matte italiane me pigmentim të intensë dhe qëndrueshmëri të gjatë."
@@ -515,6 +522,7 @@
       "name": "Davines LOVE Smoothing Shampoo 250ml",
       "brand": "Davines",
       "type": "shampoo",
+      "category": "hair",
       "price": 26.00,
       "image": "images/product-56.jpg",
       "desc": "Shampo lëmuese për flokë kaçurrelë ose të paekuilibruar me formulë të qëndrueshme."
@@ -524,6 +532,7 @@
       "name": "Davines LOVE Smoothing Conditioner 250ml",
       "brand": "Davines",
       "type": "conditioner",
+      "category": "hair",
       "price": 28.00,
       "image": "images/product-57.jpg",
       "desc": "Gërshet lëmues i pasur me ButterExtract që zbut dhe kontrollon flokët kaçurrelë."
@@ -533,6 +542,7 @@
       "name": "Davines OI All in One Milk 135ml",
       "brand": "Davines",
       "type": "treatment",
+      "category": "hair",
       "price": 32.00,
       "image": "images/product-58.jpg",
       "desc": "Lëng multifunksional me vaj Roucou që redukton kocrrat dhe jep shkëlqim natyral flokëve."
@@ -627,6 +637,7 @@
       "name": "Fino Premium Touch Penetrating Essence Hair Mask 230g",
       "brand": "Fino",
       "type": "treatment",
+      "category": "hair",
       "price": 12.00,
       "image": "images/product-68.jpg",
       "desc": "Maskë intensive japoneze me 6 serum bukurie që rigjallëron dhe zbutet flokët e dëmtuar."
@@ -636,6 +647,7 @@
       "name": "Fino Premium Touch Smoothing Leave-In Hair Oil 70ml",
       "brand": "Fino",
       "type": "oil",
+      "category": "hair",
       "price": 10.50,
       "image": "images/oil.jpg",
       "desc": "Vaj lënës japonez pa shpëlarje me serum bukurie për flokë të lëmuar dhe me shkëlqim."
@@ -645,6 +657,7 @@
       "name": "Fino Premium Touch Extra Rich Repair Hair Mask 400g",
       "brand": "Fino",
       "type": "treatment",
+      "category": "hair",
       "price": 16.00,
       "image": "images/mask.jpg",
       "desc": "Maskë intensive me formulë të pasur me keratin dhe serum përpara për riparim total."
@@ -743,7 +756,8 @@
       "id": 81,
       "name": "Jessup 14-Piece Makeup Brush Set T329",
       "brand": "Jessup",
-      "type": "makeup",
+      "type": "brushes",
+      "category": "makeup",
       "price": 24.00,
       "image": "images/product-81.jpg",
       "desc": "Set i kompletuar me 14 furça makjapi sintetike të cilësisë profesionale me çmim të arsyeshëm."
@@ -752,7 +766,8 @@
       "id": 82,
       "name": "Jessup 20-Piece Makeup Brush Set T225 White",
       "brand": "Jessup",
-      "type": "makeup",
+      "type": "brushes",
+      "category": "makeup",
       "price": 32.00,
       "image": "images/product-82.jpg",
       "desc": "Set i plotë me 20 furça të bardha elegante me flokë sintetikë dhe dorezë luksoze."
@@ -761,7 +776,8 @@
       "id": 83,
       "name": "Jessup Professional Contour Brush Set 5-Piece",
       "brand": "Jessup",
-      "type": "makeup",
+      "type": "brushes",
+      "category": "makeup",
       "price": 18.00,
       "image": "images/product-83.jpg",
       "desc": "Set furçash kontured profesionale për aplikim të saktë dhe teknikë të avancuar makjapi."
@@ -771,6 +787,7 @@
       "name": "K18 Leave-In Molecular Repair Hair Mask 50ml",
       "brand": "K18",
       "type": "treatment",
+      "category": "hair",
       "price": 75.00,
       "offer": true,
       "discount": 20,
@@ -782,6 +799,7 @@
       "name": "K18 DAMAGE SHIELD pH Protective Shampoo 250ml",
       "brand": "K18",
       "type": "shampoo",
+      "category": "hair",
       "price": 40.00,
       "image": "images/product-85.jpg",
       "desc": "Shampo mbrojtëse me pH të ekuilibruar që pastron butësisht dhe ruan integritetin e flokut."
@@ -791,6 +809,7 @@
       "name": "K18 Peptide Prep Clarifying Detox Shampoo 250ml",
       "brand": "K18",
       "type": "shampoo",
+      "category": "hair",
       "price": 42.00,
       "image": "images/product-86.jpg",
       "desc": "Shampo detoks me peptide që largon produktet e akumuluara dhe rifreskom flokët."
@@ -800,6 +819,7 @@
       "name": "Kérastase Nutritive Bain Satin Shampoo 250ml",
       "brand": "Kerastase",
       "type": "shampoo",
+      "category": "hair",
       "price": 30.00,
       "offer": true,
       "discount": 20,
@@ -811,6 +831,7 @@
       "name": "Kérastase Nutritive Masquintense Hair Mask 200ml",
       "brand": "Kerastase",
       "type": "treatment",
+      "category": "hair",
       "price": 48.00,
       "image": "images/product-88.jpg",
       "desc": "Maskë intensive e pasur me iridin dhe glukozë për flokë shumë të tharë dhe të dëmtuar."
@@ -820,6 +841,7 @@
       "name": "Kérastase Genesis Anti Hair-Fall Fortifying Serum 90ml",
       "brand": "Kerastase",
       "type": "treatment",
+      "category": "hair",
       "price": 52.00,
       "image": "images/product-89.jpg",
       "desc": "Serum fortifikues për lëkurën e kokës që lufton rënien e flokëve nga thyerja dhe dobësimi."
@@ -838,6 +860,7 @@
       "name": "Killys Microfiber Hair Turban Towel",
       "brand": "Killys",
       "type": "treatment",
+      "category": "hair",
       "price": 9.00,
       "image": "images/mask.jpg",
       "desc": "Turban peshqiri mikrofibër ultra i butë që thahet shpejt pa dëmtuar flokët e lagur."
@@ -911,7 +934,8 @@
       "id": 99,
       "name": "Laneige Neo Cushion Matte SPF42 PA+++",
       "brand": "Laneige",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 32.00,
       "image": "images/product-99.jpg",
       "desc": "Kushinë fondotinte matte me SPF42 dhe coberturë mesatare me finish të papërsosur."
@@ -920,7 +944,8 @@
       "id": 100,
       "name": "LYS Beauty Triple Fix Matte Foundation SPF 30",
       "brand": "Lysse",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 24.00,
       "image": "images/Melaclear Cream (Dark Spots).webp",
       "desc": "Fondotinte matte me SPF30 dhe coberturë të plotë nga brend clean beauty i zezëve."
@@ -938,7 +963,8 @@
       "id": 102,
       "name": "LYS Beauty Skin Quench Glossy Balm Lip Gloss",
       "brand": "Lysse",
-      "type": "makeup",
+      "type": "lipstick",
+      "category": "makeup",
       "price": 14.00,
       "image": "images/Lip Sleeping Mask.webp",
       "desc": "Gloss buzësh hidratues me finish me shkëlqim dhe acid hialuronik për buzë të mbushura."
@@ -1021,7 +1047,8 @@
       "id": 111,
       "name": "Missha M Perfect Cover BB Cream SPF42 PA+++ 50ml",
       "brand": "Missha",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 17.00,
       "image": "images/product-111.png",
       "desc": "BB Cream ikonike koreane me SPF42 PA+++ dhe coberturë të plotë për finish natyral."
@@ -1040,6 +1067,7 @@
       "name": "Mjuuk Nordic Curl Defining Cream 150ml",
       "brand": "Mjuuk",
       "type": "treatment",
+      "category": "hair",
       "price": 22.00,
       "image": "images/crm.webp",
       "desc": "Krem stilizues Nordic për kaçurrelë të definuara me formulë pa sulfate dhe pa silikone."
@@ -1049,6 +1077,7 @@
       "name": "Mjuuk Nordic Hydrating Shampoo 250ml",
       "brand": "Mjuuk",
       "type": "shampoo",
+      "category": "hair",
       "price": 24.00,
       "image": "images/Foaming Cleanser.jpg",
       "desc": "Shampo hidratuese nordike me ekstrakte bimore për flokë kaçurrelë të lëmuar dhe të shkëlqyer."
@@ -1058,6 +1087,7 @@
       "name": "Mjuuk Nordic Leave-In Conditioner Spray 200ml",
       "brand": "Mjuuk",
       "type": "conditioner",
+      "category": "hair",
       "price": 20.00,
       "image": "images/Heartleaf Soothing.webp",
       "desc": "Gërshet lënës spray nordik pa shpëlarje që zbut dhe kontrollon flokët kaçurrelë çdo ditë."
@@ -1157,6 +1187,7 @@
       "name": "Redken All Soft Shampoo 300ml",
       "brand": "Redken",
       "type": "shampoo",
+      "category": "hair",
       "price": 23.00,
       "image": "images/product-126.jpg",
       "desc": "Shampo zbususë me argan oil për flokë të thata dhe të brishtë që kanë nevojë për ushqim."
@@ -1166,6 +1197,7 @@
       "name": "Redken All Soft Conditioner 300ml",
       "brand": "Redken",
       "type": "conditioner",
+      "category": "hair",
       "price": 25.00,
       "image": "images/product-127.jpg",
       "desc": "Gërshet i pasur me RCT Protein Complex dhe vaj argani për flokë të zbusur dhe të lëmuar."
@@ -1175,6 +1207,7 @@
       "name": "Redken Extreme Shampoo 300ml",
       "brand": "Redken",
       "type": "shampoo",
+      "category": "hair",
       "price": 24.00,
       "image": "images/product-128.jpg",
       "desc": "Shampo fortifikuese me Ceramide Rx për flokë të dëmtuara dhe të brishtë."
@@ -1184,6 +1217,7 @@
       "name": "Redken Color Extend Magnetics Shampoo 300ml",
       "brand": "Redken",
       "type": "shampoo",
+      "category": "hair",
       "price": 24.00,
       "image": "images/product-129.jpg",
       "desc": "Shampo me amino ion complex që ruan gjallërinë e ngjyrës dhe mbron flokët e lyera."
@@ -1257,7 +1291,8 @@
       "id": 137,
       "name": "Skinfoot Heel Balm Repairing Foot Cream 100ml",
       "brand": "Skinfoot",
-      "type": "treatment",
+      "type": "foot-cream",
+      "category": "body",
       "price": 12.00,
       "image": "images/CeraVe Cream.jpg",
       "desc": "Balsam riparues për thembrat e çara me urea 10% dhe shea butter për këmbë të buta."
@@ -1266,7 +1301,8 @@
       "id": 138,
       "name": "Skinfoot Exfoliating Foot Mask Socks (1 palë)",
       "brand": "Skinfoot",
-      "type": "mask",
+      "type": "foot-cream",
+      "category": "body",
       "price": 8.00,
       "image": "images/mask.jpg",
       "desc": "Maska eksoliuese si çorape për këmbë me acid laktik dhe fruktik që heqin lëkurën e vjetër."
@@ -1275,7 +1311,8 @@
       "id": 139,
       "name": "Skinfoot Moisturizing Foot Cream with Urea 5% 100ml",
       "brand": "Skinfoot",
-      "type": "moisturizer",
+      "type": "foot-cream",
+      "category": "body",
       "price": 9.50,
       "image": "images/Hydro Day Cream.webp",
       "desc": "Krem hidratues për këmbë me urea 5% dhe glycerin për lëkurë të butë dhe të ushqyer."
@@ -1368,7 +1405,8 @@
       "id": 149,
       "name": "NYC New York Color Smooth Skin Liquid Makeup Foundation",
       "brand": "NYC",
-      "type": "makeup",
+      "type": "foundation",
+      "category": "makeup",
       "price": 5.99,
       "image": "images/product-149.jpg",
       "desc": "Fondotinte liquid me mbulim natyral për lëkurë të lëmuar me çmim të përballueshëm."
@@ -1377,7 +1415,8 @@
       "id": 150,
       "name": "NYC New York Color Expert Last Lip Color",
       "brand": "NYC",
-      "type": "makeup",
+      "type": "lipstick",
+      "category": "makeup",
       "price": 4.99,
       "image": "images/Lip Sleeping Mask.webp",
       "desc": "Buzëkuqe me rezistencë të gjatë dhe ngjyrë intensive nga koleksioni i qytetit të New York."
@@ -1386,7 +1425,8 @@
       "id": 151,
       "name": "NYC New York Color Smooth Skin Bronzing Powder",
       "brand": "NYC",
-      "type": "makeup",
+      "type": "powder",
+      "category": "makeup",
       "price": 5.50,
       "image": "images/Brightening.webp",
       "desc": "Pudër bronzante me formulë natyrale për ngjyrosje delikate dhe pamje verore."
@@ -1396,6 +1436,7 @@
       "name": "Olaplex No.3 Hair Perfector 100ml",
       "brand": "Olaplex",
       "type": "treatment",
+      "category": "hair",
       "price": 30.00,
       "offer": true,
       "discount": 20,
@@ -1407,6 +1448,7 @@
       "name": "Olaplex No.4 Bond Maintenance Shampoo 250ml",
       "brand": "Olaplex",
       "type": "shampoo",
+      "category": "hair",
       "price": 30.00,
       "image": "images/product-153.png",
       "desc": "Shampo riparuese me teknologjinë bond-building që pastron dhe forcon çdo lloj floku."
@@ -1416,6 +1458,7 @@
       "name": "Olaplex No.5 Bond Maintenance Conditioner 250ml",
       "brand": "Olaplex",
       "type": "conditioner",
+      "category": "hair",
       "price": 30.00,
       "image": "images/product-154.png",
       "desc": "Gërshet riparues me teknologjinë patented Olaplex që riparimëson lidhjet e dëmtuara."
@@ -1425,6 +1468,7 @@
       "name": "Olaplex No.6 Bond Smoother Frizz Control 100ml",
       "brand": "Olaplex",
       "type": "treatment",
+      "category": "hair",
       "price": 30.00,
       "image": "images/product-155.png",
       "desc": "Krem stilizues lënës pa shpëlarje që kontrollon kocrrat dhe jep shkëlqim pa peshë."
@@ -1434,9 +1478,170 @@
       "name": "Olaplex No.7 Bonding Oil 30ml",
       "brand": "Olaplex",
       "type": "oil",
+      "category": "hair",
       "price": 32.00,
       "image": "images/product-156.png",
       "desc": "Vaj lidhjesh ultralehtë që rrit gjallërinë e ngjyrës dhe mbron flokët nga nxehtësia deri 230°C."
+    },
+    {
+      "id": 157,
+      "name": "Bio-Oil Skincare Oil 125ml",
+      "brand": "Bio-Oil",
+      "type": "body-oil",
+      "category": "body",
+      "price": 16.50,
+      "image": "images/Skincare Specialist Oil 200ml.webp",
+      "desc": "Vaj ikonik kujdesi që redukton shenjat e shtatzënisë, njollat dhe lëkurën e thatë."
+    },
+    {
+      "id": 158,
+      "name": "Palmer's Cocoa Butter Formula Body Lotion 400ml",
+      "brand": "Palmer's",
+      "type": "body-lotion",
+      "category": "body",
+      "price": 8.90,
+      "image": "images/Hydro Day Cream.webp",
+      "desc": "Locion trupi me gjalpë kakao dhe vitaminë E për lëkurë të butë, elastike dhe me aromë delikate."
+    },
+    {
+      "id": 159,
+      "name": "Dove Deeply Nourishing Body Wash 400ml",
+      "brand": "Dove",
+      "type": "body-wash",
+      "category": "body",
+      "price": 5.50,
+      "image": "images/Foaming Cleanser.jpg",
+      "desc": "Xhel dushi ushqyes me krem ​​hidratues natyral që pastron me butësi dhe lë lëkurën të lëmuar."
+    },
+    {
+      "id": 160,
+      "name": "St. Ives Fresh Skin Apricot Scrub 170g",
+      "brand": "St. Ives",
+      "type": "body-scrub",
+      "category": "body",
+      "price": 7.00,
+      "image": "images/Exfoliating Cleanser.jpg",
+      "desc": "Skrab klasik me kokrra kajsie natyrale dhe ekstrakt walnut për lëkurë të lëmuar dhe radiant."
+    },
+    {
+      "id": 161,
+      "name": "Neutrogena Norwegian Formula Hand Cream 75ml",
+      "brand": "Neutrogena",
+      "type": "foot-cream",
+      "category": "body",
+      "price": 9.50,
+      "image": "images/CeraVe Cream.jpg",
+      "desc": "Krem duarsh me glicerinë norvegjezeformulaë të përqendruar për duart shumë të thara dhe të çara."
+    },
+    {
+      "id": 162,
+      "name": "Nivea Soft Moisturising Cream 300ml",
+      "brand": "Nivea",
+      "type": "body-lotion",
+      "category": "body",
+      "price": 6.50,
+      "image": "images/Moisture Shield.webp",
+      "desc": "Krem i lehtë hidratues me jojoba oil dhe vitaminë E për fytyrë, duar dhe trup njëkohësisht."
+    },
+    {
+      "id": 163,
+      "name": "Tamburins Egg Musk Perfume 11ml",
+      "brand": "Tamburins",
+      "type": "edp",
+      "category": "parfum",
+      "price": 38.00,
+      "image": "images/123.webp",
+      "desc": "Parfum korean me shishe në formë veze — aroma mushu të bardhë, sandalwood dhe iris për çdo ditë."
+    },
+    {
+      "id": 164,
+      "name": "NACIFIC Perfume Fix Spray Rose 80ml",
+      "brand": "Nacific",
+      "type": "body-mist",
+      "category": "parfum",
+      "price": 16.00,
+      "image": "images/Rose Hip Seed Oil.webp",
+      "desc": "Sprej parfum korean me trëndafil natyral dhe nota të freskëta — i lehtë dhe ideal për çdo ditë."
+    },
+    {
+      "id": 165,
+      "name": "APIEU Juicy Pang Sparkling Water Mist 250ml",
+      "brand": "APIEU",
+      "type": "body-mist",
+      "category": "parfum",
+      "price": 12.00,
+      "image": "images/Heartleaf Soothing.webp",
+      "desc": "Mist korean i lehtë me nota frutore dhe ujë gëzues — freskon lëkurën dhe jep aromë natyrale."
+    },
+    {
+      "id": 166,
+      "name": "Aromatica Calendula Blossom Eau de Parfum 30ml",
+      "brand": "Aromatica",
+      "type": "edp",
+      "category": "parfum",
+      "price": 28.00,
+      "image": "images/Calming Serum.webp",
+      "desc": "Parfum korean me kalendula organike dhe nota florale të qeta — natyral, i qetë dhe pa kimikate të dëmshme."
+    },
+    {
+      "id": 167,
+      "name": "Innisfree Green Tea Perfumed Body Mist 150ml",
+      "brand": "Innisfree",
+      "type": "body-mist",
+      "category": "parfum",
+      "price": 14.00,
+      "image": "images/Green Tea Serum.webp",
+      "desc": "Mist trupi me ekstrakt çaji jeshil organic Jeju — aromë e freskët bimore që qëndron gjatë gjithë ditës."
+    },
+    {
+      "id": 168,
+      "name": "Tonymoly Panda's Dream Body Perfume Mist 150ml",
+      "brand": "Tonymoly",
+      "type": "body-mist",
+      "category": "parfum",
+      "price": 11.00,
+      "image": "images/Brightening.webp",
+      "desc": "Mist trupi playful korean me nota të ëmbla florale dhe bamboo — i dashur dhe i freskët."
+    },
+    {
+      "id": 169,
+      "name": "Missha Perfume de Blanc EDP 30ml",
+      "brand": "Missha",
+      "type": "edp",
+      "category": "parfum",
+      "price": 22.00,
+      "image": "images/147.jpg",
+      "desc": "Eau de Parfum korean me lule të bardha, mushu dhe cedri — elegant dhe i përditshëm për çdo rast."
+    },
+    {
+      "id": 170,
+      "name": "Some By Mi AHA-BHA-PHA Body Wash 400ml",
+      "brand": "Some By Mi",
+      "type": "body-wash",
+      "category": "body",
+      "price": 14.00,
+      "image": "images/Foaming Cleanser.jpg",
+      "desc": "Xhel dushi korean me AHA, BHA dhe PHA që eksfolon butësisht, pastron poret dhe lë lëkurën të lëmuar."
+    },
+    {
+      "id": 171,
+      "name": "CeraVe SA Body Wash with Salicylic Acid 236ml",
+      "brand": "CeraVe",
+      "type": "body-wash",
+      "category": "body",
+      "price": 13.50,
+      "image": "images/Salicylic Cleanser.webp",
+      "desc": "Xhel dushi me acid salicilik dhe ceramide i rekomanduar nga dermatologë për lëkurë të trashë dhe të ashpër."
+    },
+    {
+      "id": 172,
+      "name": "Innisfree My Body Shower Gel Green Tea 300ml",
+      "brand": "Innisfree",
+      "type": "body-wash",
+      "category": "body",
+      "price": 12.00,
+      "image": "images/Heartleaf Quercetinol Foam.jpg",
+      "desc": "Xhel dushi korean me ekstrakt çaji jeshil Jeju — pastron butësisht, hidraon dhe lë aromë natyrale."
     }
   ]
 }

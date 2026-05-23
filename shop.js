@@ -2,6 +2,7 @@ const grid = document.getElementById("productGrid");
 
 let products = [];
 let filtered = [];
+let activeCategory = "all";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,13 +35,17 @@ async function loadProducts() {
     filtered = products;
     window.productsReady = true;
 
-    populateFilters();
+    // Lexo URL parametrin PARA populateFilters() — keshtu filters jane korrekte
+    const urlParams      = new URLSearchParams(window.location.search);
+    const typeParam      = urlParams.get("type");
+    const brandParam     = urlParams.get("brand");
+    const searchParam    = urlParams.get("search");
+    const categoryParam  = urlParams.get("category");
 
-    // Lexo URL parametrin ?type=ofertat / ?brand=x / ?search=x
-    const urlParams   = new URLSearchParams(window.location.search);
-    const typeParam   = urlParams.get("type");
-    const brandParam  = urlParams.get("brand");
-    const searchParam = urlParams.get("search");
+    if (categoryParam) activeCategory = categoryParam.toLowerCase();
+
+    populateFilters();
+    updateShopTitle();
 
     if (typeParam) {
       const typeFilter = document.getElementById("typeFilter");
@@ -51,7 +56,7 @@ async function loadProducts() {
       if (brandFilter) brandFilter.value = brandParam.toLowerCase();
     }
 
-    if (typeParam || brandParam) {
+    if (typeParam || brandParam || categoryParam) {
       applyFilters();
     } else if (searchParam) {
       applySearch(searchParam);
@@ -67,81 +72,121 @@ async function loadProducts() {
 }
 
 
+function matchesCat(p) {
+  if (activeCategory === "all") return true;
+  if (activeCategory === "skincare") return !p.category || p.category.toLowerCase() === "skincare";
+  return (p.category || "").toLowerCase() === activeCategory;
+}
+
 function populateFilters() {
+  const catProducts = products.filter(matchesCat);
+
   /* ── Brands ── */
   const brands = [...new Set(
-    products
-      .map(p => (p.brand || "").trim())
-      .filter(Boolean)
+    catProducts.map(p => (p.brand || "").trim()).filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
   const brandSel = document.getElementById("brandFilter");
-  brands.forEach(b => {
-    const opt = document.createElement("option");
-    opt.value = b.toLowerCase();
-    opt.textContent = b;
-    brandSel.appendChild(opt);
-  });
+  if (brandSel) {
+    brandSel.innerHTML = '<option value="all">All Brands</option>';
+    brands.forEach(b => {
+      const opt = document.createElement("option");
+      opt.value = b.toLowerCase();
+      opt.textContent = b;
+      brandSel.appendChild(opt);
+    });
+  }
 
   /* ── Types ── */
   const typeLabels = {
-    cleanser:   "Cleanser",
-    serum:      "Serum",
-    toner:      "Toner",
-    cream:      "Cream",
-    sunscreen:  "Sunscreen",
-    mask:       "Mask",
-    patch:      "Patch",
-    gel:        "Gel",
-    essence:    "Essence",
-    exfoliant:  "Exfoliant",
-    retinol:    "Retinol",
-    oil:        "Oil",
-    moisturizer:"Moisturizer",
-    lipcare:    "Lip Care",
-    pad:        "Pad",
-    peel:       "Peel",
-    lotion:     "Lotion",
+    cleanser:     "Cleanser",
+    serum:        "Serum",
+    toner:        "Toner",
+    cream:        "Cream",
+    sunscreen:    "Sunscreen",
+    mask:         "Mask",
+    patch:        "Patch",
+    gel:          "Gel",
+    essence:      "Essence",
+    exfoliant:    "Exfoliant",
+    retinol:      "Retinol",
+    oil:          "Oil",
+    moisturizer:  "Moisturizer",
+    lipcare:      "Lip Care",
+    pad:          "Pad",
+    peel:         "Peel",
+    lotion:       "Lotion",
+    shampoo:      "Shampo",
+    conditioner:  "Gërshet",
+    treatment:    "Maskë & Trajtim",
+    foundation:   "Fondotinte",
+    lipstick:     "Buzëkuqe & Gloss",
+    brushes:      "Furça",
+    powder:       "Pudër & Bronzer",
+    "body-lotion":"Krem & Locion",
+    "body-wash":  "Xhel Dushi",
+    "body-scrub": "Skrab",
+    "body-oil":   "Vaj Trupi",
+    "foot-cream": "Duar & Këmbë",
+    edp:          "Eau de Parfum",
+    edt:          "Eau de Toilette",
+    "body-mist":  "Body Mist",
   };
 
   const types = [...new Set(
-    products
-      .map(p => (p.type || "").trim().toLowerCase())
-      .filter(Boolean)
+    catProducts.map(p => (p.type || "").trim().toLowerCase()).filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
   const typeSel = document.getElementById("typeFilter");
-  types.forEach(t => {
-    const opt = document.createElement("option");
-    opt.value = t;
-    opt.textContent = typeLabels[t] || (t.charAt(0).toUpperCase() + t.slice(1));
-    typeSel.appendChild(opt);
-  });
+  if (typeSel) {
+    typeSel.innerHTML = '<option value="all">All Types</option>';
+    types.forEach(t => {
+      const opt = document.createElement("option");
+      opt.value = t;
+      opt.textContent = typeLabels[t] || (t.charAt(0).toUpperCase() + t.slice(1));
+      typeSel.appendChild(opt);
+    });
 
-  // Shto ofertën gjithmonë në fund
-  const offerOpt = document.createElement("option");
-  offerOpt.value = "ofertat";
-  offerOpt.textContent = "🏷️ Ofertat";
-  typeSel.appendChild(offerOpt);
+    // Shto ofertën gjithmonë në fund
+    const offerOpt = document.createElement("option");
+    offerOpt.value = "ofertat";
+    offerOpt.textContent = "🏷️ Ofertat";
+    typeSel.appendChild(offerOpt);
+  }
 
   /* ── Concerns ── */
   const concerns = [...new Set(
-    products
-      .map(p => (p.concern || "").trim())
-      .filter(Boolean)
+    catProducts.map(p => (p.concern || "").trim()).filter(Boolean)
   )].sort((a, b) => a.localeCompare(b));
 
   const concernSel = document.getElementById("concernFilter");
-  if (concerns.length === 0) {
-    if (concernSel) concernSel.style.display = "none";
-  } else {
-    concerns.forEach(c => {
-      const opt = document.createElement("option");
-      opt.value = c.toLowerCase();
-      opt.textContent = c.charAt(0).toUpperCase() + c.slice(1);
-      concernSel.appendChild(opt);
-    });
+  if (concernSel) {
+    if (concerns.length === 0) {
+      concernSel.style.display = "none";
+    } else {
+      concernSel.style.display = "";
+      concernSel.innerHTML = '<option value="all">All Concerns</option>';
+      concerns.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.toLowerCase();
+        opt.textContent = c.charAt(0).toUpperCase() + c.slice(1);
+        concernSel.appendChild(opt);
+      });
+    }
   }
+}
+
+
+function updateShopTitle() {
+  const titles = {
+    skincare: "Kujdesi për Lëkurë",
+    hair:     "Flokët",
+    makeup:   "Make Up",
+    body:     "Trupi",
+    parfum:   "Parfume",
+  };
+  const h1 = document.querySelector(".shop-header h1");
+  if (h1) h1.textContent = titles[activeCategory] || "Shop";
 }
 
 
@@ -162,7 +207,7 @@ function applyFilters() {
     const matchConcern =
       concern === "all" || (p.concern || "").toLowerCase().includes(concern);
 
-    return matchBrand && matchType && matchConcern;
+    return matchBrand && matchType && matchConcern && matchesCat(p);
   });
 
   render(filtered);
@@ -316,21 +361,36 @@ function filterBrand(brand) {
   const sel = document.getElementById("brandFilter");
   if (!sel) return;
   const val = brand.toLowerCase();
-  // Nëse opcioni ekziston ende (produktet mund të mos jenë ngarkuar)
   const wait = setInterval(() => {
     if (!window.productsReady) return;
     clearInterval(wait);
+    // Reset kategorine kur filtrojme sipas brendit
+    activeCategory = "all";
+    populateFilters();
+    updateShopTitle();
     sel.value = val;
     applyFilters();
     document.getElementById("mainNav")?.classList.remove("open");
   }, 50);
 }
 
-window.addToCart = addToCart;
+function applySearch(query) {
+  query = (query || "").toLowerCase().trim();
+  const list = products.filter(p =>
+    matchesCat(p) && (
+      (p.name  || "").toLowerCase().includes(query) ||
+      (p.brand || "").toLowerCase().includes(query)
+    )
+  );
+  render(list);
+}
+
+window.addToCart    = addToCart;
 window.addToWishlist = addToWishlist;
-window.goToProduct = goToProduct;
+window.goToProduct  = goToProduct;
 window.applyFilters = applyFilters;
-window.filterBrand = filterBrand;
+window.filterBrand  = filterBrand;
+window.applySearch  = applySearch;
 function openFav() {
   const modal = document.getElementById("wishlistModal");
   const table = document.getElementById("wishlistTable");
@@ -440,10 +500,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function applySearch(value) {
   value = value.toLowerCase();
 
-  filtered = products.filter(p =>
-    (p.name || "").toLowerCase().includes(value) ||
-    (p.brand || "").toLowerCase().includes(value)
-  );
+  filtered = products.filter(p => {
+    const matchText =
+      (p.name || "").toLowerCase().includes(value) ||
+      (p.brand || "").toLowerCase().includes(value);
+    return matchText && matchesCat(p);
+  });
 
   render(filtered);
 }
