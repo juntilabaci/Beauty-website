@@ -75,11 +75,32 @@
 </head>
 <body>
 
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Free Shipping in Albania • </span><span>Korean Skincare • </span><span>Dermatologist Inspired Formulas • </span><span>Special Offers Every Week • </span><span>Shop Solavie Now • </span><span>Free Shipping in Albania • </span><span>Korean Skincare • </span><span>Dermatologist Inspired Formulas • </span><span>Special Offers Every Week • </span><span>Shop Solavie Now • </span>
+  </div>
+</div>
 <header class="header">
-  <div class="logo">
-    <a href="index.html">Solavie</a>
+  <div class="search-box"><div class="search-wrapper"><input type="text" id="searchInput" placeholder="Search products..."><div id="suggestions" class="suggestions"></div></div></div>
+  <div class="logo"><a href="index.html">Solavie</a></div>
+  <div class="icons-right">
+    <div class="icon-item" onclick="openFav()" title="Wishlist"><span style="font-size:20px;color:red;">❤️</span><b id="wishlist-count">0</b></div>
+    <div class="icon-item" onclick="openCart()" title="Cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><b id="cart-count">0</b></div>
+    <div class="icon-item" title="Account" onclick="openLogin()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c2-4 14-4 16 0"/></svg><span id="loggedUserName" style="font-size:12px;"></span></div>
+    <button class="hamburger d-md-none" id="hamburgerBtn"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="mobile-search d-md-none px-3 py-2" style="background:white;border-bottom:1px solid #eee;"><input type="text" id="searchInputMobile" placeholder="Search products..." class="w-100" style="border:none;border-bottom:1px solid #000;outline:none;padding:6px;background:transparent;font-size:13px;"></div>
+<nav class="menu" id="mainNav">
+<div class="menu-item"><a href="shop.html?category=skincare">Kujdesi për lëkurë</a><div class="dropdown"><a href="shop.html?category=skincare">Të gjitha</a><a href="shop.html?category=skincare&type=cleanser">Cleanser</a><a href="shop.html?category=skincare&type=toner">Toner</a><a href="shop.html?category=skincare&type=serum">Serum</a><a href="shop.html?category=skincare&type=cream">Cream</a><a href="shop.html?category=skincare&type=moisturizer">Moisturizer</a><a href="shop.html?category=skincare&type=sunscreen">Sunscreen</a><a href="shop.html?category=skincare&type=mask">Mask</a><a href="shop.html?category=skincare&type=essence">Essence</a></div></div>
+<div class="menu-item"><a href="shop.html">Brendet</a><div class="dropdown"><a href="shop.html?brand=cosrx">COSRX</a><a href="shop.html?brand=anua">ANUA</a><a href="shop.html?brand=beauty of joseon">Beauty of Joseon</a><a href="shop.html">Të gjitha</a></div></div>
+<div class="menu-item"><a href="shop.html?category=makeup">Make Up</a><div class="dropdown"><a href="shop.html?category=makeup">Të gjitha Make Up</a><a href="shop.html?category=makeup&type=foundation">Fytyrë</a><a href="shop.html?category=makeup&type=lipstick">Buzët</a><a href="shop.html?category=makeup&type=powder">Pudër &amp; Bronzer</a><a href="shop.html?category=makeup&type=brushes">Furça &amp; Aksesorë</a></div></div>
+<div class="menu-item"><a href="shop.html?category=hair">Flokët</a><div class="dropdown"><a href="shop.html?category=hair">Të gjitha Flokët</a><a href="shop.html?category=hair&type=shampoo">Shampo</a><a href="shop.html?category=hair&type=conditioner">Gërshet</a><a href="shop.html?category=hair&type=treatment">Maskë &amp; Trajtim</a><a href="shop.html?category=hair&type=oil">Vajra &amp; Serum</a></div></div>
+<div class="menu-item"><a href="shop.html?category=body">Trupi</a><div class="dropdown"><a href="shop.html?category=body">Të gjitha Trupi</a><a href="shop.html?category=body&type=body-lotion">Krem &amp; Locion</a><a href="shop.html?category=body&type=body-wash">Pastrues Trupi</a><a href="shop.html?category=body&type=body-scrub">Skrab</a><a href="shop.html?category=body&type=body-oil">Vajra Trupi</a><a href="shop.html?category=body&type=foot-cream">Duar &amp; Këmbë</a></div></div>
+<div class="menu-item"><a href="shop.html?category=parfum">Parfume</a><div class="dropdown"><a href="shop.html?category=parfum">Të gjitha Parfume</a><a href="shop.html?category=parfum&type=edp">Eau de Parfum</a><a href="shop.html?category=parfum&type=edt">Eau de Toilette</a><a href="shop.html?category=parfum&type=body-mist">Body Mist</a></div></div>
+<a href="shop.html?type=ofertat">Oferta</a>
+<a href="blog.html">Blog</a>
+</nav>
 
 <div class="privacy-page">
   <h1>Politikat e Privatësisë</h1>
