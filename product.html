@@ -630,6 +630,7 @@ function renderProduct(p) {
         <h1>${p.name}</h1>
         <div class="price-row">${priceHTML}</div>
         <span class="type-tag">${capitalize(p.type || '')}</span>
+        ${isOffer ? `<p class="stock-badge" style="margin:0 0 14px;">⚡ Vetëm ${(p.id % 5) + 1} të mbetur!</p>` : ''}
         <p class="product-desc">${p.desc || 'Nuk ka përshkrim.'}</p>
 
         <p class="qty-label">Sasia</p>
@@ -736,6 +737,12 @@ async function loadRelated(p) {
     currentProduct = p;
     renderProduct(p);
     loadRelated(p);
+
+    // Ruaj tek "Shikuar Rishtazi"
+    const rv = JSON.parse(localStorage.getItem("recentlyViewed") || "[]");
+    const clean = rv.filter(x => String(x.id) !== String(p.id));
+    clean.unshift({ id: p.id, name: p.name, price: p.price, image: p.image, brand: p.brand, offer: p.offer || false, discount: p.discount || 20 });
+    localStorage.setItem("recentlyViewed", JSON.stringify(clean.slice(0, 6)));
   } catch (e) {
     renderNotFound();
   }
@@ -748,7 +755,6 @@ async function loadRelated(p) {
 <a href="loyalty.html" id="rewards-icon" title="Programi i Besnikërisë">
   <div class="icon-box" style="position:relative;">🎀<span id="loyalty-pts" style="position:absolute;top:-4px;right:-4px;background:#4da6ff;color:#fff;font-size:9px;font-weight:700;border-radius:10px;padding:1px 5px;font-family:sans-serif;display:none;line-height:1.4;"></span></div>
 </a>
-<script>(function(){var u=JSON.parse(localStorage.getItem('loggedUser')||'null');if(!u)return;var p=parseInt(localStorage.getItem('loyaltyPoints')||'0');var e=document.getElementById('loyalty-pts');if(e&&p>0){e.textContent=p;e.style.display='inline-block';}})()</script>
 <script src="chatbot-widget.js"></script>
 </body>
 </html>

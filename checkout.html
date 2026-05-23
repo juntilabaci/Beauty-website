@@ -616,8 +616,12 @@ function placeOrder() {
 
   /* Award loyalty points — 1 pt per €1 spent */
   const pointsEarned  = Math.floor(finalTotal);
-  const currentPoints = parseInt(localStorage.getItem('loyaltyPoints') || '0');
-  localStorage.setItem('loyaltyPoints', currentPoints + pointsEarned);
+  const loyUser = JSON.parse(localStorage.getItem('loggedUser') || 'null');
+  if (loyUser) {
+    const loyKey = 'loyaltyPoints_' + loyUser.email;
+    const currentPoints = parseInt(localStorage.getItem(loyKey) || '0');
+    localStorage.setItem(loyKey, currentPoints + pointsEarned);
+  }
 
   /* Consume the used coupon */
   if (appliedCoupon) localStorage.removeItem('activeCoupon');

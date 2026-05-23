@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupLoginModal();
   setupSearch();
   updateLoyaltyBadge();
+  renderRecentlyViewed();
 });
 
 // ─── Products ───────────────────────────────────────────────────────────────
@@ -77,6 +78,7 @@ function renderProducts() {
           <span class="product-brand-tag">${p.brand || ""}</span>
           <h3>${p.name}</h3>
           <p class="product-desc-small">${desc}</p>
+          ${isOffer ? `<span class="stock-badge">⚡ Vetëm ${(p.id % 5) + 1} të mbetur!</span>` : ""}
           <div class="product-footer">
             <div>
               ${isOffer
@@ -308,17 +310,27 @@ function syncHearts() {
 
 // ─── Loyalty Points ──────────────────────────────────────────────────────────
 
+function loyaltyKey() {
+  const u = JSON.parse(localStorage.getItem("loggedUser") || "null");
+  return u ? "loyaltyPoints_" + u.email : null;
+}
+
 function addLoyaltyPoints(pts) {
-  const current = parseInt(localStorage.getItem("loyaltyPoints") || "0");
-  localStorage.setItem("loyaltyPoints", current + pts);
+  const key = loyaltyKey();
+  if (!key) return;
+  const current = parseInt(localStorage.getItem(key) || "0");
+  localStorage.setItem(key, current + pts);
 }
 
 function updateLoyaltyBadge() {
-  const loggedUser = JSON.parse(localStorage.getItem("loggedUser") || "null");
-  if (!loggedUser) return;
-  const pts = parseInt(localStorage.getItem("loyaltyPoints") || "0");
+  const key = loyaltyKey();
+  if (!key) return;
+  const pts = parseInt(localStorage.getItem(key) || "0");
   const el  = document.getElementById("loyalty-pts");
-  if (el && pts > 0) { el.textContent = pts; el.style.display = "inline-block"; }
+  if (el) {
+    if (pts > 0) { el.textContent = pts; el.style.display = "inline-block"; }
+    else { el.style.display = "none"; }
+  }
 }
 
 // ─── Login ───────────────────────────────────────────────────────────────────
@@ -521,5 +533,70 @@ function applySearch(value) {
       <span class="heart" onclick="toggleHeart(this)">♡</span>
     </div>
   `).join("");
+  syncHearts();
+}
+
+// ─── Newsletter ───────────────────────────────────────────────────────────────
+
+function subscribeNewsletter(e) {
+  e.preventDefault();
+  const emailEl = document.getElementById("newsletterEmail");
+  if (!emailEl) return;
+  const email = emailEl.value.trim();
+  if (!email) return;
+  const subs = JSON.parse(localStorage.getItem("newsletterSubs") || "[]");
+  if (!subs.includes(email)) {
+    subs.push(email);
+    localStorage.setItem("newsletterSubs", JSON.stringify(subs));
+  }
+  const form = document.querySelector(".newsletter-form");
+  const msg  = document.getElementById("newsletterMsg");
+  if (form) form.style.display = "none";
+  if (msg)  { msg.style.display = "block"; msg.innerHTML = '✅ U regjistruat! Kodi juaj: <strong>SOLAVIE10</strong>'; }
+}
+
+// ─── Recently Viewed ──────────────────────────────────────────────────────────
+
+function renderRecentlyViewed() {
+  const rv      = JSON.parse(localStorage.getItem("recentlyViewed") || "[]");
+  const section = document.getElementById("recentViewedSection");
+  const grid    = document.getElementById("recentViewedGrid");
+  if (!section || !grid || rv.length === 0) return;
+  section.style.display = "block";
+  const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+  grid.innerHTML = rv.map(p => {
+    const isFav      = wishlist.some(w => String(w.id) === String(p.id));
+    const isOffer    = p.offer === true;
+    const disc       = p.discount || 20;
+    const finalPrice = isOffer
+      ? (Number(p.price) * (1 - disc / 100)).toFixed(2)
+      : Number(p.price).toFixed(2);
+    return `
+      <div class="product" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer;"
+           data-id="${p.id}" data-name="${p.name}" data-price="${finalPrice}">
+        <div class="product-img-box">
+          <img src="${p.image}" alt="${p.name}"
+               onerror="this.src='images/img3.png'" loading="lazy">
+          ${isOffer ? `<span class="offer-ribbon">-${disc}%</span>` : ""}
+          <span class="heart${isFav ? " active" : ""}"
+                onclick="event.stopPropagation(); toggleHeart(this)">
+            ${isFav ? "❤️" : "♡"}
+          </span>
+        </div>
+        <div class="product-body">
+          <span class="product-brand-tag">${p.brand || ""}</span>
+          <h3>${p.name}</h3>
+          <div class="product-footer">
+            <div>
+              ${isOffer
+                ? `<span style="font-size:12px;color:#bbb;text-decoration:line-through;margin-right:4px;">€${Number(p.price).toFixed(2)}</span>
+                   <span class="product-price-tag" style="color:#ef4444;">€${finalPrice}</span>`
+                : `<span class="product-price-tag">€${finalPrice}</span>`
+              }
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }).join("");
   syncHearts();
 }

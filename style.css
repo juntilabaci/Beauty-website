@@ -849,3 +849,72 @@ body {
   .hero-text h1 { font-size: 22px; }
   .products-header h2 { font-size: 26px; }
 }
+
+/* ─── Newsletter ─────────────────────────────────────────────────────────────── */
+.newsletter-section {
+  background: linear-gradient(135deg, #0f2747 0%, #1a3a6b 100%);
+  padding: 70px 24px;
+  text-align: center;
+  color: white;
+}
+.newsletter-inner { max-width: 520px; margin: auto; }
+.newsletter-section .section-chip {
+  color: rgba(255,255,255,0.75);
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+}
+.newsletter-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin: 14px 0 10px;
+}
+.newsletter-inner > p { opacity: 0.82; font-size: 15px; margin-bottom: 28px; }
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto 14px;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  outline: none;
+  color: #111;
+}
+.newsletter-form button {
+  padding: 13px 24px;
+  background: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: #3a95f0; }
+.newsletter-success { color: #86efac; font-size: 15px; margin-top: 8px; font-weight: 600; }
+@media (max-width: 500px) {
+  .newsletter-section h2 { font-size: 24px; }
+  .newsletter-form { flex-direction: column; align-items: stretch; }
+}
+
+/* ─── Stock Badge ────────────────────────────────────────────────────────────── */
+.stock-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin: 4px 0 6px;
+}
+
+/* ─── Recently Viewed ────────────────────────────────────────────────────────── */
+.recent-viewed-section { background: #fafafa; padding-top: 10px; }

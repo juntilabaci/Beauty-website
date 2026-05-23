@@ -162,6 +162,27 @@
   </div>
 </section>
 
+<section class="products recent-viewed-section" id="recentViewedSection" style="display:none;">
+  <div class="products-header">
+    <span class="section-chip">✦ Shikuar Rishtazi</span>
+    <h2>Vazhdo ku ndave</h2>
+    <p>Produktet që i shikove kohët e fundit</p>
+  </div>
+  <div class="product-grid" id="recentViewedGrid"></div>
+</section>
+
+<section class="newsletter-section">
+  <div class="newsletter-inner">
+    <span class="section-chip">✦ Newsletter</span>
+    <h2>Merr ofertat para të tjerëve</h2>
+    <p>Regjistrohu dhe merr <strong>10% zbritje</strong> për blerjen e parë + lajme ekskluzive çdo javë.</p>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+      <input type="email" id="newsletterEmail" placeholder="Email-i juaj..." required>
+      <button type="submit">Regjistrohu →</button>
+    </form>
+    <p id="newsletterMsg" class="newsletter-success" style="display:none;"></p>
+  </div>
+</section>
 
 <div id="loginModal" class="modal">
   <div class="modal-content">

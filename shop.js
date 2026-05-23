@@ -1,6 +1,5 @@
 const grid = document.getElementById("productGrid");
 
-let products = [];
 let filtered = [];
 let activeCategory = "all";
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -282,6 +281,7 @@ function render(list) {
           <span class="card-brand-tag">${p.brand || ""}</span>
           <h4>${p.name}</h4>
           <p class="card-desc">${desc}</p>
+          ${p.offer ? `<span class="stock-badge">⚡ Vetëm ${(p.id % 5) + 1} të mbetur!</span>` : ""}
           <div class="card-footer">
             <div class="card-prices">
               ${p.offer
