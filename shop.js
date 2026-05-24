@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("brandFilter")?.addEventListener("change", applyFilters);
   document.getElementById("typeFilter")?.addEventListener("change", applyFilters);
   document.getElementById("concernFilter")?.addEventListener("change", applyFilters);
+  document.getElementById("sortFilter")?.addEventListener("change", applyFilters);
 });
 
 
@@ -45,6 +46,7 @@ async function loadProducts() {
 
     populateFilters();
     updateShopTitle();
+    initPriceRange();
 
     if (typeParam) {
       const typeFilter = document.getElementById("typeFilter");
@@ -190,9 +192,12 @@ function updateShopTitle() {
 
 
 function applyFilters() {
-  const brand   = (document.getElementById("brandFilter")?.value   || "all").toLowerCase();
-  const type    = (document.getElementById("typeFilter")?.value    || "all").toLowerCase();
-  const concern = (document.getElementById("concernFilter")?.value || "all").toLowerCase();
+  const brand    = (document.getElementById("brandFilter")?.value   || "all").toLowerCase();
+  const type     = (document.getElementById("typeFilter")?.value    || "all").toLowerCase();
+  const concern  = (document.getElementById("concernFilter")?.value || "all").toLowerCase();
+  const sort     = document.getElementById("sortFilter")?.value || "default";
+  const minPrice = parseFloat(document.getElementById("rangeMin")?.value ?? 0);
+  const maxPrice = parseFloat(document.getElementById("rangeMax")?.value ?? 99999);
 
   filtered = products.filter(p => {
     const matchBrand =
@@ -206,10 +211,64 @@ function applyFilters() {
     const matchConcern =
       concern === "all" || (p.concern || "").toLowerCase().includes(concern);
 
-    return matchBrand && matchType && matchConcern && matchesCat(p);
+    const price = Number(p.price);
+    const matchPrice = price >= minPrice && price <= maxPrice;
+
+    return matchBrand && matchType && matchConcern && matchesCat(p) && matchPrice;
   });
 
+  if (sort === "price-asc")  filtered.sort((a, b) => Number(a.price) - Number(b.price));
+  else if (sort === "price-desc") filtered.sort((a, b) => Number(b.price) - Number(a.price));
+  else if (sort === "offers") filtered.sort((a, b) => (b.offer ? 1 : 0) - (a.offer ? 1 : 0));
+  else if (sort === "newest") filtered.sort((a, b) => b.id - a.id);
+
   render(filtered);
+}
+
+function onRangeInput() {
+  const minR = document.getElementById("rangeMin");
+  const maxR = document.getElementById("rangeMax");
+  if (!minR || !maxR) return;
+
+  let minVal = parseInt(minR.value);
+  let maxVal = parseInt(maxR.value);
+
+  if (minVal >= maxVal) {
+    if (event.target === minR) minR.value = maxVal - 1;
+    else maxR.value = minVal + 1;
+    minVal = parseInt(minR.value);
+    maxVal = parseInt(maxR.value);
+  }
+
+  document.getElementById("priceMinDisplay").textContent = `€${minVal}`;
+  document.getElementById("priceMaxDisplay").textContent = `€${maxVal}`;
+  updateSliderTrack(minR, maxR);
+  applyFilters();
+}
+
+function updateSliderTrack(minR, maxR) {
+  const min = parseInt(minR.min), max = parseInt(maxR.max);
+  const minPct = ((parseInt(minR.value) - min) / (max - min)) * 100;
+  const maxPct = ((parseInt(maxR.value) - min) / (max - min)) * 100;
+  const track = document.querySelector(".dual-range-track");
+  if (track) track.style.background =
+    `linear-gradient(to right, #e0e0e0 ${minPct}%, #111 ${minPct}%, #111 ${maxPct}%, #e0e0e0 ${maxPct}%)`;
+}
+
+function initPriceRange() {
+  const catProds = products.filter(matchesCat);
+  if (!catProds.length) return;
+  const prices = catProds.map(p => Number(p.price)).filter(p => !isNaN(p));
+  const minP = Math.floor(Math.min(...prices));
+  const maxP = Math.ceil(Math.max(...prices));
+  const minR = document.getElementById("rangeMin");
+  const maxR = document.getElementById("rangeMax");
+  if (!minR || !maxR) return;
+  minR.min = minP; minR.max = maxP; minR.value = minP;
+  maxR.min = minP; maxR.max = maxP; maxR.value = maxP;
+  document.getElementById("priceMinDisplay").textContent = `€${minP}`;
+  document.getElementById("priceMaxDisplay").textContent = `€${maxP}`;
+  updateSliderTrack(minR, maxR);
 }
 
 
@@ -265,17 +324,18 @@ function render(list) {
         <div class="card-img-box">
           <img src="${p.image || getImage(p.type, p.id)}" alt="${p.name}"
                onerror="this.src='https://via.placeholder.com/400x400?text=No+Image'">
-          ${p.offer ? `<span class="offer-ribbon">-${discount}%</span>` : ""}
+          ${p.offer ? `<span class="offer-ribbon">-${discount}%</span>` : p.bestseller ? `<span class="bestseller-ribbon">★ Bestseller</span>` : ""}
           <button class="card-wish${isFav ? " wished" : ""}"
                   onclick="event.stopPropagation(); addToWishlist('${p.id}', this)">
             ${isFav ? "❤️" : "♡"}
           </button>
+          ${p.soldOut ? `<div class="sold-out-overlay"><span>Sold Out</span></div>` : `
           <div class="card-overlay">
             <button class="card-overlay-btn"
                     onclick="event.stopPropagation(); addToCart('${p.id}')">
               Shto në Shportë
             </button>
-          </div>
+          </div>`}
         </div>
         <div class="card-body">
           <span class="card-brand-tag">${p.brand || ""}</span>
@@ -291,8 +351,9 @@ function render(list) {
               }
             </div>
             <button class="card-add-btn"
-                    onclick="event.stopPropagation(); addToCart('${p.id}')"
-                    title="Shto në shportë">+</button>
+                    onclick="event.stopPropagation(); ${p.soldOut ? '' : `addToCart('${p.id}')`}"
+                    title="${p.soldOut ? 'Produkt i shpenzuar' : 'Shto në shportë'}"
+                    ${p.soldOut ? 'disabled' : ''}>+</button>
           </div>
         </div>
       </div>

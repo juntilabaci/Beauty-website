@@ -86,12 +86,12 @@
 </div>
 
   <div class="menu-item">
-    <a href="shop.html">Brendet</a>
+    <a href="brands.html">Brendet</a>
     <div class="dropdown">
       <a href="shop.html?brand=cosrx">COSRX</a>
       <a href="shop.html?brand=anua">ANUA</a>
       <a href="shop.html?brand=beauty of joseon">Beauty of Joseon</a>
-      <a href="shop.html">Të gjitha</a>
+      <a href="brands.html">Të gjitha</a>
     </div>
   </div>
 
@@ -154,6 +154,23 @@
 
     <select id="concernFilter">
       <option value="all">All Concerns</option>
+    </select>
+
+    <div class="price-range-wrap">
+      <span class="price-range-label">Çmimi: <b id="priceMinDisplay">€0</b> — <b id="priceMaxDisplay">€200</b></span>
+      <div class="dual-range">
+        <div class="dual-range-track"></div>
+        <input type="range" id="rangeMin" min="0" max="200" value="0" step="1" oninput="onRangeInput()">
+        <input type="range" id="rangeMax" min="0" max="200" value="200" step="1" oninput="onRangeInput()">
+      </div>
+    </div>
+
+    <select id="sortFilter">
+      <option value="default">Rendit sipas</option>
+      <option value="price-asc">Çmimi: Ulët → Lartë</option>
+      <option value="price-desc">Çmimi: Lartë → Ulët</option>
+      <option value="offers">🏷️ Ofertat</option>
+      <option value="newest">✨ Të Rejat</option>
     </select>
 
   </div>

@@ -1,4 +1,4 @@
-﻿{
+{
   "products": [
     {
       "id": 1,
@@ -207,7 +207,7 @@
       "type": "body-scrub",
       "category": "body",
       "price": 18.00,
-      "image": "images/Exfoliating Cleanser.jpg",
+      "image": "images/aromatica-scrub.jpg",
       "desc": "Pastrues eksfoliues me kripë Qipro dhe vaj bimor për lëkurë të pastruar dhe të lëmuar."
     },
     {
@@ -1294,7 +1294,7 @@
       "type": "foot-cream",
       "category": "body",
       "price": 12.00,
-      "image": "images/CeraVe Cream.jpg",
+      "image": "images/skinfoot-heel.jpg",
       "desc": "Balsam riparues për thembrat e çara me urea 10% dhe shea butter për këmbë të buta."
     },
     {
@@ -1304,7 +1304,7 @@
       "type": "foot-cream",
       "category": "body",
       "price": 8.00,
-      "image": "images/mask.jpg",
+      "image": "images/skinfoot-mask.jpg",
       "desc": "Maska eksoliuese si çorape për këmbë me acid laktik dhe fruktik që heqin lëkurën e vjetër."
     },
     {
@@ -1314,7 +1314,7 @@
       "type": "foot-cream",
       "category": "body",
       "price": 9.50,
-      "image": "images/Hydro Day Cream.webp",
+      "image": "images/skinfoot-cream.jpg",
       "desc": "Krem hidratues për këmbë me urea 5% dhe glycerin për lëkurë të butë dhe të ushqyer."
     },
     {
@@ -1490,7 +1490,7 @@
       "type": "body-oil",
       "category": "body",
       "price": 16.50,
-      "image": "images/Skincare Specialist Oil 200ml.webp",
+      "image": "images/bio-oil.jpg",
       "desc": "Vaj ikonik kujdesi që redukton shenjat e shtatzënisë, njollat dhe lëkurën e thatë."
     },
     {
@@ -1500,48 +1500,8 @@
       "type": "body-lotion",
       "category": "body",
       "price": 8.90,
-      "image": "images/Hydro Day Cream.webp",
+      "image": "images/palmers-lotion.jpg",
       "desc": "Locion trupi me gjalpë kakao dhe vitaminë E për lëkurë të butë, elastike dhe me aromë delikate."
-    },
-    {
-      "id": 159,
-      "name": "Dove Deeply Nourishing Body Wash 400ml",
-      "brand": "Dove",
-      "type": "body-wash",
-      "category": "body",
-      "price": 5.50,
-      "image": "images/Foaming Cleanser.jpg",
-      "desc": "Xhel dushi ushqyes me krem ​​hidratues natyral që pastron me butësi dhe lë lëkurën të lëmuar."
-    },
-    {
-      "id": 160,
-      "name": "St. Ives Fresh Skin Apricot Scrub 170g",
-      "brand": "St. Ives",
-      "type": "body-scrub",
-      "category": "body",
-      "price": 7.00,
-      "image": "images/Exfoliating Cleanser.jpg",
-      "desc": "Skrab klasik me kokrra kajsie natyrale dhe ekstrakt walnut për lëkurë të lëmuar dhe radiant."
-    },
-    {
-      "id": 161,
-      "name": "Neutrogena Norwegian Formula Hand Cream 75ml",
-      "brand": "Neutrogena",
-      "type": "foot-cream",
-      "category": "body",
-      "price": 9.50,
-      "image": "images/CeraVe Cream.jpg",
-      "desc": "Krem duarsh me glicerinë norvegjezeformulaë të përqendruar për duart shumë të thara dhe të çara."
-    },
-    {
-      "id": 162,
-      "name": "Nivea Soft Moisturising Cream 300ml",
-      "brand": "Nivea",
-      "type": "body-lotion",
-      "category": "body",
-      "price": 6.50,
-      "image": "images/Moisture Shield.webp",
-      "desc": "Krem i lehtë hidratues me jojoba oil dhe vitaminë E për fytyrë, duar dhe trup njëkohësisht."
     },
     {
       "id": 163,
@@ -1550,28 +1510,8 @@
       "type": "edp",
       "category": "parfum",
       "price": 38.00,
-      "image": "images/123.webp",
+      "image": "images/tamburins-egg-musk.avif",
       "desc": "Parfum korean me shishe në formë veze — aroma mushu të bardhë, sandalwood dhe iris për çdo ditë."
-    },
-    {
-      "id": 164,
-      "name": "NACIFIC Perfume Fix Spray Rose 80ml",
-      "brand": "Nacific",
-      "type": "body-mist",
-      "category": "body",
-      "price": 16.00,
-      "image": "images/Rose Hip Seed Oil.webp",
-      "desc": "Sprej parfum korean me trëndafil natyral dhe nota të freskëta — i lehtë dhe ideal për çdo ditë."
-    },
-    {
-      "id": 165,
-      "name": "APIEU Juicy Pang Sparkling Water Mist 250ml",
-      "brand": "APIEU",
-      "type": "body-mist",
-      "category": "body",
-      "price": 12.00,
-      "image": "images/Heartleaf Soothing.webp",
-      "desc": "Mist korean i lehtë me nota frutore dhe ujë gëzues — freskon lëkurën dhe jep aromë natyrale."
     },
     {
       "id": 166,
@@ -1580,7 +1520,7 @@
       "type": "edp",
       "category": "parfum",
       "price": 28.00,
-      "image": "images/Calming Serum.webp",
+      "image": "images/aromatica-calendula-edp.jpg",
       "desc": "Parfum korean me kalendula organike dhe nota florale të qeta — natyral, i qetë dhe pa kimikate të dëmshme."
     },
     {
@@ -1590,18 +1530,8 @@
       "type": "body-mist",
       "category": "body",
       "price": 14.00,
-      "image": "images/Green Tea Serum.webp",
+      "image": "images/innisfree-mist.jpg",
       "desc": "Mist trupi me ekstrakt çaji jeshil organic Jeju — aromë e freskët bimore që qëndron gjatë gjithë ditës."
-    },
-    {
-      "id": 168,
-      "name": "Tonymoly Panda's Dream Body Perfume Mist 150ml",
-      "brand": "Tonymoly",
-      "type": "body-mist",
-      "category": "body",
-      "price": 11.00,
-      "image": "images/Brightening.webp",
-      "desc": "Mist trupi playful korean me nota të ëmbla florale dhe bamboo — i dashur dhe i freskët."
     },
     {
       "id": 169,
@@ -1610,7 +1540,7 @@
       "type": "edp",
       "category": "parfum",
       "price": 22.00,
-      "image": "images/147.jpg",
+      "image": "images/missha-perfume-de-blanc.webp",
       "desc": "Eau de Parfum korean me lule të bardha, mushu dhe cedri — elegant dhe i përditshëm për çdo rast."
     },
     {
@@ -1620,28 +1550,8 @@
       "type": "body-wash",
       "category": "body",
       "price": 14.00,
-      "image": "images/Foaming Cleanser.jpg",
+      "image": "images/somebymi-bodywash.jpg",
       "desc": "Xhel dushi korean me AHA, BHA dhe PHA që eksfolon butësisht, pastron poret dhe lë lëkurën të lëmuar."
-    },
-    {
-      "id": 171,
-      "name": "CeraVe SA Body Wash with Salicylic Acid 236ml",
-      "brand": "CeraVe",
-      "type": "body-wash",
-      "category": "body",
-      "price": 13.50,
-      "image": "images/Salicylic Cleanser.webp",
-      "desc": "Xhel dushi me acid salicilik dhe ceramide i rekomanduar nga dermatologë për lëkurë të trashë dhe të ashpër."
-    },
-    {
-      "id": 172,
-      "name": "Innisfree My Body Shower Gel Green Tea 300ml",
-      "brand": "Innisfree",
-      "type": "body-wash",
-      "category": "body",
-      "price": 12.00,
-      "image": "images/Heartleaf Quercetinol Foam.jpg",
-      "desc": "Xhel dushi korean me ekstrakt çaji jeshil Jeju — pastron butësisht, hidraon dhe lë aromë natyrale."
     },
     {
       "id": 173,
@@ -1654,18 +1564,6 @@
       "desc": "Elixir parfum flokësh luksoz nga Balmain Paris — aromë e sofistikuar me nota mushu dhe florash, mbron nga dëmtimi dhe u jep shkëlqim flokëve."
     },
     {
-      "id": 174,
-      "name": "Bee Factor The Island Bliss Santorini Face Hair Body Mist",
-      "brand": "Bee Factor",
-      "type": "body-mist",
-      "category": "body",
-      "price": 12.50,
-      "offer": true,
-      "discount": 20,
-      "image": "images/The-Island-Bliss-Essence-Of-SANTORINI-Face-Hair-And-Body-Mist-100ml-768x1011-3-e1764060609827.jpg",
-      "desc": "Mist multifunksional për fytyrë, flokë dhe trup me aromë Santorini — freskon, hidraon dhe lë aromë natyrale verore gjatë gjithë ditës."
-    },
-    {
       "id": 175,
       "name": "Matsu Harmony Hair Perfume",
       "brand": "Matsu",
@@ -1674,7 +1572,7 @@
       "price": 11.90,
       "offer": true,
       "discount": 20,
-      "image": "images/matsu-harmony.jpg",
+      "image": "images/matsu-harmony.webp",
       "desc": "Parfum flokësh Matsu me aromë bimore harmonike — mbulon flokët me notë delikate dhe i lë të buta, të shndritshme dhe me erë të bukur."
     },
     {
@@ -1698,7 +1596,7 @@
       "price": 11.90,
       "offer": true,
       "discount": 20,
-      "image": "images/matsu-myth.jpg",
+      "image": "images/matsu-myth.webp",
       "desc": "Parfum flokësh Matsu Myth me aromë misterioze dhe moderne — note qershorie dhe drusore që mbulojnë flokët me parfum të qëndrueshëm."
     },
     {
@@ -1746,7 +1644,7 @@
       "price": 7.30,
       "offer": true,
       "discount": 20,
-      "image": "images/170_fea6e099-8ff4-4504-be8f-fd04f17971aa_2048x2048.webp",
+      "image": "images/misskay-aloha-beaches.jpg",
       "desc": "Eau de Parfum Miss Kay me aromë tropikale — nota kokosu, ananas dhe lulesh të bardha për ndjesinë e pushimeve gjatë gjithë vitit."
     },
     {
@@ -1758,7 +1656,7 @@
       "price": 7.30,
       "offer": true,
       "discount": 20,
-      "image": "images/182_2048x-e1764686978786.webp",
+      "image": "images/misskay-boho-vibes.webp",
       "desc": "Eau de Parfum Miss Kay me shpirt bohemian — aromë e lirë me nota sandalwood, patchouli dhe lulesh egra."
     },
     {
@@ -1770,7 +1668,7 @@
       "price": 7.30,
       "offer": true,
       "discount": 20,
-      "image": "images/misskay-boyfriend-tee.jpg",
+      "image": "images/misskay-boyfriend-tee.webp",
       "desc": "Eau de Parfum Miss Kay — aromë e ëmbël dhe e ngrohtë si korsë e dashnorit: mushu, vanilje dhe pak dru cedri."
     },
     {
@@ -1822,112 +1720,35 @@
       "desc": "Eau de Parfum Miss Kay Happy Tears — aromë emocionale dhe e freskët me nota frutore, lulesh dhe mushu të bardhë."
     },
     {
-      "id": 188,
-      "name": "Miss Kay Heart Rebel EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 7.30,
-      "offer": true,
-      "discount": 20,
-      "image": "images/misskay-heart-rebel.jpg",
-      "desc": "Eau de Parfum Miss Kay Heart Rebel — aromë rebele dhe femërore me nota lulesh deli, fruta të kuqe dhe dru atar."
+      "id": 197,
+      "name": "Beauty Jar Charm Berry Shimmering Body Cream 150ml",
+      "brand": "Beauty Jar",
+      "type": "body-lotion",
+      "category": "body",
+      "price": 7.00,
+      "soldOut": true,
+      "image": "images/beauty-jar-charm-berry.png",
+      "desc": "Krem trupi shkëlqyes me aromë mjedre dhe kokrra shkëlqimi për lëkurë të lëmuar dhe radiant."
     },
     {
-      "id": 189,
-      "name": "Miss Kay Holy Chic EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 7.30,
-      "offer": true,
-      "discount": 20,
-      "image": "images/misskay-holy-chic.jpg",
-      "desc": "Eau de Parfum Miss Kay Holy Chic — aromë elegante dhe e pastër me nota iris, ambrë dhe mushu të bardhë — sofistikate për çdo rast."
+      "id": 198,
+      "name": "Beauty Jar Chérie Ambition Renewing Body Scrub 360g",
+      "brand": "Beauty Jar",
+      "type": "body-scrub",
+      "category": "body",
+      "price": 6.00,
+      "image": "images/beauty-jar-cherie-ambition.jpg",
+      "desc": "Skrab trupi rinovues me përbërës natyralë që eksfolon dhe lë lëkurën të butë dhe të ndritshme."
     },
     {
-      "id": 190,
-      "name": "Miss Kay I Am Iconic EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 20.80,
-      "offer": true,
-      "discount": 10,
-      "image": "images/misskay-i-am-iconic.jpg",
-      "desc": "Eau de Parfum Miss Kay I Am Iconic — parfum signature i fortë dhe i paharrueshëm me nota oud, sandalwood dhe lule jasmine."
-    },
-    {
-      "id": 191,
-      "name": "Miss Kay I Am Sassy EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 20.80,
-      "offer": true,
-      "discount": 10,
-      "image": "images/misskay-i-am-sassy.jpg",
-      "desc": "Eau de Parfum Miss Kay I Am Sassy — aromë e guximshme dhe e gjallë me nota frutore, florash dhe pak spice."
-    },
-    {
-      "id": 192,
-      "name": "Miss Kay I Am Unique EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 20.80,
-      "offer": true,
-      "discount": 10,
-      "image": "images/misskay-i-am-unique.jpg",
-      "desc": "Eau de Parfum Miss Kay I Am Unique — aromë e veçantë dhe moderne me nota bergamoti, lulesh ekzotike dhe mushu të ngrohtë."
-    },
-    {
-      "id": 193,
-      "name": "Miss Kay Kiss My Ex EDP 25ml",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 7.30,
-      "offer": true,
-      "discount": 20,
-      "image": "images/misskay-kiss-my-ex.jpg",
-      "desc": "Eau de Parfum Miss Kay Kiss My Ex — aromë e guximshme dhe e çlirimit me nota fruta të kuqe, trëndafili dhe mushu."
-    },
-    {
-      "id": 194,
-      "name": "Miss Kay No Drama EDP 25ml",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 9.20,
-      "offer": true,
-      "discount": 23,
-      "image": "images/misskay-no-drama.jpg",
-      "desc": "Eau de Parfum Miss Kay No Drama — aromë e qetë dhe elegante pa ekscese, me nota florash të bardha, sandalwood dhe mushu."
-    },
-    {
-      "id": 195,
-      "name": "Miss Kay Perfect Mess EDP 25ml",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 9.20,
-      "offer": true,
-      "discount": 23,
-      "image": "images/misskay-perfect-mess.jpg",
-      "desc": "Eau de Parfum Miss Kay Perfect Mess — aromë e shpirtshme dhe kundërshtuese me nota lulesh egra, oud dhe ambrë gri."
-    },
-    {
-      "id": 196,
-      "name": "Miss Kay Pool Party EDP",
-      "brand": "Miss Kay",
-      "type": "edp",
-      "category": "parfum",
-      "price": 7.30,
-      "offer": true,
-      "discount": 20,
-      "image": "images/misskay-pool-party.jpg",
-      "desc": "Eau de Parfum Miss Kay Pool Party — aromë verore dhe e gëzueshme me nota kokosu, fruta tropikale dhe mushu të freskët."
+      "id": 199,
+      "name": "Beauty Jar Choco La'Vida Smoothing Body Scrub",
+      "brand": "Beauty Jar",
+      "type": "body-scrub",
+      "category": "body",
+      "price": 6.00,
+      "image": "images/beauty-jar-choco-lavida.jpeg",
+      "desc": "Skrab trupi zbutës me aromë çokollate dhe përbërës ushqyes për lëkurë të lëmuar dhe të freskët."
     }
   ]
 }

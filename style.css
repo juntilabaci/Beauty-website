@@ -848,6 +848,17 @@ body {
   .hero { height: 260px; padding-left: 18px; }
   .hero-text h1 { font-size: 22px; }
   .products-header h2 { font-size: 26px; }
+  .product-body { padding: 10px 12px 14px; }
+  .product h3 { font-size: 13px; }
+  .product-desc-small { display: none; }
+  .product-price-tag { font-size: 15px; }
+}
+@media (max-width: 360px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+/* Overlay gjithmonë i dukshëm në celular (touch) */
+@media (hover: none) {
+  .product-overlay { transform: translateY(0); background: linear-gradient(to top, rgba(0,0,0,0.55), transparent); }
 }
 
 /* ─── Newsletter ─────────────────────────────────────────────────────────────── */
@@ -918,3 +929,64 @@ body {
 
 /* ─── Recently Viewed ────────────────────────────────────────────────────────── */
 .recent-viewed-section { background: #fafafa; padding-top: 10px; }
+
+/* ─── Bestseller ribbon (index cards) ───────────────────────────────────────── */
+.bestseller-ribbon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+/* ─── Sold Out overlay (index cards) ────────────────────────────────────────── */
+.sold-out-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  backdrop-filter: blur(2px);
+}
+.sold-out-overlay span {
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+/* ─── Scroll to top ──────────────────────────────────────────────────────────── */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: background 0.2s, transform 0.2s, opacity 0.3s;
+  opacity: 0;
+}
+#scrollTopBtn.visible { display: flex; opacity: 1; }
+#scrollTopBtn:hover { background: #333; transform: translateY(-3px); }

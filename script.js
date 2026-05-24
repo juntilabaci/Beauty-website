@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSearch();
   updateLoyaltyBadge();
   renderRecentlyViewed();
+  setupScrollToTop();
 });
 
 // ─── Products ───────────────────────────────────────────────────────────────
@@ -62,17 +63,18 @@ function renderProducts() {
         <div class="product-img-box">
           <img src="${p.image}" alt="${p.name}"
                onerror="this.src='https://via.placeholder.com/400x400'">
-          ${isOffer ? `<span class="offer-ribbon">-${discount}%</span>` : ""}
+          ${isOffer ? `<span class="offer-ribbon">-${discount}%</span>` : p.bestseller ? `<span class="bestseller-ribbon">★ Bestseller</span>` : ""}
           <span class="heart${isFav ? " active" : ""}"
                 onclick="event.stopPropagation(); toggleHeart(this)">
             ${isFav ? "❤️" : "♡"}
           </span>
+          ${p.soldOut ? `<div class="sold-out-overlay"><span>Sold Out</span></div>` : `
           <div class="product-overlay">
             <button class="btn-add btn-overlay-add"
                     onclick="event.stopPropagation(); addToCartFromCard(this)">
               Shto në Shportë
             </button>
-          </div>
+          </div>`}
         </div>
         <div class="product-body">
           <span class="product-brand-tag">${p.brand || ""}</span>
@@ -553,6 +555,25 @@ function subscribeNewsletter(e) {
   const msg  = document.getElementById("newsletterMsg");
   if (form) form.style.display = "none";
   if (msg)  { msg.style.display = "block"; msg.innerHTML = '✅ U regjistruat! Kodi juaj: <strong>SOLAVIE10</strong>'; }
+}
+
+// ─── Scroll to top ───────────────────────────────────────────────────────────
+
+function setupScrollToTop() {
+  const btn = document.createElement("button");
+  btn.id = "scrollTopBtn";
+  btn.title = "Kthehu lart";
+  btn.innerHTML = "↑";
+  document.body.appendChild(btn);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) btn.classList.add("visible");
+    else btn.classList.remove("visible");
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
 // ─── Recently Viewed ──────────────────────────────────────────────────────────
